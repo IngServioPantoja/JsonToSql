@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/JsonModel/src" modelPluginID="JsonModel" modelName="JsonModel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>jsonModel.ecore</foreignModel>
+  <genPackages prefix="JsonModel" disposableProviderFactory="true" ecorePackage="jsonModel.ecore#/">
+    <genClasses ecoreClass="jsonModel.ecore#//Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jsonModel.ecore#//Document/objects"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Object">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jsonModel.ecore#//Object/pairs"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Pair">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference jsonModel.ecore#//Pair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Value"/>
+    <genClasses ecoreClass="jsonModel.ecore#//ValueObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jsonModel.ecore#//ValueObject/object"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Array">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jsonModel.ecore#//Array/values"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//String">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jsonModel.ecore#//String/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Number">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jsonModel.ecore#//Number/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Boolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jsonModel.ecore#//Boolean/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jsonModel.ecore#//Decimal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jsonModel.ecore#//Decimal/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

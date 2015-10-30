@@ -14,7 +14,7 @@ Object:
 ;
   
 Pair:
- name= EString COLON value=Value
+ name= EString COLON value = Value
 ;
 
 Value:

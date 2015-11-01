@@ -1,10 +1,16 @@
 pre {
-	("Iniciando transformación de JSon a Sql").println();
-	var db : new SQL!Database;
+	("Iniciando transformaciï¿½n de JSon a Sql").println();
+	
 }
 
 rule Document2Database
-	transform
-		doc: JSON!Document
-	to
-		db:
+	transform doc: JSON!Document
+	to db: DB!Database{
+	 	
+	}
+		
+@lazy
+rule Object2Table
+	transform obj: JSON!Object
+	to tb: DB!Table{
+	}

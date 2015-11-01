@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="configTextToConfigModel" nsURI="http://www.example.org/configTextToConfigModel"
+    nsPrefix="configTextToConfigModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MergedField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableName"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributeNames" lowerBound="1"
+        upperBound="-1" eType="#//AttributeName" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" lowerBound="1"
+        upperBound="-1" eType="#//Field" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FieldType">
+    <eLiterals name="String"/>
+    <eLiterals name="Integer"/>
+    <eLiterals name="Float"/>
+    <eLiterals name="Boolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttributeName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="finalField" lowerBound="1"
+        eType="#//Field"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Config">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conecction" lowerBound="1"
+        eType="#//Connection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mergeFields" upperBound="-1"
+        eType="#//MergedField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//FieldType"/>
+  </eClassifiers>
+</ecore:EPackage>

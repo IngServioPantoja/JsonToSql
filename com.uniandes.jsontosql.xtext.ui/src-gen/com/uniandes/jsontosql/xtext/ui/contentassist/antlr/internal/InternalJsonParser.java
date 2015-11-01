@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "'['", "']'", "':'", "','", "'\"'", "'true'", "'false'", "'E'", "'e'", "'-'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'}'", "'['", "']'", "':'", "','", "'true'", "'false'", "'E'", "'e'", "'-'", "'.'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -42,7 +42,6 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__23=23;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -1255,88 +1254,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleCOMMA"
 
 
-    // $ANTLR start "entryRuleQUOTES"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:520:1: entryRuleQUOTES : ruleQUOTES EOF ;
-    public final void entryRuleQUOTES() throws RecognitionException {
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:521:1: ( ruleQUOTES EOF )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:522:1: ruleQUOTES EOF
-            {
-             before(grammarAccess.getQUOTESRule()); 
-            pushFollow(FOLLOW_ruleQUOTES_in_entryRuleQUOTES1033);
-            ruleQUOTES();
-
-            state._fsp--;
-
-             after(grammarAccess.getQUOTESRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQUOTES1040); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return ;
-    }
-    // $ANTLR end "entryRuleQUOTES"
-
-
-    // $ANTLR start "ruleQUOTES"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:529:1: ruleQUOTES : ( '\"' ) ;
-    public final void ruleQUOTES() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:533:2: ( ( '\"' ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:534:1: ( '\"' )
-            {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:534:1: ( '\"' )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:535:1: '\"'
-            {
-             before(grammarAccess.getQUOTESAccess().getQuotationMarkKeyword()); 
-            match(input,17,FOLLOW_17_in_ruleQUOTES1067); 
-             after(grammarAccess.getQUOTESAccess().getQuotationMarkKeyword()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "ruleQUOTES"
-
-
     // $ANTLR start "entryRuleEString"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:552:1: entryRuleEString : ruleEString EOF ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:524:1: entryRuleEString : ruleEString EOF ;
     public final void entryRuleEString() throws RecognitionException {
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:553:1: ( ruleEString EOF )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:554:1: ruleEString EOF
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:525:1: ( ruleEString EOF )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:526:1: ruleEString EOF
             {
              before(grammarAccess.getEStringRule()); 
-            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1097);
+            pushFollow(FOLLOW_ruleEString_in_entryRuleEString1037);
             ruleEString();
 
             state._fsp--;
 
              after(grammarAccess.getEStringRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1104); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEString1044); 
 
             }
 
@@ -1353,23 +1285,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEString"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:561:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:533:1: ruleEString : ( ( rule__EString__Alternatives ) ) ;
     public final void ruleEString() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:565:2: ( ( ( rule__EString__Alternatives ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:566:1: ( ( rule__EString__Alternatives ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:537:2: ( ( ( rule__EString__Alternatives ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:538:1: ( ( rule__EString__Alternatives ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:566:1: ( ( rule__EString__Alternatives ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:567:1: ( rule__EString__Alternatives )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:538:1: ( ( rule__EString__Alternatives ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:539:1: ( rule__EString__Alternatives )
             {
              before(grammarAccess.getEStringAccess().getAlternatives()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:568:1: ( rule__EString__Alternatives )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:568:2: rule__EString__Alternatives
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:540:1: ( rule__EString__Alternatives )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:540:2: rule__EString__Alternatives
             {
-            pushFollow(FOLLOW_rule__EString__Alternatives_in_ruleEString1130);
+            pushFollow(FOLLOW_rule__EString__Alternatives_in_ruleEString1070);
             rule__EString__Alternatives();
 
             state._fsp--;
@@ -1400,20 +1332,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleEInt"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:580:1: entryRuleEInt : ruleEInt EOF ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:552:1: entryRuleEInt : ruleEInt EOF ;
     public final void entryRuleEInt() throws RecognitionException {
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:581:1: ( ruleEInt EOF )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:582:1: ruleEInt EOF
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:553:1: ( ruleEInt EOF )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:554:1: ruleEInt EOF
             {
              before(grammarAccess.getEIntRule()); 
-            pushFollow(FOLLOW_ruleEInt_in_entryRuleEInt1157);
+            pushFollow(FOLLOW_ruleEInt_in_entryRuleEInt1097);
             ruleEInt();
 
             state._fsp--;
 
              after(grammarAccess.getEIntRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEInt1164); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEInt1104); 
 
             }
 
@@ -1430,23 +1362,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEInt"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:589:1: ruleEInt : ( ( rule__EInt__Group__0 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:561:1: ruleEInt : ( ( rule__EInt__Group__0 ) ) ;
     public final void ruleEInt() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:593:2: ( ( ( rule__EInt__Group__0 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:594:1: ( ( rule__EInt__Group__0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:565:2: ( ( ( rule__EInt__Group__0 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:566:1: ( ( rule__EInt__Group__0 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:594:1: ( ( rule__EInt__Group__0 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:595:1: ( rule__EInt__Group__0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:566:1: ( ( rule__EInt__Group__0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:567:1: ( rule__EInt__Group__0 )
             {
              before(grammarAccess.getEIntAccess().getGroup()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:596:1: ( rule__EInt__Group__0 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:596:2: rule__EInt__Group__0
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:568:1: ( rule__EInt__Group__0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:568:2: rule__EInt__Group__0
             {
-            pushFollow(FOLLOW_rule__EInt__Group__0_in_ruleEInt1190);
+            pushFollow(FOLLOW_rule__EInt__Group__0_in_ruleEInt1130);
             rule__EInt__Group__0();
 
             state._fsp--;
@@ -1477,20 +1409,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleEBoolean"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:608:1: entryRuleEBoolean : ruleEBoolean EOF ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:580:1: entryRuleEBoolean : ruleEBoolean EOF ;
     public final void entryRuleEBoolean() throws RecognitionException {
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:609:1: ( ruleEBoolean EOF )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:610:1: ruleEBoolean EOF
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:581:1: ( ruleEBoolean EOF )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:582:1: ruleEBoolean EOF
             {
              before(grammarAccess.getEBooleanRule()); 
-            pushFollow(FOLLOW_ruleEBoolean_in_entryRuleEBoolean1217);
+            pushFollow(FOLLOW_ruleEBoolean_in_entryRuleEBoolean1157);
             ruleEBoolean();
 
             state._fsp--;
 
              after(grammarAccess.getEBooleanRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEBoolean1224); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEBoolean1164); 
 
             }
 
@@ -1507,23 +1439,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEBoolean"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:617:1: ruleEBoolean : ( ( rule__EBoolean__Alternatives ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:589:1: ruleEBoolean : ( ( rule__EBoolean__Alternatives ) ) ;
     public final void ruleEBoolean() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:621:2: ( ( ( rule__EBoolean__Alternatives ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:622:1: ( ( rule__EBoolean__Alternatives ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:593:2: ( ( ( rule__EBoolean__Alternatives ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:594:1: ( ( rule__EBoolean__Alternatives ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:622:1: ( ( rule__EBoolean__Alternatives ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:623:1: ( rule__EBoolean__Alternatives )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:594:1: ( ( rule__EBoolean__Alternatives ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:595:1: ( rule__EBoolean__Alternatives )
             {
              before(grammarAccess.getEBooleanAccess().getAlternatives()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:624:1: ( rule__EBoolean__Alternatives )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:624:2: rule__EBoolean__Alternatives
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:596:1: ( rule__EBoolean__Alternatives )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:596:2: rule__EBoolean__Alternatives
             {
-            pushFollow(FOLLOW_rule__EBoolean__Alternatives_in_ruleEBoolean1250);
+            pushFollow(FOLLOW_rule__EBoolean__Alternatives_in_ruleEBoolean1190);
             rule__EBoolean__Alternatives();
 
             state._fsp--;
@@ -1554,20 +1486,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleEDouble"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:636:1: entryRuleEDouble : ruleEDouble EOF ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:608:1: entryRuleEDouble : ruleEDouble EOF ;
     public final void entryRuleEDouble() throws RecognitionException {
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:637:1: ( ruleEDouble EOF )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:638:1: ruleEDouble EOF
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:609:1: ( ruleEDouble EOF )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:610:1: ruleEDouble EOF
             {
              before(grammarAccess.getEDoubleRule()); 
-            pushFollow(FOLLOW_ruleEDouble_in_entryRuleEDouble1277);
+            pushFollow(FOLLOW_ruleEDouble_in_entryRuleEDouble1217);
             ruleEDouble();
 
             state._fsp--;
 
              after(grammarAccess.getEDoubleRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEDouble1284); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEDouble1224); 
 
             }
 
@@ -1584,23 +1516,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEDouble"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:645:1: ruleEDouble : ( ( rule__EDouble__Group__0 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:617:1: ruleEDouble : ( ( rule__EDouble__Group__0 ) ) ;
     public final void ruleEDouble() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:649:2: ( ( ( rule__EDouble__Group__0 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:650:1: ( ( rule__EDouble__Group__0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:621:2: ( ( ( rule__EDouble__Group__0 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:622:1: ( ( rule__EDouble__Group__0 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:650:1: ( ( rule__EDouble__Group__0 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:651:1: ( rule__EDouble__Group__0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:622:1: ( ( rule__EDouble__Group__0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:623:1: ( rule__EDouble__Group__0 )
             {
              before(grammarAccess.getEDoubleAccess().getGroup()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:652:1: ( rule__EDouble__Group__0 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:652:2: rule__EDouble__Group__0
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:624:1: ( rule__EDouble__Group__0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:624:2: rule__EDouble__Group__0
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__0_in_ruleEDouble1310);
+            pushFollow(FOLLOW_rule__EDouble__Group__0_in_ruleEDouble1250);
             rule__EDouble__Group__0();
 
             state._fsp--;
@@ -1631,13 +1563,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Alternatives"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:664:1: rule__Document__Alternatives : ( ( ( rule__Document__ObjectsAssignment_0 ) ) | ( ( rule__Document__Group_1__0 ) ) );
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:636:1: rule__Document__Alternatives : ( ( ( rule__Document__ObjectsAssignment_0 ) ) | ( ( rule__Document__Group_1__0 ) ) );
     public final void rule__Document__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:668:1: ( ( ( rule__Document__ObjectsAssignment_0 ) ) | ( ( rule__Document__Group_1__0 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:640:1: ( ( ( rule__Document__ObjectsAssignment_0 ) ) | ( ( rule__Document__Group_1__0 ) ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1655,16 +1587,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:669:1: ( ( rule__Document__ObjectsAssignment_0 ) )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:641:1: ( ( rule__Document__ObjectsAssignment_0 ) )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:669:1: ( ( rule__Document__ObjectsAssignment_0 ) )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:670:1: ( rule__Document__ObjectsAssignment_0 )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:641:1: ( ( rule__Document__ObjectsAssignment_0 ) )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:642:1: ( rule__Document__ObjectsAssignment_0 )
                     {
                      before(grammarAccess.getDocumentAccess().getObjectsAssignment_0()); 
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:671:1: ( rule__Document__ObjectsAssignment_0 )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:671:2: rule__Document__ObjectsAssignment_0
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:643:1: ( rule__Document__ObjectsAssignment_0 )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:643:2: rule__Document__ObjectsAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Document__ObjectsAssignment_0_in_rule__Document__Alternatives1346);
+                    pushFollow(FOLLOW_rule__Document__ObjectsAssignment_0_in_rule__Document__Alternatives1286);
                     rule__Document__ObjectsAssignment_0();
 
                     state._fsp--;
@@ -1680,16 +1612,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:675:6: ( ( rule__Document__Group_1__0 ) )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:647:6: ( ( rule__Document__Group_1__0 ) )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:675:6: ( ( rule__Document__Group_1__0 ) )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:676:1: ( rule__Document__Group_1__0 )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:647:6: ( ( rule__Document__Group_1__0 ) )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:648:1: ( rule__Document__Group_1__0 )
                     {
                      before(grammarAccess.getDocumentAccess().getGroup_1()); 
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:677:1: ( rule__Document__Group_1__0 )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:677:2: rule__Document__Group_1__0
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:649:1: ( rule__Document__Group_1__0 )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:649:2: rule__Document__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Document__Group_1__0_in_rule__Document__Alternatives1364);
+                    pushFollow(FOLLOW_rule__Document__Group_1__0_in_rule__Document__Alternatives1304);
                     rule__Document__Group_1__0();
 
                     state._fsp--;
@@ -1722,13 +1654,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__Alternatives"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:686:1: rule__Value__Alternatives : ( ( ruleStringValue ) | ( ruleNumberValue ) | ( ruleDecimalValue ) | ( ruleArrayValue ) | ( ruleBooleanValue ) | ( ruleValueObject ) );
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:658:1: rule__Value__Alternatives : ( ( ruleStringValue ) | ( ruleNumberValue ) | ( ruleDecimalValue ) | ( ruleArrayValue ) | ( ruleBooleanValue ) | ( ruleValueObject ) );
     public final void rule__Value__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:690:1: ( ( ruleStringValue ) | ( ruleNumberValue ) | ( ruleDecimalValue ) | ( ruleArrayValue ) | ( ruleBooleanValue ) | ( ruleValueObject ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:662:1: ( ( ruleStringValue ) | ( ruleNumberValue ) | ( ruleDecimalValue ) | ( ruleArrayValue ) | ( ruleBooleanValue ) | ( ruleValueObject ) )
             int alt2=6;
             switch ( input.LA(1) ) {
             case RULE_STRING:
@@ -1737,18 +1669,18 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                 alt2=1;
                 }
                 break;
-            case 22:
+            case 21:
                 {
                 int LA2_2 = input.LA(2);
 
                 if ( (LA2_2==RULE_INT) ) {
                     int LA2_3 = input.LA(3);
 
-                    if ( (LA2_3==23) ) {
-                        alt2=3;
-                    }
-                    else if ( (LA2_3==EOF||LA2_3==14||(LA2_3>=16 && LA2_3<=17)) ) {
+                    if ( (LA2_3==EOF||LA2_3==12||LA2_3==14||LA2_3==16) ) {
                         alt2=2;
+                    }
+                    else if ( (LA2_3==22) ) {
+                        alt2=3;
                     }
                     else {
                         NoViableAltException nvae =
@@ -1757,7 +1689,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                         throw nvae;
                     }
                 }
-                else if ( (LA2_2==23) ) {
+                else if ( (LA2_2==22) ) {
                     alt2=3;
                 }
                 else {
@@ -1772,11 +1704,11 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                 {
                 int LA2_3 = input.LA(2);
 
-                if ( (LA2_3==23) ) {
-                    alt2=3;
-                }
-                else if ( (LA2_3==EOF||LA2_3==14||(LA2_3>=16 && LA2_3<=17)) ) {
+                if ( (LA2_3==EOF||LA2_3==12||LA2_3==14||LA2_3==16) ) {
                     alt2=2;
+                }
+                else if ( (LA2_3==22) ) {
+                    alt2=3;
                 }
                 else {
                     NoViableAltException nvae =
@@ -1786,7 +1718,7 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                 }
                 }
                 break;
-            case 23:
+            case 22:
                 {
                 alt2=3;
                 }
@@ -1796,8 +1728,8 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                 alt2=4;
                 }
                 break;
+            case 17:
             case 18:
-            case 19:
                 {
                 alt2=5;
                 }
@@ -1816,13 +1748,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:691:1: ( ruleStringValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:663:1: ( ruleStringValue )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:691:1: ( ruleStringValue )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:692:1: ruleStringValue
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:663:1: ( ruleStringValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:664:1: ruleStringValue
                     {
                      before(grammarAccess.getValueAccess().getStringValueParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleStringValue_in_rule__Value__Alternatives1397);
+                    pushFollow(FOLLOW_ruleStringValue_in_rule__Value__Alternatives1337);
                     ruleStringValue();
 
                     state._fsp--;
@@ -1835,13 +1767,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:697:6: ( ruleNumberValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:669:6: ( ruleNumberValue )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:697:6: ( ruleNumberValue )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:698:1: ruleNumberValue
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:669:6: ( ruleNumberValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:670:1: ruleNumberValue
                     {
                      before(grammarAccess.getValueAccess().getNumberValueParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleNumberValue_in_rule__Value__Alternatives1414);
+                    pushFollow(FOLLOW_ruleNumberValue_in_rule__Value__Alternatives1354);
                     ruleNumberValue();
 
                     state._fsp--;
@@ -1854,13 +1786,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:703:6: ( ruleDecimalValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:675:6: ( ruleDecimalValue )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:703:6: ( ruleDecimalValue )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:704:1: ruleDecimalValue
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:675:6: ( ruleDecimalValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:676:1: ruleDecimalValue
                     {
                      before(grammarAccess.getValueAccess().getDecimalValueParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleDecimalValue_in_rule__Value__Alternatives1431);
+                    pushFollow(FOLLOW_ruleDecimalValue_in_rule__Value__Alternatives1371);
                     ruleDecimalValue();
 
                     state._fsp--;
@@ -1873,13 +1805,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:709:6: ( ruleArrayValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:681:6: ( ruleArrayValue )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:709:6: ( ruleArrayValue )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:710:1: ruleArrayValue
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:681:6: ( ruleArrayValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:682:1: ruleArrayValue
                     {
                      before(grammarAccess.getValueAccess().getArrayValueParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleArrayValue_in_rule__Value__Alternatives1448);
+                    pushFollow(FOLLOW_ruleArrayValue_in_rule__Value__Alternatives1388);
                     ruleArrayValue();
 
                     state._fsp--;
@@ -1892,13 +1824,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:715:6: ( ruleBooleanValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:687:6: ( ruleBooleanValue )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:715:6: ( ruleBooleanValue )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:716:1: ruleBooleanValue
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:687:6: ( ruleBooleanValue )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:688:1: ruleBooleanValue
                     {
                      before(grammarAccess.getValueAccess().getBooleanValueParserRuleCall_4()); 
-                    pushFollow(FOLLOW_ruleBooleanValue_in_rule__Value__Alternatives1465);
+                    pushFollow(FOLLOW_ruleBooleanValue_in_rule__Value__Alternatives1405);
                     ruleBooleanValue();
 
                     state._fsp--;
@@ -1911,13 +1843,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:721:6: ( ruleValueObject )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:693:6: ( ruleValueObject )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:721:6: ( ruleValueObject )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:722:1: ruleValueObject
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:693:6: ( ruleValueObject )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:694:1: ruleValueObject
                     {
                      before(grammarAccess.getValueAccess().getValueObjectParserRuleCall_5()); 
-                    pushFollow(FOLLOW_ruleValueObject_in_rule__Value__Alternatives1482);
+                    pushFollow(FOLLOW_ruleValueObject_in_rule__Value__Alternatives1422);
                     ruleValueObject();
 
                     state._fsp--;
@@ -1947,13 +1879,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EString__Alternatives"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:732:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:704:1: rule__EString__Alternatives : ( ( RULE_STRING ) | ( RULE_ID ) );
     public final void rule__EString__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:736:1: ( ( RULE_STRING ) | ( RULE_ID ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:708:1: ( ( RULE_STRING ) | ( RULE_ID ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1971,13 +1903,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:737:1: ( RULE_STRING )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:709:1: ( RULE_STRING )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:737:1: ( RULE_STRING )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:738:1: RULE_STRING
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:709:1: ( RULE_STRING )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:710:1: RULE_STRING
                     {
                      before(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__EString__Alternatives1514); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__EString__Alternatives1454); 
                      after(grammarAccess.getEStringAccess().getSTRINGTerminalRuleCall_0()); 
 
                     }
@@ -1986,13 +1918,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:743:6: ( RULE_ID )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:715:6: ( RULE_ID )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:743:6: ( RULE_ID )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:744:1: RULE_ID
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:715:6: ( RULE_ID )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:716:1: RULE_ID
                     {
                      before(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EString__Alternatives1531); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__EString__Alternatives1471); 
                      after(grammarAccess.getEStringAccess().getIDTerminalRuleCall_1()); 
 
                     }
@@ -2018,20 +1950,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EBoolean__Alternatives"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:754:1: rule__EBoolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:726:1: rule__EBoolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
     public final void rule__EBoolean__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:758:1: ( ( 'true' ) | ( 'false' ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:730:1: ( ( 'true' ) | ( 'false' ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==18) ) {
+            if ( (LA4_0==17) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==19) ) {
+            else if ( (LA4_0==18) ) {
                 alt4=2;
             }
             else {
@@ -2042,13 +1974,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:759:1: ( 'true' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:731:1: ( 'true' )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:759:1: ( 'true' )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:760:1: 'true'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:731:1: ( 'true' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:732:1: 'true'
                     {
                      before(grammarAccess.getEBooleanAccess().getTrueKeyword_0()); 
-                    match(input,18,FOLLOW_18_in_rule__EBoolean__Alternatives1564); 
+                    match(input,17,FOLLOW_17_in_rule__EBoolean__Alternatives1504); 
                      after(grammarAccess.getEBooleanAccess().getTrueKeyword_0()); 
 
                     }
@@ -2057,13 +1989,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:767:6: ( 'false' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:739:6: ( 'false' )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:767:6: ( 'false' )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:768:1: 'false'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:739:6: ( 'false' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:740:1: 'false'
                     {
                      before(grammarAccess.getEBooleanAccess().getFalseKeyword_1()); 
-                    match(input,19,FOLLOW_19_in_rule__EBoolean__Alternatives1584); 
+                    match(input,18,FOLLOW_18_in_rule__EBoolean__Alternatives1524); 
                      after(grammarAccess.getEBooleanAccess().getFalseKeyword_1()); 
 
                     }
@@ -2089,20 +2021,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Alternatives_4_0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:780:1: rule__EDouble__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:752:1: rule__EDouble__Alternatives_4_0 : ( ( 'E' ) | ( 'e' ) );
     public final void rule__EDouble__Alternatives_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:784:1: ( ( 'E' ) | ( 'e' ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:756:1: ( ( 'E' ) | ( 'e' ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==20) ) {
+            if ( (LA5_0==19) ) {
                 alt5=1;
             }
-            else if ( (LA5_0==21) ) {
+            else if ( (LA5_0==20) ) {
                 alt5=2;
             }
             else {
@@ -2113,13 +2045,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:785:1: ( 'E' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:757:1: ( 'E' )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:785:1: ( 'E' )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:786:1: 'E'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:757:1: ( 'E' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:758:1: 'E'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
-                    match(input,20,FOLLOW_20_in_rule__EDouble__Alternatives_4_01619); 
+                    match(input,19,FOLLOW_19_in_rule__EDouble__Alternatives_4_01559); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_0()); 
 
                     }
@@ -2128,13 +2060,13 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:793:6: ( 'e' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:765:6: ( 'e' )
                     {
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:793:6: ( 'e' )
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:794:1: 'e'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:765:6: ( 'e' )
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:766:1: 'e'
                     {
                      before(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
-                    match(input,21,FOLLOW_21_in_rule__EDouble__Alternatives_4_01639); 
+                    match(input,20,FOLLOW_20_in_rule__EDouble__Alternatives_4_01579); 
                      after(grammarAccess.getEDoubleAccess().getEKeyword_4_0_1()); 
 
                     }
@@ -2160,21 +2092,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:808:1: rule__Document__Group_1__0 : rule__Document__Group_1__0__Impl rule__Document__Group_1__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:780:1: rule__Document__Group_1__0 : rule__Document__Group_1__0__Impl rule__Document__Group_1__1 ;
     public final void rule__Document__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:812:1: ( rule__Document__Group_1__0__Impl rule__Document__Group_1__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:813:2: rule__Document__Group_1__0__Impl rule__Document__Group_1__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:784:1: ( rule__Document__Group_1__0__Impl rule__Document__Group_1__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:785:2: rule__Document__Group_1__0__Impl rule__Document__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Document__Group_1__0__Impl_in_rule__Document__Group_1__01671);
+            pushFollow(FOLLOW_rule__Document__Group_1__0__Impl_in_rule__Document__Group_1__01611);
             rule__Document__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Document__Group_1__1_in_rule__Document__Group_1__01674);
+            pushFollow(FOLLOW_rule__Document__Group_1__1_in_rule__Document__Group_1__01614);
             rule__Document__Group_1__1();
 
             state._fsp--;
@@ -2198,20 +2130,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:820:1: rule__Document__Group_1__0__Impl : ( ruleLSQUARE ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:792:1: rule__Document__Group_1__0__Impl : ( ruleLSQUARE ) ;
     public final void rule__Document__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:824:1: ( ( ruleLSQUARE ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:825:1: ( ruleLSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:796:1: ( ( ruleLSQUARE ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:797:1: ( ruleLSQUARE )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:825:1: ( ruleLSQUARE )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:826:1: ruleLSQUARE
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:797:1: ( ruleLSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:798:1: ruleLSQUARE
             {
              before(grammarAccess.getDocumentAccess().getLSQUAREParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleLSQUARE_in_rule__Document__Group_1__0__Impl1701);
+            pushFollow(FOLLOW_ruleLSQUARE_in_rule__Document__Group_1__0__Impl1641);
             ruleLSQUARE();
 
             state._fsp--;
@@ -2239,21 +2171,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:837:1: rule__Document__Group_1__1 : rule__Document__Group_1__1__Impl rule__Document__Group_1__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:809:1: rule__Document__Group_1__1 : rule__Document__Group_1__1__Impl rule__Document__Group_1__2 ;
     public final void rule__Document__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:841:1: ( rule__Document__Group_1__1__Impl rule__Document__Group_1__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:842:2: rule__Document__Group_1__1__Impl rule__Document__Group_1__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:813:1: ( rule__Document__Group_1__1__Impl rule__Document__Group_1__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:814:2: rule__Document__Group_1__1__Impl rule__Document__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Document__Group_1__1__Impl_in_rule__Document__Group_1__11730);
+            pushFollow(FOLLOW_rule__Document__Group_1__1__Impl_in_rule__Document__Group_1__11670);
             rule__Document__Group_1__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Document__Group_1__2_in_rule__Document__Group_1__11733);
+            pushFollow(FOLLOW_rule__Document__Group_1__2_in_rule__Document__Group_1__11673);
             rule__Document__Group_1__2();
 
             state._fsp--;
@@ -2277,23 +2209,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:849:1: rule__Document__Group_1__1__Impl : ( ( rule__Document__ObjectsAssignment_1_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:821:1: rule__Document__Group_1__1__Impl : ( ( rule__Document__ObjectsAssignment_1_1 ) ) ;
     public final void rule__Document__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:853:1: ( ( ( rule__Document__ObjectsAssignment_1_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:854:1: ( ( rule__Document__ObjectsAssignment_1_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:825:1: ( ( ( rule__Document__ObjectsAssignment_1_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:826:1: ( ( rule__Document__ObjectsAssignment_1_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:854:1: ( ( rule__Document__ObjectsAssignment_1_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:855:1: ( rule__Document__ObjectsAssignment_1_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:826:1: ( ( rule__Document__ObjectsAssignment_1_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:827:1: ( rule__Document__ObjectsAssignment_1_1 )
             {
              before(grammarAccess.getDocumentAccess().getObjectsAssignment_1_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:856:1: ( rule__Document__ObjectsAssignment_1_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:856:2: rule__Document__ObjectsAssignment_1_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:828:1: ( rule__Document__ObjectsAssignment_1_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:828:2: rule__Document__ObjectsAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Document__ObjectsAssignment_1_1_in_rule__Document__Group_1__1__Impl1760);
+            pushFollow(FOLLOW_rule__Document__ObjectsAssignment_1_1_in_rule__Document__Group_1__1__Impl1700);
             rule__Document__ObjectsAssignment_1_1();
 
             state._fsp--;
@@ -2324,21 +2256,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:866:1: rule__Document__Group_1__2 : rule__Document__Group_1__2__Impl rule__Document__Group_1__3 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:838:1: rule__Document__Group_1__2 : rule__Document__Group_1__2__Impl rule__Document__Group_1__3 ;
     public final void rule__Document__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:870:1: ( rule__Document__Group_1__2__Impl rule__Document__Group_1__3 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:871:2: rule__Document__Group_1__2__Impl rule__Document__Group_1__3
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:842:1: ( rule__Document__Group_1__2__Impl rule__Document__Group_1__3 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:843:2: rule__Document__Group_1__2__Impl rule__Document__Group_1__3
             {
-            pushFollow(FOLLOW_rule__Document__Group_1__2__Impl_in_rule__Document__Group_1__21790);
+            pushFollow(FOLLOW_rule__Document__Group_1__2__Impl_in_rule__Document__Group_1__21730);
             rule__Document__Group_1__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Document__Group_1__3_in_rule__Document__Group_1__21793);
+            pushFollow(FOLLOW_rule__Document__Group_1__3_in_rule__Document__Group_1__21733);
             rule__Document__Group_1__3();
 
             state._fsp--;
@@ -2362,20 +2294,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:878:1: rule__Document__Group_1__2__Impl : ( ( rule__Document__Group_1_2__0 )* ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:850:1: rule__Document__Group_1__2__Impl : ( ( rule__Document__Group_1_2__0 )* ) ;
     public final void rule__Document__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:882:1: ( ( ( rule__Document__Group_1_2__0 )* ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:883:1: ( ( rule__Document__Group_1_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:854:1: ( ( ( rule__Document__Group_1_2__0 )* ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:855:1: ( ( rule__Document__Group_1_2__0 )* )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:883:1: ( ( rule__Document__Group_1_2__0 )* )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:884:1: ( rule__Document__Group_1_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:855:1: ( ( rule__Document__Group_1_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:856:1: ( rule__Document__Group_1_2__0 )*
             {
              before(grammarAccess.getDocumentAccess().getGroup_1_2()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:885:1: ( rule__Document__Group_1_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:857:1: ( rule__Document__Group_1_2__0 )*
             loop6:
             do {
                 int alt6=2;
@@ -2388,9 +2320,9 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:885:2: rule__Document__Group_1_2__0
+            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:857:2: rule__Document__Group_1_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Document__Group_1_2__0_in_rule__Document__Group_1__2__Impl1820);
+            	    pushFollow(FOLLOW_rule__Document__Group_1_2__0_in_rule__Document__Group_1__2__Impl1760);
             	    rule__Document__Group_1_2__0();
 
             	    state._fsp--;
@@ -2427,16 +2359,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__3"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:895:1: rule__Document__Group_1__3 : rule__Document__Group_1__3__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:867:1: rule__Document__Group_1__3 : rule__Document__Group_1__3__Impl ;
     public final void rule__Document__Group_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:899:1: ( rule__Document__Group_1__3__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:900:2: rule__Document__Group_1__3__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:871:1: ( rule__Document__Group_1__3__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:872:2: rule__Document__Group_1__3__Impl
             {
-            pushFollow(FOLLOW_rule__Document__Group_1__3__Impl_in_rule__Document__Group_1__31851);
+            pushFollow(FOLLOW_rule__Document__Group_1__3__Impl_in_rule__Document__Group_1__31791);
             rule__Document__Group_1__3__Impl();
 
             state._fsp--;
@@ -2460,20 +2392,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1__3__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:906:1: rule__Document__Group_1__3__Impl : ( ruleRSQUARE ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:878:1: rule__Document__Group_1__3__Impl : ( ruleRSQUARE ) ;
     public final void rule__Document__Group_1__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:910:1: ( ( ruleRSQUARE ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:911:1: ( ruleRSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:882:1: ( ( ruleRSQUARE ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:883:1: ( ruleRSQUARE )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:911:1: ( ruleRSQUARE )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:912:1: ruleRSQUARE
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:883:1: ( ruleRSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:884:1: ruleRSQUARE
             {
              before(grammarAccess.getDocumentAccess().getRSQUAREParserRuleCall_1_3()); 
-            pushFollow(FOLLOW_ruleRSQUARE_in_rule__Document__Group_1__3__Impl1878);
+            pushFollow(FOLLOW_ruleRSQUARE_in_rule__Document__Group_1__3__Impl1818);
             ruleRSQUARE();
 
             state._fsp--;
@@ -2501,21 +2433,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1_2__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:931:1: rule__Document__Group_1_2__0 : rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:903:1: rule__Document__Group_1_2__0 : rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1 ;
     public final void rule__Document__Group_1_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:935:1: ( rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:936:2: rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:907:1: ( rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:908:2: rule__Document__Group_1_2__0__Impl rule__Document__Group_1_2__1
             {
-            pushFollow(FOLLOW_rule__Document__Group_1_2__0__Impl_in_rule__Document__Group_1_2__01915);
+            pushFollow(FOLLOW_rule__Document__Group_1_2__0__Impl_in_rule__Document__Group_1_2__01855);
             rule__Document__Group_1_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Document__Group_1_2__1_in_rule__Document__Group_1_2__01918);
+            pushFollow(FOLLOW_rule__Document__Group_1_2__1_in_rule__Document__Group_1_2__01858);
             rule__Document__Group_1_2__1();
 
             state._fsp--;
@@ -2539,20 +2471,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1_2__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:943:1: rule__Document__Group_1_2__0__Impl : ( ruleCOMMA ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:915:1: rule__Document__Group_1_2__0__Impl : ( ruleCOMMA ) ;
     public final void rule__Document__Group_1_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:947:1: ( ( ruleCOMMA ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:948:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:919:1: ( ( ruleCOMMA ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:920:1: ( ruleCOMMA )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:948:1: ( ruleCOMMA )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:949:1: ruleCOMMA
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:920:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:921:1: ruleCOMMA
             {
              before(grammarAccess.getDocumentAccess().getCOMMAParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleCOMMA_in_rule__Document__Group_1_2__0__Impl1945);
+            pushFollow(FOLLOW_ruleCOMMA_in_rule__Document__Group_1_2__0__Impl1885);
             ruleCOMMA();
 
             state._fsp--;
@@ -2580,16 +2512,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1_2__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:960:1: rule__Document__Group_1_2__1 : rule__Document__Group_1_2__1__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:932:1: rule__Document__Group_1_2__1 : rule__Document__Group_1_2__1__Impl ;
     public final void rule__Document__Group_1_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:964:1: ( rule__Document__Group_1_2__1__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:965:2: rule__Document__Group_1_2__1__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:936:1: ( rule__Document__Group_1_2__1__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:937:2: rule__Document__Group_1_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Document__Group_1_2__1__Impl_in_rule__Document__Group_1_2__11974);
+            pushFollow(FOLLOW_rule__Document__Group_1_2__1__Impl_in_rule__Document__Group_1_2__11914);
             rule__Document__Group_1_2__1__Impl();
 
             state._fsp--;
@@ -2613,23 +2545,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__Group_1_2__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:971:1: rule__Document__Group_1_2__1__Impl : ( ( rule__Document__ObjectsAssignment_1_2_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:943:1: rule__Document__Group_1_2__1__Impl : ( ( rule__Document__ObjectsAssignment_1_2_1 ) ) ;
     public final void rule__Document__Group_1_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:975:1: ( ( ( rule__Document__ObjectsAssignment_1_2_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:976:1: ( ( rule__Document__ObjectsAssignment_1_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:947:1: ( ( ( rule__Document__ObjectsAssignment_1_2_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:948:1: ( ( rule__Document__ObjectsAssignment_1_2_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:976:1: ( ( rule__Document__ObjectsAssignment_1_2_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:977:1: ( rule__Document__ObjectsAssignment_1_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:948:1: ( ( rule__Document__ObjectsAssignment_1_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:949:1: ( rule__Document__ObjectsAssignment_1_2_1 )
             {
              before(grammarAccess.getDocumentAccess().getObjectsAssignment_1_2_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:978:1: ( rule__Document__ObjectsAssignment_1_2_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:978:2: rule__Document__ObjectsAssignment_1_2_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:950:1: ( rule__Document__ObjectsAssignment_1_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:950:2: rule__Document__ObjectsAssignment_1_2_1
             {
-            pushFollow(FOLLOW_rule__Document__ObjectsAssignment_1_2_1_in_rule__Document__Group_1_2__1__Impl2001);
+            pushFollow(FOLLOW_rule__Document__ObjectsAssignment_1_2_1_in_rule__Document__Group_1_2__1__Impl1941);
             rule__Document__ObjectsAssignment_1_2_1();
 
             state._fsp--;
@@ -2660,21 +2592,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:992:1: rule__Object__Group__0 : rule__Object__Group__0__Impl rule__Object__Group__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:964:1: rule__Object__Group__0 : rule__Object__Group__0__Impl rule__Object__Group__1 ;
     public final void rule__Object__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:996:1: ( rule__Object__Group__0__Impl rule__Object__Group__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:997:2: rule__Object__Group__0__Impl rule__Object__Group__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:968:1: ( rule__Object__Group__0__Impl rule__Object__Group__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:969:2: rule__Object__Group__0__Impl rule__Object__Group__1
             {
-            pushFollow(FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__02035);
+            pushFollow(FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__01975);
             rule__Object__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__1_in_rule__Object__Group__02038);
+            pushFollow(FOLLOW_rule__Object__Group__1_in_rule__Object__Group__01978);
             rule__Object__Group__1();
 
             state._fsp--;
@@ -2698,20 +2630,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1004:1: rule__Object__Group__0__Impl : ( ruleLCURLY ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:976:1: rule__Object__Group__0__Impl : ( ruleLCURLY ) ;
     public final void rule__Object__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1008:1: ( ( ruleLCURLY ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1009:1: ( ruleLCURLY )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:980:1: ( ( ruleLCURLY ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:981:1: ( ruleLCURLY )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1009:1: ( ruleLCURLY )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1010:1: ruleLCURLY
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:981:1: ( ruleLCURLY )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:982:1: ruleLCURLY
             {
              before(grammarAccess.getObjectAccess().getLCURLYParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleLCURLY_in_rule__Object__Group__0__Impl2065);
+            pushFollow(FOLLOW_ruleLCURLY_in_rule__Object__Group__0__Impl2005);
             ruleLCURLY();
 
             state._fsp--;
@@ -2739,21 +2671,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1021:1: rule__Object__Group__1 : rule__Object__Group__1__Impl rule__Object__Group__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:993:1: rule__Object__Group__1 : rule__Object__Group__1__Impl rule__Object__Group__2 ;
     public final void rule__Object__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1025:1: ( rule__Object__Group__1__Impl rule__Object__Group__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1026:2: rule__Object__Group__1__Impl rule__Object__Group__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:997:1: ( rule__Object__Group__1__Impl rule__Object__Group__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:998:2: rule__Object__Group__1__Impl rule__Object__Group__2
             {
-            pushFollow(FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__12094);
+            pushFollow(FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__12034);
             rule__Object__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__2_in_rule__Object__Group__12097);
+            pushFollow(FOLLOW_rule__Object__Group__2_in_rule__Object__Group__12037);
             rule__Object__Group__2();
 
             state._fsp--;
@@ -2777,23 +2709,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1033:1: rule__Object__Group__1__Impl : ( ( rule__Object__PairsAssignment_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1005:1: rule__Object__Group__1__Impl : ( ( rule__Object__PairsAssignment_1 ) ) ;
     public final void rule__Object__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1037:1: ( ( ( rule__Object__PairsAssignment_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1038:1: ( ( rule__Object__PairsAssignment_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1009:1: ( ( ( rule__Object__PairsAssignment_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1010:1: ( ( rule__Object__PairsAssignment_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1038:1: ( ( rule__Object__PairsAssignment_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1039:1: ( rule__Object__PairsAssignment_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1010:1: ( ( rule__Object__PairsAssignment_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1011:1: ( rule__Object__PairsAssignment_1 )
             {
              before(grammarAccess.getObjectAccess().getPairsAssignment_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1040:1: ( rule__Object__PairsAssignment_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1040:2: rule__Object__PairsAssignment_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1012:1: ( rule__Object__PairsAssignment_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1012:2: rule__Object__PairsAssignment_1
             {
-            pushFollow(FOLLOW_rule__Object__PairsAssignment_1_in_rule__Object__Group__1__Impl2124);
+            pushFollow(FOLLOW_rule__Object__PairsAssignment_1_in_rule__Object__Group__1__Impl2064);
             rule__Object__PairsAssignment_1();
 
             state._fsp--;
@@ -2824,21 +2756,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1050:1: rule__Object__Group__2 : rule__Object__Group__2__Impl rule__Object__Group__3 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1022:1: rule__Object__Group__2 : rule__Object__Group__2__Impl rule__Object__Group__3 ;
     public final void rule__Object__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1054:1: ( rule__Object__Group__2__Impl rule__Object__Group__3 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1055:2: rule__Object__Group__2__Impl rule__Object__Group__3
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1026:1: ( rule__Object__Group__2__Impl rule__Object__Group__3 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1027:2: rule__Object__Group__2__Impl rule__Object__Group__3
             {
-            pushFollow(FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__22154);
+            pushFollow(FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__22094);
             rule__Object__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__3_in_rule__Object__Group__22157);
+            pushFollow(FOLLOW_rule__Object__Group__3_in_rule__Object__Group__22097);
             rule__Object__Group__3();
 
             state._fsp--;
@@ -2862,20 +2794,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1062:1: rule__Object__Group__2__Impl : ( ( rule__Object__Group_2__0 )* ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1034:1: rule__Object__Group__2__Impl : ( ( rule__Object__Group_2__0 )* ) ;
     public final void rule__Object__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1066:1: ( ( ( rule__Object__Group_2__0 )* ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1067:1: ( ( rule__Object__Group_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1038:1: ( ( ( rule__Object__Group_2__0 )* ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1039:1: ( ( rule__Object__Group_2__0 )* )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1067:1: ( ( rule__Object__Group_2__0 )* )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1068:1: ( rule__Object__Group_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1039:1: ( ( rule__Object__Group_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1040:1: ( rule__Object__Group_2__0 )*
             {
              before(grammarAccess.getObjectAccess().getGroup_2()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1069:1: ( rule__Object__Group_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1041:1: ( rule__Object__Group_2__0 )*
             loop7:
             do {
                 int alt7=2;
@@ -2888,9 +2820,9 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1069:2: rule__Object__Group_2__0
+            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1041:2: rule__Object__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl2184);
+            	    pushFollow(FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl2124);
             	    rule__Object__Group_2__0();
 
             	    state._fsp--;
@@ -2927,16 +2859,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__3"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1079:1: rule__Object__Group__3 : rule__Object__Group__3__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1051:1: rule__Object__Group__3 : rule__Object__Group__3__Impl ;
     public final void rule__Object__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1083:1: ( rule__Object__Group__3__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1084:2: rule__Object__Group__3__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1055:1: ( rule__Object__Group__3__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1056:2: rule__Object__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__32215);
+            pushFollow(FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__32155);
             rule__Object__Group__3__Impl();
 
             state._fsp--;
@@ -2960,20 +2892,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group__3__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1090:1: rule__Object__Group__3__Impl : ( ruleRCURLY ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1062:1: rule__Object__Group__3__Impl : ( ruleRCURLY ) ;
     public final void rule__Object__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1094:1: ( ( ruleRCURLY ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1095:1: ( ruleRCURLY )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1066:1: ( ( ruleRCURLY ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1067:1: ( ruleRCURLY )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1095:1: ( ruleRCURLY )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1096:1: ruleRCURLY
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1067:1: ( ruleRCURLY )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1068:1: ruleRCURLY
             {
              before(grammarAccess.getObjectAccess().getRCURLYParserRuleCall_3()); 
-            pushFollow(FOLLOW_ruleRCURLY_in_rule__Object__Group__3__Impl2242);
+            pushFollow(FOLLOW_ruleRCURLY_in_rule__Object__Group__3__Impl2182);
             ruleRCURLY();
 
             state._fsp--;
@@ -3001,21 +2933,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_2__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1115:1: rule__Object__Group_2__0 : rule__Object__Group_2__0__Impl rule__Object__Group_2__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1087:1: rule__Object__Group_2__0 : rule__Object__Group_2__0__Impl rule__Object__Group_2__1 ;
     public final void rule__Object__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1119:1: ( rule__Object__Group_2__0__Impl rule__Object__Group_2__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1120:2: rule__Object__Group_2__0__Impl rule__Object__Group_2__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1091:1: ( rule__Object__Group_2__0__Impl rule__Object__Group_2__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1092:2: rule__Object__Group_2__0__Impl rule__Object__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__02279);
+            pushFollow(FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__02219);
             rule__Object__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__02282);
+            pushFollow(FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__02222);
             rule__Object__Group_2__1();
 
             state._fsp--;
@@ -3039,20 +2971,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_2__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1127:1: rule__Object__Group_2__0__Impl : ( ruleCOMMA ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1099:1: rule__Object__Group_2__0__Impl : ( ruleCOMMA ) ;
     public final void rule__Object__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1131:1: ( ( ruleCOMMA ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1132:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1103:1: ( ( ruleCOMMA ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1104:1: ( ruleCOMMA )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1132:1: ( ruleCOMMA )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1133:1: ruleCOMMA
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1104:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1105:1: ruleCOMMA
             {
              before(grammarAccess.getObjectAccess().getCOMMAParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleCOMMA_in_rule__Object__Group_2__0__Impl2309);
+            pushFollow(FOLLOW_ruleCOMMA_in_rule__Object__Group_2__0__Impl2249);
             ruleCOMMA();
 
             state._fsp--;
@@ -3080,16 +3012,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_2__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1144:1: rule__Object__Group_2__1 : rule__Object__Group_2__1__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1116:1: rule__Object__Group_2__1 : rule__Object__Group_2__1__Impl ;
     public final void rule__Object__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1148:1: ( rule__Object__Group_2__1__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1149:2: rule__Object__Group_2__1__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1120:1: ( rule__Object__Group_2__1__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1121:2: rule__Object__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__12338);
+            pushFollow(FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__12278);
             rule__Object__Group_2__1__Impl();
 
             state._fsp--;
@@ -3113,23 +3045,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__Group_2__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1155:1: rule__Object__Group_2__1__Impl : ( ( rule__Object__PairsAssignment_2_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1127:1: rule__Object__Group_2__1__Impl : ( ( rule__Object__PairsAssignment_2_1 ) ) ;
     public final void rule__Object__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1159:1: ( ( ( rule__Object__PairsAssignment_2_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1160:1: ( ( rule__Object__PairsAssignment_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1131:1: ( ( ( rule__Object__PairsAssignment_2_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1132:1: ( ( rule__Object__PairsAssignment_2_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1160:1: ( ( rule__Object__PairsAssignment_2_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1161:1: ( rule__Object__PairsAssignment_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1132:1: ( ( rule__Object__PairsAssignment_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1133:1: ( rule__Object__PairsAssignment_2_1 )
             {
              before(grammarAccess.getObjectAccess().getPairsAssignment_2_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1162:1: ( rule__Object__PairsAssignment_2_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1162:2: rule__Object__PairsAssignment_2_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1134:1: ( rule__Object__PairsAssignment_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1134:2: rule__Object__PairsAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__Object__PairsAssignment_2_1_in_rule__Object__Group_2__1__Impl2365);
+            pushFollow(FOLLOW_rule__Object__PairsAssignment_2_1_in_rule__Object__Group_2__1__Impl2305);
             rule__Object__PairsAssignment_2_1();
 
             state._fsp--;
@@ -3160,21 +3092,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1176:1: rule__Pair__Group__0 : rule__Pair__Group__0__Impl rule__Pair__Group__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1148:1: rule__Pair__Group__0 : rule__Pair__Group__0__Impl rule__Pair__Group__1 ;
     public final void rule__Pair__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1180:1: ( rule__Pair__Group__0__Impl rule__Pair__Group__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1181:2: rule__Pair__Group__0__Impl rule__Pair__Group__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1152:1: ( rule__Pair__Group__0__Impl rule__Pair__Group__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1153:2: rule__Pair__Group__0__Impl rule__Pair__Group__1
             {
-            pushFollow(FOLLOW_rule__Pair__Group__0__Impl_in_rule__Pair__Group__02399);
+            pushFollow(FOLLOW_rule__Pair__Group__0__Impl_in_rule__Pair__Group__02339);
             rule__Pair__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Pair__Group__1_in_rule__Pair__Group__02402);
+            pushFollow(FOLLOW_rule__Pair__Group__1_in_rule__Pair__Group__02342);
             rule__Pair__Group__1();
 
             state._fsp--;
@@ -3198,25 +3130,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1188:1: rule__Pair__Group__0__Impl : ( ruleQUOTES ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1160:1: rule__Pair__Group__0__Impl : ( ( rule__Pair__NameAssignment_0 ) ) ;
     public final void rule__Pair__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1192:1: ( ( ruleQUOTES ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1193:1: ( ruleQUOTES )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1164:1: ( ( ( rule__Pair__NameAssignment_0 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1165:1: ( ( rule__Pair__NameAssignment_0 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1193:1: ( ruleQUOTES )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1194:1: ruleQUOTES
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1165:1: ( ( rule__Pair__NameAssignment_0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1166:1: ( rule__Pair__NameAssignment_0 )
             {
-             before(grammarAccess.getPairAccess().getQUOTESParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleQUOTES_in_rule__Pair__Group__0__Impl2429);
-            ruleQUOTES();
+             before(grammarAccess.getPairAccess().getNameAssignment_0()); 
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1167:1: ( rule__Pair__NameAssignment_0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1167:2: rule__Pair__NameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Pair__NameAssignment_0_in_rule__Pair__Group__0__Impl2369);
+            rule__Pair__NameAssignment_0();
 
             state._fsp--;
 
-             after(grammarAccess.getPairAccess().getQUOTESParserRuleCall_0()); 
+
+            }
+
+             after(grammarAccess.getPairAccess().getNameAssignment_0()); 
 
             }
 
@@ -3239,21 +3177,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1205:1: rule__Pair__Group__1 : rule__Pair__Group__1__Impl rule__Pair__Group__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1177:1: rule__Pair__Group__1 : rule__Pair__Group__1__Impl rule__Pair__Group__2 ;
     public final void rule__Pair__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1209:1: ( rule__Pair__Group__1__Impl rule__Pair__Group__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1210:2: rule__Pair__Group__1__Impl rule__Pair__Group__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1181:1: ( rule__Pair__Group__1__Impl rule__Pair__Group__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1182:2: rule__Pair__Group__1__Impl rule__Pair__Group__2
             {
-            pushFollow(FOLLOW_rule__Pair__Group__1__Impl_in_rule__Pair__Group__12458);
+            pushFollow(FOLLOW_rule__Pair__Group__1__Impl_in_rule__Pair__Group__12399);
             rule__Pair__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Pair__Group__2_in_rule__Pair__Group__12461);
+            pushFollow(FOLLOW_rule__Pair__Group__2_in_rule__Pair__Group__12402);
             rule__Pair__Group__2();
 
             state._fsp--;
@@ -3277,31 +3215,25 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1217:1: rule__Pair__Group__1__Impl : ( ( rule__Pair__NameAssignment_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1189:1: rule__Pair__Group__1__Impl : ( ruleCOLON ) ;
     public final void rule__Pair__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1221:1: ( ( ( rule__Pair__NameAssignment_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1222:1: ( ( rule__Pair__NameAssignment_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1193:1: ( ( ruleCOLON ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1194:1: ( ruleCOLON )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1222:1: ( ( rule__Pair__NameAssignment_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1223:1: ( rule__Pair__NameAssignment_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1194:1: ( ruleCOLON )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1195:1: ruleCOLON
             {
-             before(grammarAccess.getPairAccess().getNameAssignment_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1224:1: ( rule__Pair__NameAssignment_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1224:2: rule__Pair__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Pair__NameAssignment_1_in_rule__Pair__Group__1__Impl2488);
-            rule__Pair__NameAssignment_1();
+             before(grammarAccess.getPairAccess().getCOLONParserRuleCall_1()); 
+            pushFollow(FOLLOW_ruleCOLON_in_rule__Pair__Group__1__Impl2429);
+            ruleCOLON();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getPairAccess().getNameAssignment_1()); 
+             after(grammarAccess.getPairAccess().getCOLONParserRuleCall_1()); 
 
             }
 
@@ -3324,22 +3256,17 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1234:1: rule__Pair__Group__2 : rule__Pair__Group__2__Impl rule__Pair__Group__3 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1206:1: rule__Pair__Group__2 : rule__Pair__Group__2__Impl ;
     public final void rule__Pair__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1238:1: ( rule__Pair__Group__2__Impl rule__Pair__Group__3 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1239:2: rule__Pair__Group__2__Impl rule__Pair__Group__3
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1210:1: ( rule__Pair__Group__2__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1211:2: rule__Pair__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Pair__Group__2__Impl_in_rule__Pair__Group__22518);
+            pushFollow(FOLLOW_rule__Pair__Group__2__Impl_in_rule__Pair__Group__22458);
             rule__Pair__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Pair__Group__3_in_rule__Pair__Group__22521);
-            rule__Pair__Group__3();
 
             state._fsp--;
 
@@ -3362,25 +3289,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Pair__Group__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1246:1: rule__Pair__Group__2__Impl : ( ruleQUOTES ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1217:1: rule__Pair__Group__2__Impl : ( ( rule__Pair__ValueAssignment_2 ) ) ;
     public final void rule__Pair__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1250:1: ( ( ruleQUOTES ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1251:1: ( ruleQUOTES )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1221:1: ( ( ( rule__Pair__ValueAssignment_2 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1222:1: ( ( rule__Pair__ValueAssignment_2 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1251:1: ( ruleQUOTES )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1252:1: ruleQUOTES
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1222:1: ( ( rule__Pair__ValueAssignment_2 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1223:1: ( rule__Pair__ValueAssignment_2 )
             {
-             before(grammarAccess.getPairAccess().getQUOTESParserRuleCall_2()); 
-            pushFollow(FOLLOW_ruleQUOTES_in_rule__Pair__Group__2__Impl2548);
-            ruleQUOTES();
+             before(grammarAccess.getPairAccess().getValueAssignment_2()); 
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1224:1: ( rule__Pair__ValueAssignment_2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1224:2: rule__Pair__ValueAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Pair__ValueAssignment_2_in_rule__Pair__Group__2__Impl2485);
+            rule__Pair__ValueAssignment_2();
 
             state._fsp--;
 
-             after(grammarAccess.getPairAccess().getQUOTESParserRuleCall_2()); 
+
+            }
+
+             after(grammarAccess.getPairAccess().getValueAssignment_2()); 
 
             }
 
@@ -3402,339 +3335,22 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Pair__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Pair__Group__3"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1263:1: rule__Pair__Group__3 : rule__Pair__Group__3__Impl rule__Pair__Group__4 ;
-    public final void rule__Pair__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1267:1: ( rule__Pair__Group__3__Impl rule__Pair__Group__4 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1268:2: rule__Pair__Group__3__Impl rule__Pair__Group__4
-            {
-            pushFollow(FOLLOW_rule__Pair__Group__3__Impl_in_rule__Pair__Group__32577);
-            rule__Pair__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Pair__Group__4_in_rule__Pair__Group__32580);
-            rule__Pair__Group__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__3"
-
-
-    // $ANTLR start "rule__Pair__Group__3__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1275:1: rule__Pair__Group__3__Impl : ( ruleCOLON ) ;
-    public final void rule__Pair__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1279:1: ( ( ruleCOLON ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1280:1: ( ruleCOLON )
-            {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1280:1: ( ruleCOLON )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1281:1: ruleCOLON
-            {
-             before(grammarAccess.getPairAccess().getCOLONParserRuleCall_3()); 
-            pushFollow(FOLLOW_ruleCOLON_in_rule__Pair__Group__3__Impl2607);
-            ruleCOLON();
-
-            state._fsp--;
-
-             after(grammarAccess.getPairAccess().getCOLONParserRuleCall_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__3__Impl"
-
-
-    // $ANTLR start "rule__Pair__Group__4"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1292:1: rule__Pair__Group__4 : rule__Pair__Group__4__Impl rule__Pair__Group__5 ;
-    public final void rule__Pair__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1296:1: ( rule__Pair__Group__4__Impl rule__Pair__Group__5 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1297:2: rule__Pair__Group__4__Impl rule__Pair__Group__5
-            {
-            pushFollow(FOLLOW_rule__Pair__Group__4__Impl_in_rule__Pair__Group__42636);
-            rule__Pair__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Pair__Group__5_in_rule__Pair__Group__42639);
-            rule__Pair__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__4"
-
-
-    // $ANTLR start "rule__Pair__Group__4__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1304:1: rule__Pair__Group__4__Impl : ( ruleQUOTES ) ;
-    public final void rule__Pair__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1308:1: ( ( ruleQUOTES ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1309:1: ( ruleQUOTES )
-            {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1309:1: ( ruleQUOTES )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1310:1: ruleQUOTES
-            {
-             before(grammarAccess.getPairAccess().getQUOTESParserRuleCall_4()); 
-            pushFollow(FOLLOW_ruleQUOTES_in_rule__Pair__Group__4__Impl2666);
-            ruleQUOTES();
-
-            state._fsp--;
-
-             after(grammarAccess.getPairAccess().getQUOTESParserRuleCall_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__4__Impl"
-
-
-    // $ANTLR start "rule__Pair__Group__5"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1321:1: rule__Pair__Group__5 : rule__Pair__Group__5__Impl rule__Pair__Group__6 ;
-    public final void rule__Pair__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1325:1: ( rule__Pair__Group__5__Impl rule__Pair__Group__6 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1326:2: rule__Pair__Group__5__Impl rule__Pair__Group__6
-            {
-            pushFollow(FOLLOW_rule__Pair__Group__5__Impl_in_rule__Pair__Group__52695);
-            rule__Pair__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Pair__Group__6_in_rule__Pair__Group__52698);
-            rule__Pair__Group__6();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__5"
-
-
-    // $ANTLR start "rule__Pair__Group__5__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1333:1: rule__Pair__Group__5__Impl : ( ( rule__Pair__ValueAssignment_5 ) ) ;
-    public final void rule__Pair__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1337:1: ( ( ( rule__Pair__ValueAssignment_5 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1338:1: ( ( rule__Pair__ValueAssignment_5 ) )
-            {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1338:1: ( ( rule__Pair__ValueAssignment_5 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1339:1: ( rule__Pair__ValueAssignment_5 )
-            {
-             before(grammarAccess.getPairAccess().getValueAssignment_5()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1340:1: ( rule__Pair__ValueAssignment_5 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1340:2: rule__Pair__ValueAssignment_5
-            {
-            pushFollow(FOLLOW_rule__Pair__ValueAssignment_5_in_rule__Pair__Group__5__Impl2725);
-            rule__Pair__ValueAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPairAccess().getValueAssignment_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__5__Impl"
-
-
-    // $ANTLR start "rule__Pair__Group__6"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1350:1: rule__Pair__Group__6 : rule__Pair__Group__6__Impl ;
-    public final void rule__Pair__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1354:1: ( rule__Pair__Group__6__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1355:2: rule__Pair__Group__6__Impl
-            {
-            pushFollow(FOLLOW_rule__Pair__Group__6__Impl_in_rule__Pair__Group__62755);
-            rule__Pair__Group__6__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__6"
-
-
-    // $ANTLR start "rule__Pair__Group__6__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1361:1: rule__Pair__Group__6__Impl : ( ruleQUOTES ) ;
-    public final void rule__Pair__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1365:1: ( ( ruleQUOTES ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1366:1: ( ruleQUOTES )
-            {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1366:1: ( ruleQUOTES )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1367:1: ruleQUOTES
-            {
-             before(grammarAccess.getPairAccess().getQUOTESParserRuleCall_6()); 
-            pushFollow(FOLLOW_ruleQUOTES_in_rule__Pair__Group__6__Impl2782);
-            ruleQUOTES();
-
-            state._fsp--;
-
-             after(grammarAccess.getPairAccess().getQUOTESParserRuleCall_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Pair__Group__6__Impl"
-
-
     // $ANTLR start "rule__ArrayValue__Group__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1392:1: rule__ArrayValue__Group__0 : rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1240:1: rule__ArrayValue__Group__0 : rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1 ;
     public final void rule__ArrayValue__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1396:1: ( rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1397:2: rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1244:1: ( rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1245:2: rule__ArrayValue__Group__0__Impl rule__ArrayValue__Group__1
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group__0__Impl_in_rule__ArrayValue__Group__02825);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__0__Impl_in_rule__ArrayValue__Group__02521);
             rule__ArrayValue__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArrayValue__Group__1_in_rule__ArrayValue__Group__02828);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__1_in_rule__ArrayValue__Group__02524);
             rule__ArrayValue__Group__1();
 
             state._fsp--;
@@ -3758,20 +3374,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1404:1: rule__ArrayValue__Group__0__Impl : ( ruleLSQUARE ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1252:1: rule__ArrayValue__Group__0__Impl : ( ruleLSQUARE ) ;
     public final void rule__ArrayValue__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1408:1: ( ( ruleLSQUARE ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1409:1: ( ruleLSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1256:1: ( ( ruleLSQUARE ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1257:1: ( ruleLSQUARE )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1409:1: ( ruleLSQUARE )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1410:1: ruleLSQUARE
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1257:1: ( ruleLSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1258:1: ruleLSQUARE
             {
              before(grammarAccess.getArrayValueAccess().getLSQUAREParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleLSQUARE_in_rule__ArrayValue__Group__0__Impl2855);
+            pushFollow(FOLLOW_ruleLSQUARE_in_rule__ArrayValue__Group__0__Impl2551);
             ruleLSQUARE();
 
             state._fsp--;
@@ -3799,21 +3415,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1421:1: rule__ArrayValue__Group__1 : rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1269:1: rule__ArrayValue__Group__1 : rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2 ;
     public final void rule__ArrayValue__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1425:1: ( rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1426:2: rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1273:1: ( rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1274:2: rule__ArrayValue__Group__1__Impl rule__ArrayValue__Group__2
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group__1__Impl_in_rule__ArrayValue__Group__12884);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__1__Impl_in_rule__ArrayValue__Group__12580);
             rule__ArrayValue__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArrayValue__Group__2_in_rule__ArrayValue__Group__12887);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__2_in_rule__ArrayValue__Group__12583);
             rule__ArrayValue__Group__2();
 
             state._fsp--;
@@ -3837,23 +3453,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1433:1: rule__ArrayValue__Group__1__Impl : ( ( rule__ArrayValue__ValuesAssignment_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1281:1: rule__ArrayValue__Group__1__Impl : ( ( rule__ArrayValue__ValuesAssignment_1 ) ) ;
     public final void rule__ArrayValue__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1437:1: ( ( ( rule__ArrayValue__ValuesAssignment_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1438:1: ( ( rule__ArrayValue__ValuesAssignment_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1285:1: ( ( ( rule__ArrayValue__ValuesAssignment_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1286:1: ( ( rule__ArrayValue__ValuesAssignment_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1438:1: ( ( rule__ArrayValue__ValuesAssignment_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1439:1: ( rule__ArrayValue__ValuesAssignment_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1286:1: ( ( rule__ArrayValue__ValuesAssignment_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1287:1: ( rule__ArrayValue__ValuesAssignment_1 )
             {
              before(grammarAccess.getArrayValueAccess().getValuesAssignment_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1440:1: ( rule__ArrayValue__ValuesAssignment_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1440:2: rule__ArrayValue__ValuesAssignment_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1288:1: ( rule__ArrayValue__ValuesAssignment_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1288:2: rule__ArrayValue__ValuesAssignment_1
             {
-            pushFollow(FOLLOW_rule__ArrayValue__ValuesAssignment_1_in_rule__ArrayValue__Group__1__Impl2914);
+            pushFollow(FOLLOW_rule__ArrayValue__ValuesAssignment_1_in_rule__ArrayValue__Group__1__Impl2610);
             rule__ArrayValue__ValuesAssignment_1();
 
             state._fsp--;
@@ -3884,21 +3500,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1450:1: rule__ArrayValue__Group__2 : rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1298:1: rule__ArrayValue__Group__2 : rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3 ;
     public final void rule__ArrayValue__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1454:1: ( rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1455:2: rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1302:1: ( rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1303:2: rule__ArrayValue__Group__2__Impl rule__ArrayValue__Group__3
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group__2__Impl_in_rule__ArrayValue__Group__22944);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__2__Impl_in_rule__ArrayValue__Group__22640);
             rule__ArrayValue__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArrayValue__Group__3_in_rule__ArrayValue__Group__22947);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__3_in_rule__ArrayValue__Group__22643);
             rule__ArrayValue__Group__3();
 
             state._fsp--;
@@ -3922,20 +3538,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1462:1: rule__ArrayValue__Group__2__Impl : ( ( rule__ArrayValue__Group_2__0 )* ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1310:1: rule__ArrayValue__Group__2__Impl : ( ( rule__ArrayValue__Group_2__0 )* ) ;
     public final void rule__ArrayValue__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1466:1: ( ( ( rule__ArrayValue__Group_2__0 )* ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1467:1: ( ( rule__ArrayValue__Group_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1314:1: ( ( ( rule__ArrayValue__Group_2__0 )* ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1315:1: ( ( rule__ArrayValue__Group_2__0 )* )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1467:1: ( ( rule__ArrayValue__Group_2__0 )* )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1468:1: ( rule__ArrayValue__Group_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1315:1: ( ( rule__ArrayValue__Group_2__0 )* )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1316:1: ( rule__ArrayValue__Group_2__0 )*
             {
              before(grammarAccess.getArrayValueAccess().getGroup_2()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1469:1: ( rule__ArrayValue__Group_2__0 )*
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1317:1: ( rule__ArrayValue__Group_2__0 )*
             loop8:
             do {
                 int alt8=2;
@@ -3948,9 +3564,9 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1469:2: rule__ArrayValue__Group_2__0
+            	    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1317:2: rule__ArrayValue__Group_2__0
             	    {
-            	    pushFollow(FOLLOW_rule__ArrayValue__Group_2__0_in_rule__ArrayValue__Group__2__Impl2974);
+            	    pushFollow(FOLLOW_rule__ArrayValue__Group_2__0_in_rule__ArrayValue__Group__2__Impl2670);
             	    rule__ArrayValue__Group_2__0();
 
             	    state._fsp--;
@@ -3987,16 +3603,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__3"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1479:1: rule__ArrayValue__Group__3 : rule__ArrayValue__Group__3__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1327:1: rule__ArrayValue__Group__3 : rule__ArrayValue__Group__3__Impl ;
     public final void rule__ArrayValue__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1483:1: ( rule__ArrayValue__Group__3__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1484:2: rule__ArrayValue__Group__3__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1331:1: ( rule__ArrayValue__Group__3__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1332:2: rule__ArrayValue__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group__3__Impl_in_rule__ArrayValue__Group__33005);
+            pushFollow(FOLLOW_rule__ArrayValue__Group__3__Impl_in_rule__ArrayValue__Group__32701);
             rule__ArrayValue__Group__3__Impl();
 
             state._fsp--;
@@ -4020,20 +3636,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group__3__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1490:1: rule__ArrayValue__Group__3__Impl : ( ruleRSQUARE ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1338:1: rule__ArrayValue__Group__3__Impl : ( ruleRSQUARE ) ;
     public final void rule__ArrayValue__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1494:1: ( ( ruleRSQUARE ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1495:1: ( ruleRSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1342:1: ( ( ruleRSQUARE ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1343:1: ( ruleRSQUARE )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1495:1: ( ruleRSQUARE )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1496:1: ruleRSQUARE
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1343:1: ( ruleRSQUARE )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1344:1: ruleRSQUARE
             {
              before(grammarAccess.getArrayValueAccess().getRSQUAREParserRuleCall_3()); 
-            pushFollow(FOLLOW_ruleRSQUARE_in_rule__ArrayValue__Group__3__Impl3032);
+            pushFollow(FOLLOW_ruleRSQUARE_in_rule__ArrayValue__Group__3__Impl2728);
             ruleRSQUARE();
 
             state._fsp--;
@@ -4061,21 +3677,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group_2__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1515:1: rule__ArrayValue__Group_2__0 : rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1363:1: rule__ArrayValue__Group_2__0 : rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1 ;
     public final void rule__ArrayValue__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1519:1: ( rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1520:2: rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1367:1: ( rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1368:2: rule__ArrayValue__Group_2__0__Impl rule__ArrayValue__Group_2__1
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group_2__0__Impl_in_rule__ArrayValue__Group_2__03069);
+            pushFollow(FOLLOW_rule__ArrayValue__Group_2__0__Impl_in_rule__ArrayValue__Group_2__02765);
             rule__ArrayValue__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ArrayValue__Group_2__1_in_rule__ArrayValue__Group_2__03072);
+            pushFollow(FOLLOW_rule__ArrayValue__Group_2__1_in_rule__ArrayValue__Group_2__02768);
             rule__ArrayValue__Group_2__1();
 
             state._fsp--;
@@ -4099,20 +3715,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group_2__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1527:1: rule__ArrayValue__Group_2__0__Impl : ( ruleCOMMA ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1375:1: rule__ArrayValue__Group_2__0__Impl : ( ruleCOMMA ) ;
     public final void rule__ArrayValue__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1531:1: ( ( ruleCOMMA ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1532:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1379:1: ( ( ruleCOMMA ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1380:1: ( ruleCOMMA )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1532:1: ( ruleCOMMA )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1533:1: ruleCOMMA
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1380:1: ( ruleCOMMA )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1381:1: ruleCOMMA
             {
              before(grammarAccess.getArrayValueAccess().getCOMMAParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleCOMMA_in_rule__ArrayValue__Group_2__0__Impl3099);
+            pushFollow(FOLLOW_ruleCOMMA_in_rule__ArrayValue__Group_2__0__Impl2795);
             ruleCOMMA();
 
             state._fsp--;
@@ -4140,16 +3756,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group_2__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1544:1: rule__ArrayValue__Group_2__1 : rule__ArrayValue__Group_2__1__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1392:1: rule__ArrayValue__Group_2__1 : rule__ArrayValue__Group_2__1__Impl ;
     public final void rule__ArrayValue__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1548:1: ( rule__ArrayValue__Group_2__1__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1549:2: rule__ArrayValue__Group_2__1__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1396:1: ( rule__ArrayValue__Group_2__1__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1397:2: rule__ArrayValue__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ArrayValue__Group_2__1__Impl_in_rule__ArrayValue__Group_2__13128);
+            pushFollow(FOLLOW_rule__ArrayValue__Group_2__1__Impl_in_rule__ArrayValue__Group_2__12824);
             rule__ArrayValue__Group_2__1__Impl();
 
             state._fsp--;
@@ -4173,23 +3789,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__Group_2__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1555:1: rule__ArrayValue__Group_2__1__Impl : ( ( rule__ArrayValue__ValuesAssignment_2_1 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1403:1: rule__ArrayValue__Group_2__1__Impl : ( ( rule__ArrayValue__ValuesAssignment_2_1 ) ) ;
     public final void rule__ArrayValue__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1559:1: ( ( ( rule__ArrayValue__ValuesAssignment_2_1 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1560:1: ( ( rule__ArrayValue__ValuesAssignment_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1407:1: ( ( ( rule__ArrayValue__ValuesAssignment_2_1 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1408:1: ( ( rule__ArrayValue__ValuesAssignment_2_1 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1560:1: ( ( rule__ArrayValue__ValuesAssignment_2_1 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1561:1: ( rule__ArrayValue__ValuesAssignment_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1408:1: ( ( rule__ArrayValue__ValuesAssignment_2_1 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1409:1: ( rule__ArrayValue__ValuesAssignment_2_1 )
             {
              before(grammarAccess.getArrayValueAccess().getValuesAssignment_2_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1562:1: ( rule__ArrayValue__ValuesAssignment_2_1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1562:2: rule__ArrayValue__ValuesAssignment_2_1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1410:1: ( rule__ArrayValue__ValuesAssignment_2_1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1410:2: rule__ArrayValue__ValuesAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__ArrayValue__ValuesAssignment_2_1_in_rule__ArrayValue__Group_2__1__Impl3155);
+            pushFollow(FOLLOW_rule__ArrayValue__ValuesAssignment_2_1_in_rule__ArrayValue__Group_2__1__Impl2851);
             rule__ArrayValue__ValuesAssignment_2_1();
 
             state._fsp--;
@@ -4220,21 +3836,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EInt__Group__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1576:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1424:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
     public final void rule__EInt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1580:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1581:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1428:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1429:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
             {
-            pushFollow(FOLLOW_rule__EInt__Group__0__Impl_in_rule__EInt__Group__03189);
+            pushFollow(FOLLOW_rule__EInt__Group__0__Impl_in_rule__EInt__Group__02885);
             rule__EInt__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EInt__Group__1_in_rule__EInt__Group__03192);
+            pushFollow(FOLLOW_rule__EInt__Group__1_in_rule__EInt__Group__02888);
             rule__EInt__Group__1();
 
             state._fsp--;
@@ -4258,31 +3874,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EInt__Group__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1588:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1436:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EInt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1592:1: ( ( ( '-' )? ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1593:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1440:1: ( ( ( '-' )? ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1441:1: ( ( '-' )? )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1593:1: ( ( '-' )? )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1594:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1441:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1442:1: ( '-' )?
             {
              before(grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1595:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1443:1: ( '-' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==22) ) {
+            if ( (LA9_0==21) ) {
                 alt9=1;
             }
             switch (alt9) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1596:2: '-'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1444:2: '-'
                     {
-                    match(input,22,FOLLOW_22_in_rule__EInt__Group__0__Impl3221); 
+                    match(input,21,FOLLOW_21_in_rule__EInt__Group__0__Impl2917); 
 
                     }
                     break;
@@ -4312,16 +3928,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EInt__Group__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1607:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1455:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
     public final void rule__EInt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1611:1: ( rule__EInt__Group__1__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1612:2: rule__EInt__Group__1__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1459:1: ( rule__EInt__Group__1__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1460:2: rule__EInt__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__EInt__Group__1__Impl_in_rule__EInt__Group__13254);
+            pushFollow(FOLLOW_rule__EInt__Group__1__Impl_in_rule__EInt__Group__12950);
             rule__EInt__Group__1__Impl();
 
             state._fsp--;
@@ -4345,20 +3961,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EInt__Group__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1618:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1466:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
     public final void rule__EInt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1622:1: ( ( RULE_INT ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1623:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1470:1: ( ( RULE_INT ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1471:1: ( RULE_INT )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1623:1: ( RULE_INT )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1624:1: RULE_INT
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1471:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1472:1: RULE_INT
             {
              before(grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EInt__Group__1__Impl3281); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EInt__Group__1__Impl2977); 
              after(grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
 
             }
@@ -4382,21 +3998,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1639:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1487:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1643:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1644:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1491:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1492:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__03314);
+            pushFollow(FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__03010);
             rule__EDouble__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__03317);
+            pushFollow(FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__03013);
             rule__EDouble__Group__1();
 
             state._fsp--;
@@ -4420,31 +4036,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1651:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1499:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1655:1: ( ( ( '-' )? ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1656:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1503:1: ( ( ( '-' )? ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1504:1: ( ( '-' )? )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1656:1: ( ( '-' )? )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1657:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1504:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1505:1: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1658:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1506:1: ( '-' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==22) ) {
+            if ( (LA10_0==21) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1659:2: '-'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1507:2: '-'
                     {
-                    match(input,22,FOLLOW_22_in_rule__EDouble__Group__0__Impl3346); 
+                    match(input,21,FOLLOW_21_in_rule__EDouble__Group__0__Impl3042); 
 
                     }
                     break;
@@ -4474,21 +4090,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1670:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1518:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1674:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1675:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1522:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1523:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__13379);
+            pushFollow(FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__13075);
             rule__EDouble__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__13382);
+            pushFollow(FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__13078);
             rule__EDouble__Group__2();
 
             state._fsp--;
@@ -4512,20 +4128,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1682:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1530:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1686:1: ( ( ( RULE_INT )? ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1687:1: ( ( RULE_INT )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1534:1: ( ( ( RULE_INT )? ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1535:1: ( ( RULE_INT )? )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1687:1: ( ( RULE_INT )? )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1688:1: ( RULE_INT )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1535:1: ( ( RULE_INT )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1536:1: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1689:1: ( RULE_INT )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1537:1: ( RULE_INT )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -4534,9 +4150,9 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1689:3: RULE_INT
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1537:3: RULE_INT
                     {
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl3410); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl3106); 
 
                     }
                     break;
@@ -4566,21 +4182,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1699:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1547:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1703:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1704:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1551:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1552:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__23441);
+            pushFollow(FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__23137);
             rule__EDouble__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__23444);
+            pushFollow(FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__23140);
             rule__EDouble__Group__3();
 
             state._fsp--;
@@ -4604,20 +4220,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1711:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1559:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1715:1: ( ( '.' ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1716:1: ( '.' )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1563:1: ( ( '.' ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1564:1: ( '.' )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1716:1: ( '.' )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1717:1: '.'
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1564:1: ( '.' )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1565:1: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__EDouble__Group__2__Impl3472); 
+            match(input,22,FOLLOW_22_in_rule__EDouble__Group__2__Impl3168); 
              after(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
 
             }
@@ -4641,21 +4257,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1730:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1578:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1734:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1735:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1582:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1583:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__33503);
+            pushFollow(FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__33199);
             rule__EDouble__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__33506);
+            pushFollow(FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__33202);
             rule__EDouble__Group__4();
 
             state._fsp--;
@@ -4679,20 +4295,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1742:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1590:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1746:1: ( ( RULE_INT ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1747:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1594:1: ( ( RULE_INT ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1595:1: ( RULE_INT )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1747:1: ( RULE_INT )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1748:1: RULE_INT
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1595:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1596:1: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl3533); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl3229); 
              after(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
 
             }
@@ -4716,16 +4332,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1759:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1607:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
     public final void rule__EDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1763:1: ( rule__EDouble__Group__4__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1764:2: rule__EDouble__Group__4__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1611:1: ( rule__EDouble__Group__4__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1612:2: rule__EDouble__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__43562);
+            pushFollow(FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__43258);
             rule__EDouble__Group__4__Impl();
 
             state._fsp--;
@@ -4749,31 +4365,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1770:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1618:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
     public final void rule__EDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1774:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1775:1: ( ( rule__EDouble__Group_4__0 )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1622:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1623:1: ( ( rule__EDouble__Group_4__0 )? )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1775:1: ( ( rule__EDouble__Group_4__0 )? )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1776:1: ( rule__EDouble__Group_4__0 )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1623:1: ( ( rule__EDouble__Group_4__0 )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1624:1: ( rule__EDouble__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_4()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1777:1: ( rule__EDouble__Group_4__0 )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1625:1: ( rule__EDouble__Group_4__0 )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( ((LA12_0>=20 && LA12_0<=21)) ) {
+            if ( ((LA12_0>=19 && LA12_0<=20)) ) {
                 alt12=1;
             }
             switch (alt12) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1777:2: rule__EDouble__Group_4__0
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1625:2: rule__EDouble__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl3589);
+                    pushFollow(FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl3285);
                     rule__EDouble__Group_4__0();
 
                     state._fsp--;
@@ -4807,21 +4423,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1797:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1645:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
     public final void rule__EDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1801:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1802:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1649:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1650:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
             {
-            pushFollow(FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__03630);
+            pushFollow(FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__03326);
             rule__EDouble__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__03633);
+            pushFollow(FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__03329);
             rule__EDouble__Group_4__1();
 
             state._fsp--;
@@ -4845,23 +4461,23 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1809:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1657:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
     public final void rule__EDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1813:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1814:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1661:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1662:1: ( ( rule__EDouble__Alternatives_4_0 ) )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1814:1: ( ( rule__EDouble__Alternatives_4_0 ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1815:1: ( rule__EDouble__Alternatives_4_0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1662:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1663:1: ( rule__EDouble__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_4_0()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1816:1: ( rule__EDouble__Alternatives_4_0 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1816:2: rule__EDouble__Alternatives_4_0
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1664:1: ( rule__EDouble__Alternatives_4_0 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1664:2: rule__EDouble__Alternatives_4_0
             {
-            pushFollow(FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl3660);
+            pushFollow(FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl3356);
             rule__EDouble__Alternatives_4_0();
 
             state._fsp--;
@@ -4892,21 +4508,21 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1826:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1674:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
     public final void rule__EDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1830:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1831:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1678:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1679:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
             {
-            pushFollow(FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__13690);
+            pushFollow(FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__13386);
             rule__EDouble__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__13693);
+            pushFollow(FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__13389);
             rule__EDouble__Group_4__2();
 
             state._fsp--;
@@ -4930,31 +4546,31 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1838:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1686:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1842:1: ( ( ( '-' )? ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1843:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1690:1: ( ( ( '-' )? ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1691:1: ( ( '-' )? )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1843:1: ( ( '-' )? )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1844:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1691:1: ( ( '-' )? )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1692:1: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1845:1: ( '-' )?
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1693:1: ( '-' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==22) ) {
+            if ( (LA13_0==21) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1846:2: '-'
+                    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1694:2: '-'
                     {
-                    match(input,22,FOLLOW_22_in_rule__EDouble__Group_4__1__Impl3722); 
+                    match(input,21,FOLLOW_21_in_rule__EDouble__Group_4__1__Impl3418); 
 
                     }
                     break;
@@ -4984,16 +4600,16 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1857:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1705:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
     public final void rule__EDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1861:1: ( rule__EDouble__Group_4__2__Impl )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1862:2: rule__EDouble__Group_4__2__Impl
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1709:1: ( rule__EDouble__Group_4__2__Impl )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1710:2: rule__EDouble__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__23755);
+            pushFollow(FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__23451);
             rule__EDouble__Group_4__2__Impl();
 
             state._fsp--;
@@ -5017,20 +4633,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2__Impl"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1868:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1716:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1872:1: ( ( RULE_INT ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1873:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1720:1: ( ( RULE_INT ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1721:1: ( RULE_INT )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1873:1: ( RULE_INT )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1874:1: RULE_INT
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1721:1: ( RULE_INT )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1722:1: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl3782); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl3478); 
              after(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
 
             }
@@ -5054,20 +4670,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__ObjectsAssignment_0"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1892:1: rule__Document__ObjectsAssignment_0 : ( ruleObject ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1740:1: rule__Document__ObjectsAssignment_0 : ( ruleObject ) ;
     public final void rule__Document__ObjectsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1896:1: ( ( ruleObject ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1897:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1744:1: ( ( ruleObject ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1745:1: ( ruleObject )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1897:1: ( ruleObject )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1898:1: ruleObject
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1745:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1746:1: ruleObject
             {
              before(grammarAccess.getDocumentAccess().getObjectsObjectParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_03822);
+            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_03518);
             ruleObject();
 
             state._fsp--;
@@ -5095,20 +4711,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__ObjectsAssignment_1_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1907:1: rule__Document__ObjectsAssignment_1_1 : ( ruleObject ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1755:1: rule__Document__ObjectsAssignment_1_1 : ( ruleObject ) ;
     public final void rule__Document__ObjectsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1911:1: ( ( ruleObject ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1912:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1759:1: ( ( ruleObject ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1760:1: ( ruleObject )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1912:1: ( ruleObject )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1913:1: ruleObject
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1760:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1761:1: ruleObject
             {
              before(grammarAccess.getDocumentAccess().getObjectsObjectParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_13853);
+            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_13549);
             ruleObject();
 
             state._fsp--;
@@ -5136,20 +4752,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Document__ObjectsAssignment_1_2_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1922:1: rule__Document__ObjectsAssignment_1_2_1 : ( ruleObject ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1770:1: rule__Document__ObjectsAssignment_1_2_1 : ( ruleObject ) ;
     public final void rule__Document__ObjectsAssignment_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1926:1: ( ( ruleObject ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1927:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1774:1: ( ( ruleObject ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1775:1: ( ruleObject )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1927:1: ( ruleObject )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1928:1: ruleObject
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1775:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1776:1: ruleObject
             {
              before(grammarAccess.getDocumentAccess().getObjectsObjectParserRuleCall_1_2_1_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_2_13884);
+            pushFollow(FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_2_13580);
             ruleObject();
 
             state._fsp--;
@@ -5177,20 +4793,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__PairsAssignment_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1937:1: rule__Object__PairsAssignment_1 : ( rulePair ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1785:1: rule__Object__PairsAssignment_1 : ( rulePair ) ;
     public final void rule__Object__PairsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1941:1: ( ( rulePair ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1942:1: ( rulePair )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1789:1: ( ( rulePair ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1790:1: ( rulePair )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1942:1: ( rulePair )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1943:1: rulePair
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1790:1: ( rulePair )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1791:1: rulePair
             {
              before(grammarAccess.getObjectAccess().getPairsPairParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_rulePair_in_rule__Object__PairsAssignment_13915);
+            pushFollow(FOLLOW_rulePair_in_rule__Object__PairsAssignment_13611);
             rulePair();
 
             state._fsp--;
@@ -5218,20 +4834,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Object__PairsAssignment_2_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1952:1: rule__Object__PairsAssignment_2_1 : ( rulePair ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1800:1: rule__Object__PairsAssignment_2_1 : ( rulePair ) ;
     public final void rule__Object__PairsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1956:1: ( ( rulePair ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1957:1: ( rulePair )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1804:1: ( ( rulePair ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1805:1: ( rulePair )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1957:1: ( rulePair )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1958:1: rulePair
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1805:1: ( rulePair )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1806:1: rulePair
             {
              before(grammarAccess.getObjectAccess().getPairsPairParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_rulePair_in_rule__Object__PairsAssignment_2_13946);
+            pushFollow(FOLLOW_rulePair_in_rule__Object__PairsAssignment_2_13642);
             rulePair();
 
             state._fsp--;
@@ -5258,26 +4874,26 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Object__PairsAssignment_2_1"
 
 
-    // $ANTLR start "rule__Pair__NameAssignment_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1967:1: rule__Pair__NameAssignment_1 : ( ruleEString ) ;
-    public final void rule__Pair__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Pair__NameAssignment_0"
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1815:1: rule__Pair__NameAssignment_0 : ( ruleEString ) ;
+    public final void rule__Pair__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1971:1: ( ( ruleEString ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1972:1: ( ruleEString )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1819:1: ( ( ruleEString ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1820:1: ( ruleEString )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1972:1: ( ruleEString )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1973:1: ruleEString
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1820:1: ( ruleEString )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1821:1: ruleEString
             {
-             before(grammarAccess.getPairAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__Pair__NameAssignment_13977);
+             before(grammarAccess.getPairAccess().getNameEStringParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleEString_in_rule__Pair__NameAssignment_03673);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getPairAccess().getNameEStringParserRuleCall_1_0()); 
+             after(grammarAccess.getPairAccess().getNameEStringParserRuleCall_0_0()); 
 
             }
 
@@ -5296,29 +4912,29 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Pair__NameAssignment_1"
+    // $ANTLR end "rule__Pair__NameAssignment_0"
 
 
-    // $ANTLR start "rule__Pair__ValueAssignment_5"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1982:1: rule__Pair__ValueAssignment_5 : ( ruleValue ) ;
-    public final void rule__Pair__ValueAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Pair__ValueAssignment_2"
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1830:1: rule__Pair__ValueAssignment_2 : ( ruleValue ) ;
+    public final void rule__Pair__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1986:1: ( ( ruleValue ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1987:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1834:1: ( ( ruleValue ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1835:1: ( ruleValue )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1987:1: ( ruleValue )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1988:1: ruleValue
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1835:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1836:1: ruleValue
             {
-             before(grammarAccess.getPairAccess().getValueValueParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Pair__ValueAssignment_54008);
+             before(grammarAccess.getPairAccess().getValueValueParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__Pair__ValueAssignment_23704);
             ruleValue();
 
             state._fsp--;
 
-             after(grammarAccess.getPairAccess().getValueValueParserRuleCall_5_0()); 
+             after(grammarAccess.getPairAccess().getValueValueParserRuleCall_2_0()); 
 
             }
 
@@ -5337,24 +4953,24 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Pair__ValueAssignment_5"
+    // $ANTLR end "rule__Pair__ValueAssignment_2"
 
 
     // $ANTLR start "rule__StringValue__ValueAssignment"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1997:1: rule__StringValue__ValueAssignment : ( ruleEString ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1845:1: rule__StringValue__ValueAssignment : ( ruleEString ) ;
     public final void rule__StringValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2001:1: ( ( ruleEString ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2002:1: ( ruleEString )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1849:1: ( ( ruleEString ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1850:1: ( ruleEString )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2002:1: ( ruleEString )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2003:1: ruleEString
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1850:1: ( ruleEString )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1851:1: ruleEString
             {
              before(grammarAccess.getStringValueAccess().getValueEStringParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleEString_in_rule__StringValue__ValueAssignment4039);
+            pushFollow(FOLLOW_ruleEString_in_rule__StringValue__ValueAssignment3735);
             ruleEString();
 
             state._fsp--;
@@ -5382,20 +4998,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__NumberValue__ValueAssignment"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2012:1: rule__NumberValue__ValueAssignment : ( ruleEInt ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1860:1: rule__NumberValue__ValueAssignment : ( ruleEInt ) ;
     public final void rule__NumberValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2016:1: ( ( ruleEInt ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2017:1: ( ruleEInt )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1864:1: ( ( ruleEInt ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1865:1: ( ruleEInt )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2017:1: ( ruleEInt )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2018:1: ruleEInt
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1865:1: ( ruleEInt )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1866:1: ruleEInt
             {
              before(grammarAccess.getNumberValueAccess().getValueEIntParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleEInt_in_rule__NumberValue__ValueAssignment4070);
+            pushFollow(FOLLOW_ruleEInt_in_rule__NumberValue__ValueAssignment3766);
             ruleEInt();
 
             state._fsp--;
@@ -5423,20 +5039,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DecimalValue__ValueAssignment"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2027:1: rule__DecimalValue__ValueAssignment : ( ruleEDouble ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1875:1: rule__DecimalValue__ValueAssignment : ( ruleEDouble ) ;
     public final void rule__DecimalValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2031:1: ( ( ruleEDouble ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2032:1: ( ruleEDouble )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1879:1: ( ( ruleEDouble ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1880:1: ( ruleEDouble )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2032:1: ( ruleEDouble )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2033:1: ruleEDouble
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1880:1: ( ruleEDouble )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1881:1: ruleEDouble
             {
              before(grammarAccess.getDecimalValueAccess().getValueEDoubleParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleEDouble_in_rule__DecimalValue__ValueAssignment4101);
+            pushFollow(FOLLOW_ruleEDouble_in_rule__DecimalValue__ValueAssignment3797);
             ruleEDouble();
 
             state._fsp--;
@@ -5464,20 +5080,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ValueObject__ValueAssignment"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2042:1: rule__ValueObject__ValueAssignment : ( ruleObject ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1890:1: rule__ValueObject__ValueAssignment : ( ruleObject ) ;
     public final void rule__ValueObject__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2046:1: ( ( ruleObject ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2047:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1894:1: ( ( ruleObject ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1895:1: ( ruleObject )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2047:1: ( ruleObject )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2048:1: ruleObject
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1895:1: ( ruleObject )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1896:1: ruleObject
             {
              before(grammarAccess.getValueObjectAccess().getValueObjectParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__ValueObject__ValueAssignment4132);
+            pushFollow(FOLLOW_ruleObject_in_rule__ValueObject__ValueAssignment3828);
             ruleObject();
 
             state._fsp--;
@@ -5505,20 +5121,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__ValuesAssignment_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2057:1: rule__ArrayValue__ValuesAssignment_1 : ( ruleValue ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1905:1: rule__ArrayValue__ValuesAssignment_1 : ( ruleValue ) ;
     public final void rule__ArrayValue__ValuesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2061:1: ( ( ruleValue ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2062:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1909:1: ( ( ruleValue ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1910:1: ( ruleValue )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2062:1: ( ruleValue )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2063:1: ruleValue
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1910:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1911:1: ruleValue
             {
              before(grammarAccess.getArrayValueAccess().getValuesValueParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_14163);
+            pushFollow(FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_13859);
             ruleValue();
 
             state._fsp--;
@@ -5546,20 +5162,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ArrayValue__ValuesAssignment_2_1"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2072:1: rule__ArrayValue__ValuesAssignment_2_1 : ( ruleValue ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1920:1: rule__ArrayValue__ValuesAssignment_2_1 : ( ruleValue ) ;
     public final void rule__ArrayValue__ValuesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2076:1: ( ( ruleValue ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2077:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1924:1: ( ( ruleValue ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1925:1: ( ruleValue )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2077:1: ( ruleValue )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2078:1: ruleValue
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1925:1: ( ruleValue )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1926:1: ruleValue
             {
              before(grammarAccess.getArrayValueAccess().getValuesValueParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_2_14194);
+            pushFollow(FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_2_13890);
             ruleValue();
 
             state._fsp--;
@@ -5587,20 +5203,20 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BooleanValue__ValueAssignment"
-    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2087:1: rule__BooleanValue__ValueAssignment : ( ruleEBoolean ) ;
+    // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1935:1: rule__BooleanValue__ValueAssignment : ( ruleEBoolean ) ;
     public final void rule__BooleanValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2091:1: ( ( ruleEBoolean ) )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2092:1: ( ruleEBoolean )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1939:1: ( ( ruleEBoolean ) )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1940:1: ( ruleEBoolean )
             {
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2092:1: ( ruleEBoolean )
-            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:2093:1: ruleEBoolean
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1940:1: ( ruleEBoolean )
+            // ../com.uniandes.jsontosql.xtext.ui/src-gen/com/uniandes/jsontosql/xtext/ui/contentassist/antlr/internal/InternalJson.g:1941:1: ruleEBoolean
             {
              before(grammarAccess.getBooleanValueAccess().getValueEBooleanParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleEBoolean_in_rule__BooleanValue__ValueAssignment4225);
+            pushFollow(FOLLOW_ruleEBoolean_in_rule__BooleanValue__ValueAssignment3921);
             ruleEBoolean();
 
             state._fsp--;
@@ -5679,143 +5295,128 @@ public class InternalJsonParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleCOMMA_in_entryRuleCOMMA971 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCOMMA978 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_ruleCOMMA1005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQUOTES_in_entryRuleQUOTES1033 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQUOTES1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleQUOTES1067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1097 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEString1104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EString__Alternatives_in_ruleEString1130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt1157 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEInt1164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EInt__Group__0_in_ruleEInt1190 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEBoolean_in_entryRuleEBoolean1217 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEBoolean1224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EBoolean__Alternatives_in_ruleEBoolean1250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEDouble_in_entryRuleEDouble1277 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEDouble1284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__0_in_ruleEDouble1310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_0_in_rule__Document__Alternatives1346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__0_in_rule__Document__Alternatives1364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringValue_in_rule__Value__Alternatives1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumberValue_in_rule__Value__Alternatives1414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDecimalValue_in_rule__Value__Alternatives1431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArrayValue_in_rule__Value__Alternatives1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanValue_in_rule__Value__Alternatives1465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValueObject_in_rule__Value__Alternatives1482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives1531 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__EBoolean__Alternatives1564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__EBoolean__Alternatives1584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__EDouble__Alternatives_4_01619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__EDouble__Alternatives_4_01639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__0__Impl_in_rule__Document__Group_1__01671 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__1_in_rule__Document__Group_1__01674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLSQUARE_in_rule__Document__Group_1__0__Impl1701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__1__Impl_in_rule__Document__Group_1__11730 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__2_in_rule__Document__Group_1__11733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_1_1_in_rule__Document__Group_1__1__Impl1760 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__2__Impl_in_rule__Document__Group_1__21790 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__3_in_rule__Document__Group_1__21793 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1_2__0_in_rule__Document__Group_1__2__Impl1820 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1__3__Impl_in_rule__Document__Group_1__31851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRSQUARE_in_rule__Document__Group_1__3__Impl1878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1_2__0__Impl_in_rule__Document__Group_1_2__01915 = new BitSet(new long[]{0x0000000000000800L});
-    public static final BitSet FOLLOW_rule__Document__Group_1_2__1_in_rule__Document__Group_1_2__01918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCOMMA_in_rule__Document__Group_1_2__0__Impl1945 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__Group_1_2__1__Impl_in_rule__Document__Group_1_2__11974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_1_2_1_in_rule__Document__Group_1_2__1__Impl2001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__02035 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Object__Group__1_in_rule__Object__Group__02038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLCURLY_in_rule__Object__Group__0__Impl2065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__12094 = new BitSet(new long[]{0x0000000000011000L});
-    public static final BitSet FOLLOW_rule__Object__Group__2_in_rule__Object__Group__12097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__PairsAssignment_1_in_rule__Object__Group__1__Impl2124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__22154 = new BitSet(new long[]{0x0000000000011000L});
-    public static final BitSet FOLLOW_rule__Object__Group__3_in_rule__Object__Group__22157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl2184 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__32215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRCURLY_in_rule__Object__Group__3__Impl2242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__02279 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__02282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCOMMA_in_rule__Object__Group_2__0__Impl2309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__12338 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__PairsAssignment_2_1_in_rule__Object__Group_2__1__Impl2365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__0__Impl_in_rule__Pair__Group__02399 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_rule__Pair__Group__1_in_rule__Pair__Group__02402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQUOTES_in_rule__Pair__Group__0__Impl2429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__1__Impl_in_rule__Pair__Group__12458 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Pair__Group__2_in_rule__Pair__Group__12461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__NameAssignment_1_in_rule__Pair__Group__1__Impl2488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__2__Impl_in_rule__Pair__Group__22518 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Pair__Group__3_in_rule__Pair__Group__22521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQUOTES_in_rule__Pair__Group__2__Impl2548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__3__Impl_in_rule__Pair__Group__32577 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Pair__Group__4_in_rule__Pair__Group__32580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCOLON_in_rule__Pair__Group__3__Impl2607 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__4__Impl_in_rule__Pair__Group__42636 = new BitSet(new long[]{0x0000000000CC2870L});
-    public static final BitSet FOLLOW_rule__Pair__Group__5_in_rule__Pair__Group__42639 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQUOTES_in_rule__Pair__Group__4__Impl2666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__5__Impl_in_rule__Pair__Group__52695 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Pair__Group__6_in_rule__Pair__Group__52698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__ValueAssignment_5_in_rule__Pair__Group__5__Impl2725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Pair__Group__6__Impl_in_rule__Pair__Group__62755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQUOTES_in_rule__Pair__Group__6__Impl2782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__0__Impl_in_rule__ArrayValue__Group__02825 = new BitSet(new long[]{0x0000000000CC2870L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__1_in_rule__ArrayValue__Group__02828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLSQUARE_in_rule__ArrayValue__Group__0__Impl2855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__1__Impl_in_rule__ArrayValue__Group__12884 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__2_in_rule__ArrayValue__Group__12887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__ValuesAssignment_1_in_rule__ArrayValue__Group__1__Impl2914 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__2__Impl_in_rule__ArrayValue__Group__22944 = new BitSet(new long[]{0x0000000000014000L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__3_in_rule__ArrayValue__Group__22947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__0_in_rule__ArrayValue__Group__2__Impl2974 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group__3__Impl_in_rule__ArrayValue__Group__33005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRSQUARE_in_rule__ArrayValue__Group__3__Impl3032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__0__Impl_in_rule__ArrayValue__Group_2__03069 = new BitSet(new long[]{0x0000000000CC2870L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__1_in_rule__ArrayValue__Group_2__03072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCOMMA_in_rule__ArrayValue__Group_2__0__Impl3099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__1__Impl_in_rule__ArrayValue__Group_2__13128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ArrayValue__ValuesAssignment_2_1_in_rule__ArrayValue__Group_2__1__Impl3155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EInt__Group__0__Impl_in_rule__EInt__Group__03189 = new BitSet(new long[]{0x0000000000400040L});
-    public static final BitSet FOLLOW_rule__EInt__Group__1_in_rule__EInt__Group__03192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__EInt__Group__0__Impl3221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EInt__Group__1__Impl_in_rule__EInt__Group__13254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__EInt__Group__1__Impl3281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__03314 = new BitSet(new long[]{0x0000000000C00040L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__03317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__EDouble__Group__0__Impl3346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__13379 = new BitSet(new long[]{0x0000000000C00040L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__13382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl3410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__23441 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__23444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__EDouble__Group__2__Impl3472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__33503 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__33506 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl3533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__43562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl3589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__03630 = new BitSet(new long[]{0x0000000000400040L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__03633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl3660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__13690 = new BitSet(new long[]{0x0000000000400040L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__13693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__EDouble__Group_4__1__Impl3722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__23755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl3782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_03822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_13853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_2_13884 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePair_in_rule__Object__PairsAssignment_13915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePair_in_rule__Object__PairsAssignment_2_13946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__Pair__NameAssignment_13977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Pair__ValueAssignment_54008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEString_in_rule__StringValue__ValueAssignment4039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEInt_in_rule__NumberValue__ValueAssignment4070 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEDouble_in_rule__DecimalValue__ValueAssignment4101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__ValueObject__ValueAssignment4132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_14163 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_2_14194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEBoolean_in_rule__BooleanValue__ValueAssignment4225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_entryRuleEString1037 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEString1044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EString__Alternatives_in_ruleEString1070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt1097 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEInt1104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EInt__Group__0_in_ruleEInt1130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEBoolean_in_entryRuleEBoolean1157 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEBoolean1164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EBoolean__Alternatives_in_ruleEBoolean1190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEDouble_in_entryRuleEDouble1217 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEDouble1224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__0_in_ruleEDouble1250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_0_in_rule__Document__Alternatives1286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__0_in_rule__Document__Alternatives1304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringValue_in_rule__Value__Alternatives1337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumberValue_in_rule__Value__Alternatives1354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDecimalValue_in_rule__Value__Alternatives1371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArrayValue_in_rule__Value__Alternatives1388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanValue_in_rule__Value__Alternatives1405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValueObject_in_rule__Value__Alternatives1422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives1454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives1471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__EBoolean__Alternatives1504 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__EBoolean__Alternatives1524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__EDouble__Alternatives_4_01559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__EDouble__Alternatives_4_01579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__0__Impl_in_rule__Document__Group_1__01611 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__1_in_rule__Document__Group_1__01614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLSQUARE_in_rule__Document__Group_1__0__Impl1641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__1__Impl_in_rule__Document__Group_1__11670 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__2_in_rule__Document__Group_1__11673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_1_1_in_rule__Document__Group_1__1__Impl1700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__2__Impl_in_rule__Document__Group_1__21730 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__3_in_rule__Document__Group_1__21733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1_2__0_in_rule__Document__Group_1__2__Impl1760 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1__3__Impl_in_rule__Document__Group_1__31791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRSQUARE_in_rule__Document__Group_1__3__Impl1818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1_2__0__Impl_in_rule__Document__Group_1_2__01855 = new BitSet(new long[]{0x0000000000000800L});
+    public static final BitSet FOLLOW_rule__Document__Group_1_2__1_in_rule__Document__Group_1_2__01858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCOMMA_in_rule__Document__Group_1_2__0__Impl1885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__Group_1_2__1__Impl_in_rule__Document__Group_1_2__11914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Document__ObjectsAssignment_1_2_1_in_rule__Document__Group_1_2__1__Impl1941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__01975 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Object__Group__1_in_rule__Object__Group__01978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLCURLY_in_rule__Object__Group__0__Impl2005 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__12034 = new BitSet(new long[]{0x0000000000011000L});
+    public static final BitSet FOLLOW_rule__Object__Group__2_in_rule__Object__Group__12037 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__PairsAssignment_1_in_rule__Object__Group__1__Impl2064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__22094 = new BitSet(new long[]{0x0000000000011000L});
+    public static final BitSet FOLLOW_rule__Object__Group__3_in_rule__Object__Group__22097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl2124 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__32155 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRCURLY_in_rule__Object__Group__3__Impl2182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__02219 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__02222 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCOMMA_in_rule__Object__Group_2__0__Impl2249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__12278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Object__PairsAssignment_2_1_in_rule__Object__Group_2__1__Impl2305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pair__Group__0__Impl_in_rule__Pair__Group__02339 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Pair__Group__1_in_rule__Pair__Group__02342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pair__NameAssignment_0_in_rule__Pair__Group__0__Impl2369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pair__Group__1__Impl_in_rule__Pair__Group__12399 = new BitSet(new long[]{0x0000000000662870L});
+    public static final BitSet FOLLOW_rule__Pair__Group__2_in_rule__Pair__Group__12402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCOLON_in_rule__Pair__Group__1__Impl2429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pair__Group__2__Impl_in_rule__Pair__Group__22458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Pair__ValueAssignment_2_in_rule__Pair__Group__2__Impl2485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__0__Impl_in_rule__ArrayValue__Group__02521 = new BitSet(new long[]{0x0000000000662870L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__1_in_rule__ArrayValue__Group__02524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLSQUARE_in_rule__ArrayValue__Group__0__Impl2551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__1__Impl_in_rule__ArrayValue__Group__12580 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__2_in_rule__ArrayValue__Group__12583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__ValuesAssignment_1_in_rule__ArrayValue__Group__1__Impl2610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__2__Impl_in_rule__ArrayValue__Group__22640 = new BitSet(new long[]{0x0000000000014000L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__3_in_rule__ArrayValue__Group__22643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__0_in_rule__ArrayValue__Group__2__Impl2670 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group__3__Impl_in_rule__ArrayValue__Group__32701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRSQUARE_in_rule__ArrayValue__Group__3__Impl2728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__0__Impl_in_rule__ArrayValue__Group_2__02765 = new BitSet(new long[]{0x0000000000662870L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__1_in_rule__ArrayValue__Group_2__02768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCOMMA_in_rule__ArrayValue__Group_2__0__Impl2795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__Group_2__1__Impl_in_rule__ArrayValue__Group_2__12824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ArrayValue__ValuesAssignment_2_1_in_rule__ArrayValue__Group_2__1__Impl2851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EInt__Group__0__Impl_in_rule__EInt__Group__02885 = new BitSet(new long[]{0x0000000000200040L});
+    public static final BitSet FOLLOW_rule__EInt__Group__1_in_rule__EInt__Group__02888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__EInt__Group__0__Impl2917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EInt__Group__1__Impl_in_rule__EInt__Group__12950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__EInt__Group__1__Impl2977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__0__Impl_in_rule__EDouble__Group__03010 = new BitSet(new long[]{0x0000000000600040L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__1_in_rule__EDouble__Group__03013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__EDouble__Group__0__Impl3042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__1__Impl_in_rule__EDouble__Group__13075 = new BitSet(new long[]{0x0000000000600040L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__2_in_rule__EDouble__Group__13078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__1__Impl3106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__2__Impl_in_rule__EDouble__Group__23137 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__3_in_rule__EDouble__Group__23140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__EDouble__Group__2__Impl3168 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__3__Impl_in_rule__EDouble__Group__33199 = new BitSet(new long[]{0x0000000000180000L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__4_in_rule__EDouble__Group__33202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group__3__Impl3229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group__4__Impl_in_rule__EDouble__Group__43258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__0_in_rule__EDouble__Group__4__Impl3285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__0__Impl_in_rule__EDouble__Group_4__03326 = new BitSet(new long[]{0x0000000000200040L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__1_in_rule__EDouble__Group_4__03329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Alternatives_4_0_in_rule__EDouble__Group_4__0__Impl3356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__1__Impl_in_rule__EDouble__Group_4__13386 = new BitSet(new long[]{0x0000000000200040L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__2_in_rule__EDouble__Group_4__13389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__EDouble__Group_4__1__Impl3418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__EDouble__Group_4__2__Impl_in_rule__EDouble__Group_4__23451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__EDouble__Group_4__2__Impl3478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_03518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_13549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_rule__Document__ObjectsAssignment_1_2_13580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePair_in_rule__Object__PairsAssignment_13611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePair_in_rule__Object__PairsAssignment_2_13642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__Pair__NameAssignment_03673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Pair__ValueAssignment_23704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEString_in_rule__StringValue__ValueAssignment3735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEInt_in_rule__NumberValue__ValueAssignment3766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEDouble_in_rule__DecimalValue__ValueAssignment3797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleObject_in_rule__ValueObject__ValueAssignment3828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_13859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__ArrayValue__ValuesAssignment_2_13890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEBoolean_in_rule__BooleanValue__ValueAssignment3921 = new BitSet(new long[]{0x0000000000000002L});
 
 }

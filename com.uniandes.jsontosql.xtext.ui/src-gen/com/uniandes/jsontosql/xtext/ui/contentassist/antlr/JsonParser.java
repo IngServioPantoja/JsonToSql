@@ -57,8 +57,8 @@ public class JsonParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDocumentAccess().getObjectsAssignment_1_2_1(), "rule__Document__ObjectsAssignment_1_2_1");
 					put(grammarAccess.getObjectAccess().getPairsAssignment_1(), "rule__Object__PairsAssignment_1");
 					put(grammarAccess.getObjectAccess().getPairsAssignment_2_1(), "rule__Object__PairsAssignment_2_1");
-					put(grammarAccess.getPairAccess().getNameAssignment_1(), "rule__Pair__NameAssignment_1");
-					put(grammarAccess.getPairAccess().getValueAssignment_5(), "rule__Pair__ValueAssignment_5");
+					put(grammarAccess.getPairAccess().getNameAssignment_0(), "rule__Pair__NameAssignment_0");
+					put(grammarAccess.getPairAccess().getValueAssignment_2(), "rule__Pair__ValueAssignment_2");
 					put(grammarAccess.getStringValueAccess().getValueAssignment(), "rule__StringValue__ValueAssignment");
 					put(grammarAccess.getNumberValueAccess().getValueAssignment(), "rule__NumberValue__ValueAssignment");
 					put(grammarAccess.getDecimalValueAccess().getValueAssignment(), "rule__DecimalValue__ValueAssignment");

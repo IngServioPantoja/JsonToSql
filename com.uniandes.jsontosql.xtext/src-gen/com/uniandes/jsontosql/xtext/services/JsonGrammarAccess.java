@@ -121,49 +121,33 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	public class PairElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Pair");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cQUOTESParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final RuleCall cQUOTESParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
-		private final RuleCall cCOLONParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
-		private final RuleCall cQUOTESParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		private final Assignment cValueAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cValueValueParserRuleCall_5_0 = (RuleCall)cValueAssignment_5.eContents().get(0);
-		private final RuleCall cQUOTESParserRuleCall_6 = (RuleCall)cGroup.eContents().get(6);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameEStringParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cCOLONParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cValueValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
 		
 		//Pair:
-		//	QUOTES name=EString QUOTES COLON QUOTES value=Value QUOTES;
+		//	name=EString COLON value=Value;
 		public ParserRule getRule() { return rule; }
 
-		//QUOTES name=EString QUOTES COLON QUOTES value=Value QUOTES
+		//name=EString COLON value=Value
 		public Group getGroup() { return cGroup; }
 
-		//QUOTES
-		public RuleCall getQUOTESParserRuleCall_0() { return cQUOTESParserRuleCall_0; }
-
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
-
-		//QUOTES
-		public RuleCall getQUOTESParserRuleCall_2() { return cQUOTESParserRuleCall_2; }
+		public RuleCall getNameEStringParserRuleCall_0_0() { return cNameEStringParserRuleCall_0_0; }
 
 		//COLON
-		public RuleCall getCOLONParserRuleCall_3() { return cCOLONParserRuleCall_3; }
-
-		//QUOTES
-		public RuleCall getQUOTESParserRuleCall_4() { return cQUOTESParserRuleCall_4; }
+		public RuleCall getCOLONParserRuleCall_1() { return cCOLONParserRuleCall_1; }
 
 		//value=Value
-		public Assignment getValueAssignment_5() { return cValueAssignment_5; }
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
 
 		//Value
-		public RuleCall getValueValueParserRuleCall_5_0() { return cValueValueParserRuleCall_5_0; }
-
-		//QUOTES
-		public RuleCall getQUOTESParserRuleCall_6() { return cQUOTESParserRuleCall_6; }
+		public RuleCall getValueValueParserRuleCall_2_0() { return cValueValueParserRuleCall_2_0; }
 	}
 
 	public class ValueElements extends AbstractParserRuleElementFinder {
@@ -639,7 +623,7 @@ public class JsonGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Pair:
-	//	QUOTES name=EString QUOTES COLON QUOTES value=Value QUOTES;
+	//	name=EString COLON value=Value;
 	public PairElements getPairAccess() {
 		return pPair;
 	}

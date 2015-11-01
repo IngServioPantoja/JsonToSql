@@ -14,7 +14,7 @@ Object:
 ;
   
 Pair:
- QUOTES name= EString QUOTES COLON QUOTES value=Value QUOTES
+  name= EString COLON value=Value
 ;
 
 Value:

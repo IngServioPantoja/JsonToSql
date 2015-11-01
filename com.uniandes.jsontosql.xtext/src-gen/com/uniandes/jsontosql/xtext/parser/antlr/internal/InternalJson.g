@@ -258,27 +258,19 @@ rulePair returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-    { 
-        newCompositeNode(grammarAccess.getPairAccess().getQUOTESParserRuleCall_0()); 
-    }
-ruleQUOTES
-    { 
-        afterParserOrEnumRuleCall();
-    }
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPairAccess().getNameEStringParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getPairAccess().getNameEStringParserRuleCall_0_0()); 
 	    }
-		lv_name_1_0=ruleEString		{
+		lv_name_0_0=ruleEString		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPairRule());
 	        }
        		set(
        			$current, 
        			"name",
-        		lv_name_1_0, 
+        		lv_name_0_0, 
         		"EString");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -286,55 +278,31 @@ ruleQUOTES
 )
 )
     { 
-        newCompositeNode(grammarAccess.getPairAccess().getQUOTESParserRuleCall_2()); 
-    }
-ruleQUOTES
-    { 
-        afterParserOrEnumRuleCall();
-    }
-
-    { 
-        newCompositeNode(grammarAccess.getPairAccess().getCOLONParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getPairAccess().getCOLONParserRuleCall_1()); 
     }
 ruleCOLON
-    { 
-        afterParserOrEnumRuleCall();
-    }
-
-    { 
-        newCompositeNode(grammarAccess.getPairAccess().getQUOTESParserRuleCall_4()); 
-    }
-ruleQUOTES
     { 
         afterParserOrEnumRuleCall();
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPairAccess().getValueValueParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getPairAccess().getValueValueParserRuleCall_2_0()); 
 	    }
-		lv_value_5_0=ruleValue		{
+		lv_value_2_0=ruleValue		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPairRule());
 	        }
        		set(
        			$current, 
        			"value",
-        		lv_value_5_0, 
+        		lv_value_2_0, 
         		"Value");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)
-    { 
-        newCompositeNode(grammarAccess.getPairAccess().getQUOTESParserRuleCall_6()); 
-    }
-ruleQUOTES
-    { 
-        afterParserOrEnumRuleCall();
-    }
-)
+))
 ;
 
 
@@ -856,31 +824,6 @@ ruleCOMMA returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     ;
 
 
-
-
-
-// Entry rule entryRuleQUOTES
-entryRuleQUOTES returns [String current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getQUOTESRule()); } 
-	 iv_ruleQUOTES=ruleQUOTES 
-	 { $current=$iv_ruleQUOTES.current.getText(); }  
-	 EOF 
-;
-
-// Rule QUOTES
-ruleQUOTES returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-
-	kw='"' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getQUOTESAccess().getQuotationMarkKeyword()); 
-    }
-
-    ;
 
 
 

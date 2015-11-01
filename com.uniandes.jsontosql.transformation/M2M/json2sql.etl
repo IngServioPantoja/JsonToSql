@@ -1,0 +1,10 @@
+pre {
+	("Iniciando transformación de JSon a Sql").println();
+	var db : new SQL!Database;
+}
+
+rule Document2Database
+	transform
+		doc: JSON!Document
+	to
+		db:

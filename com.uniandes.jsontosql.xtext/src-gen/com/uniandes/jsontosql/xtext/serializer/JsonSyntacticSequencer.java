@@ -31,8 +31,6 @@ public class JsonSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getLCURLYToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getLSQUARERule())
 			return getLSQUAREToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getQUOTESRule())
-			return getQUOTESToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getRCURLYRule())
 			return getRCURLYToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getRSQUARERule())
@@ -74,15 +72,6 @@ public class JsonSyntacticSequencer extends AbstractSyntacticSequencer {
 		if (node != null)
 			return getTokenText(node);
 		return "[";
-	}
-	
-	/**
-	 * QUOTES   : '"';
-	 */
-	protected String getQUOTESToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"";
 	}
 	
 	/**

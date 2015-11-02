@@ -426,6 +426,7 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage
     addEEnumLiteral(fieldTypeEEnum, FieldType.STRING);
     addEEnumLiteral(fieldTypeEEnum, FieldType.INTEGER);
     addEEnumLiteral(fieldTypeEEnum, FieldType.FLOAT);
+    addEEnumLiteral(fieldTypeEEnum, FieldType.ARRAY);
     addEEnumLiteral(fieldTypeEEnum, FieldType.BOOLEAN);
 
     // Create resource

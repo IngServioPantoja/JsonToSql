@@ -628,10 +628,16 @@ ruleFieldType returns [Enumerator current=null]
         newLeafNode(enumLiteral_2, grammarAccess.getFieldTypeAccess().getFloatEnumLiteralDeclaration_2()); 
     }
 )
-    |(	enumLiteral_3='\'Boolean\'' 
+    |(	enumLiteral_3='\'Array\'' 
 	{
-        $current = grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); 
+        $current = grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3()); 
+    }
+)
+    |(	enumLiteral_4='\'Boolean\'' 
+	{
+        $current = grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4()); 
     }
 ));
 

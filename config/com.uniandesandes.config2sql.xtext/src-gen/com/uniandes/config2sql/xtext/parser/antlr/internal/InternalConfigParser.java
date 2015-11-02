@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalConfigParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LITERACONFIG", "RULE_COLON", "RULE_LEFTPARENTESIS", "RULE_LITERACONNECTION", "RULE_LITERALMERGEDFIELDS", "RULE_LEFTBRACKET", "RULE_COMA", "RULE_RIGHTBRACKET", "RULE_RIGHTPARENTESIS", "RULE_LITERALURL", "RULE_LITERALUSERNAME", "RULE_LITERALPASSWORD", "RULE_LITERALTABLENAME", "RULE_LITERALFIELDS", "RULE_LITERALATTRIBUTENAMES", "RULE_STRING", "RULE_ID", "RULE_SINGLEQUOTE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\'String\\''", "'\\'Integer\\''", "'\\'Float\\''", "'\\'Boolean\\''"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LITERACONFIG", "RULE_COLON", "RULE_LEFTPARENTESIS", "RULE_LITERACONNECTION", "RULE_LITERALMERGEDFIELDS", "RULE_LEFTBRACKET", "RULE_COMA", "RULE_RIGHTBRACKET", "RULE_RIGHTPARENTESIS", "RULE_LITERALURL", "RULE_LITERALUSERNAME", "RULE_LITERALPASSWORD", "RULE_LITERALTABLENAME", "RULE_LITERALFIELDS", "RULE_LITERALATTRIBUTENAMES", "RULE_STRING", "RULE_ID", "RULE_SINGLEQUOTE", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\\'String\\''", "'\\'Integer\\''", "'\\'Float\\''", "'\\'Array\\''", "'\\'Boolean\\''"
     };
     public static final int RULE_LITERALMERGEDFIELDS=8;
     public static final int RULE_COMA=10;
@@ -37,6 +37,7 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
     public static final int RULE_LITERALATTRIBUTENAMES=18;
     public static final int EOF=-1;
     public static final int T__30=30;
+    public static final int T__31=31;
     public static final int RULE_ID=20;
     public static final int RULE_WS=25;
     public static final int RULE_RIGHTPARENTESIS=12;
@@ -1337,7 +1338,7 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( ((LA11_0>=27 && LA11_0<=30)) ) {
+            if ( ((LA11_0>=27 && LA11_0<=31)) ) {
                 alt11=1;
             }
             switch (alt11) {
@@ -1400,7 +1401,7 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldType"
-    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:610:1: ruleFieldType returns [Enumerator current=null] : ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) ) ;
+    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:610:1: ruleFieldType returns [Enumerator current=null] : ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Array\\'' ) | (enumLiteral_4= '\\'Boolean\\'' ) ) ;
     public final Enumerator ruleFieldType() throws RecognitionException {
         Enumerator current = null;
 
@@ -1408,14 +1409,15 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
         Token enumLiteral_1=null;
         Token enumLiteral_2=null;
         Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
 
          enterRule(); 
         try {
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:612:28: ( ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) ) )
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:612:28: ( ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Array\\'' ) | (enumLiteral_4= '\\'Boolean\\'' ) ) )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Array\\'' ) | (enumLiteral_4= '\\'Boolean\\'' ) )
             {
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Boolean\\'' ) )
-            int alt12=4;
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:613:1: ( (enumLiteral_0= '\\'String\\'' ) | (enumLiteral_1= '\\'Integer\\'' ) | (enumLiteral_2= '\\'Float\\'' ) | (enumLiteral_3= '\\'Array\\'' ) | (enumLiteral_4= '\\'Boolean\\'' ) )
+            int alt12=5;
             switch ( input.LA(1) ) {
             case 27:
                 {
@@ -1435,6 +1437,11 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
             case 30:
                 {
                 alt12=4;
+                }
+                break;
+            case 31:
+                {
+                alt12=5;
                 }
                 break;
             default:
@@ -1497,15 +1504,32 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:6: (enumLiteral_3= '\\'Boolean\\'' )
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:6: (enumLiteral_3= '\\'Array\\'' )
                     {
-                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:6: (enumLiteral_3= '\\'Boolean\\'' )
-                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:8: enumLiteral_3= '\\'Boolean\\''
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:6: (enumLiteral_3= '\\'Array\\'' )
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:631:8: enumLiteral_3= '\\'Array\\''
                     {
                     enumLiteral_3=(Token)match(input,30,FOLLOW_30_in_ruleFieldType1290); 
 
-                            current = grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-                            newLeafNode(enumLiteral_3, grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); 
+                            current = grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_3, grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3()); 
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:637:6: (enumLiteral_4= '\\'Boolean\\'' )
+                    {
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:637:6: (enumLiteral_4= '\\'Boolean\\'' )
+                    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:637:8: enumLiteral_4= '\\'Boolean\\''
+                    {
+                    enumLiteral_4=(Token)match(input,31,FOLLOW_31_in_ruleFieldType1307); 
+
+                            current = grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                            newLeafNode(enumLiteral_4, grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4()); 
                         
 
                     }
@@ -1595,12 +1619,13 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleField1091 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_LEFTPARENTESIS_in_ruleField1127 = new BitSet(new long[]{0x0000000000180000L});
     public static final BitSet FOLLOW_ruleEString_in_ruleField1147 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_RULE_COMA_in_ruleField1158 = new BitSet(new long[]{0x0000000078001000L});
+    public static final BitSet FOLLOW_RULE_COMA_in_ruleField1158 = new BitSet(new long[]{0x00000000F8001000L});
     public static final BitSet FOLLOW_ruleFieldType_in_ruleField1178 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_ruleField1190 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_27_in_ruleFieldType1239 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_28_in_ruleFieldType1256 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_29_in_ruleFieldType1273 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_30_in_ruleFieldType1290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleFieldType1307 = new BitSet(new long[]{0x0000000000000002L});
 
 }

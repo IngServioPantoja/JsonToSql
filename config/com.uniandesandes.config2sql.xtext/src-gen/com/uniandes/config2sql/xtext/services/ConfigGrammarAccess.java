@@ -404,14 +404,16 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIntegerIntegerKeyword_1_0 = (Keyword)cIntegerEnumLiteralDeclaration_1.eContents().get(0);
 		private final EnumLiteralDeclaration cFloatEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cFloatFloatKeyword_2_0 = (Keyword)cFloatEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cBooleanEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cBooleanBooleanKeyword_3_0 = (Keyword)cBooleanEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cArrayEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cArrayArrayKeyword_3_0 = (Keyword)cArrayEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cBooleanEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cBooleanBooleanKeyword_4_0 = (Keyword)cBooleanEnumLiteralDeclaration_4.eContents().get(0);
 		
 		//enum FieldType:
-		//	String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Boolean="\'Boolean\'";
+		//	String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Array="\'Array\'" | Boolean="\'Boolean\'";
 		public EnumRule getRule() { return rule; }
 
-		//String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Boolean="\'Boolean\'"
+		//String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Array="\'Array\'" | Boolean="\'Boolean\'"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//String="\'String\'"
@@ -432,11 +434,17 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 		//"\'Float\'"
 		public Keyword getFloatFloatKeyword_2_0() { return cFloatFloatKeyword_2_0; }
 
+		//Array="\'Array\'"
+		public EnumLiteralDeclaration getArrayEnumLiteralDeclaration_3() { return cArrayEnumLiteralDeclaration_3; }
+
+		//"\'Array\'"
+		public Keyword getArrayArrayKeyword_3_0() { return cArrayArrayKeyword_3_0; }
+
 		//Boolean="\'Boolean\'"
-		public EnumLiteralDeclaration getBooleanEnumLiteralDeclaration_3() { return cBooleanEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getBooleanEnumLiteralDeclaration_4() { return cBooleanEnumLiteralDeclaration_4; }
 
 		//"\'Boolean\'"
-		public Keyword getBooleanBooleanKeyword_3_0() { return cBooleanBooleanKeyword_3_0; }
+		public Keyword getBooleanBooleanKeyword_4_0() { return cBooleanBooleanKeyword_4_0; }
 	}
 	
 	private final ConfigElements pConfig;
@@ -589,7 +597,7 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum FieldType:
-	//	String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Boolean="\'Boolean\'";
+	//	String="\'String\'" | Integer="\'Integer\'" | Float="\'Float\'" | Array="\'Array\'" | Boolean="\'Boolean\'";
 	public FieldTypeElements getFieldTypeAccess() {
 		return unknownRuleFieldType;
 	}

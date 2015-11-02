@@ -293,10 +293,17 @@ rule__FieldType__Alternatives
 )
 
     |(
-{ before(grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); }
+{ before(grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3()); }
+(	'\'Array\'' 
+)
+{ after(grammarAccess.getFieldTypeAccess().getArrayEnumLiteralDeclaration_3()); }
+)
+
+    |(
+{ before(grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4()); }
 (	'\'Boolean\'' 
 )
-{ after(grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_3()); }
+{ after(grammarAccess.getFieldTypeAccess().getBooleanEnumLiteralDeclaration_4()); }
 )
 
 ;

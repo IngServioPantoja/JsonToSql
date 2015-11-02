@@ -50,6 +50,16 @@ public enum FieldType implements Enumerator
   FLOAT(2, "Float", "\'Float\'"),
 
   /**
+   * The '<em><b>Array</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ARRAY_VALUE
+   * @generated
+   * @ordered
+   */
+  ARRAY(3, "Array", "\'Array\'"),
+
+  /**
    * The '<em><b>Boolean</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -57,7 +67,7 @@ public enum FieldType implements Enumerator
    * @generated
    * @ordered
    */
-  BOOLEAN(3, "Boolean", "\'Boolean\'");
+  BOOLEAN(4, "Boolean", "\'Boolean\'");
 
   /**
    * The '<em><b>String</b></em>' literal value.
@@ -105,6 +115,21 @@ public enum FieldType implements Enumerator
   public static final int FLOAT_VALUE = 2;
 
   /**
+   * The '<em><b>Array</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>Array</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #ARRAY
+   * @model name="Array" literal="\'Array\'"
+   * @generated
+   * @ordered
+   */
+  public static final int ARRAY_VALUE = 3;
+
+  /**
    * The '<em><b>Boolean</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -117,7 +142,7 @@ public enum FieldType implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int BOOLEAN_VALUE = 3;
+  public static final int BOOLEAN_VALUE = 4;
 
   /**
    * An array of all the '<em><b>Field Type</b></em>' enumerators.
@@ -131,6 +156,7 @@ public enum FieldType implements Enumerator
       STRING,
       INTEGER,
       FLOAT,
+      ARRAY,
       BOOLEAN,
     };
 
@@ -199,6 +225,7 @@ public enum FieldType implements Enumerator
       case STRING_VALUE: return STRING;
       case INTEGER_VALUE: return INTEGER;
       case FLOAT_VALUE: return FLOAT;
+      case ARRAY_VALUE: return ARRAY;
       case BOOLEAN_VALUE: return BOOLEAN;
     }
     return null;

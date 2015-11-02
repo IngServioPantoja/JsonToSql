@@ -11,6 +11,7 @@
       <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/String"/>
       <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/Integer"/>
       <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/Array"/>
       <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/Boolean"/>
     </genEnums>
     <genClasses ecoreClass="Config.ecore#//Config">

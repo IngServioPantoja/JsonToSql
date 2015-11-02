@@ -88,7 +88,7 @@ LEFTPARENTESIS name=EString COMA (type=FieldType)? RIGHTPARENTESIS;
 
 enum FieldType returns FieldType:
 
-String = "'String'" | Integer = "'Integer'" | Float = "'Float'" | Boolean = "'Boolean'";
+String = "'String'" | Integer = "'Integer'" | Float = "'Float'" | Array = "'Array'" | Boolean = "'Boolean'";
 
 
 

@@ -32,6 +32,7 @@
     <eLiterals name="String" literal="'String'"/>
     <eLiterals name="Integer" value="1" literal="'Integer'"/>
     <eLiterals name="Float" value="2" literal="'Float'"/>
-    <eLiterals name="Boolean" value="3" literal="'Boolean'"/>
+    <eLiterals name="Array" value="3" literal="'Array'"/>
+    <eLiterals name="Boolean" value="4" literal="'Boolean'"/>
   </eClassifiers>
 </ecore:EPackage>

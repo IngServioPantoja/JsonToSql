@@ -12,7 +12,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="database" eType="#//Database"
         eOpposite="#//Database/contents"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//DatabaseElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Table" instanceClassName="" eSuperTypes="#//DatabaseElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
         eType="#//Column" containment="true" eOpposite="#//Column/table"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="primaryKeys" upperBound="-1"

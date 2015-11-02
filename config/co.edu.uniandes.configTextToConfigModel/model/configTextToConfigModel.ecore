@@ -19,6 +19,7 @@
     <eLiterals name="Integer"/>
     <eLiterals name="Float"/>
     <eLiterals name="Boolean"/>
+    <eLiterals name="Array"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AttributeName">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="oldField"/>

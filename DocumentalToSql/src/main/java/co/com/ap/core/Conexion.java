@@ -13,6 +13,7 @@ public class Conexion {
 	private static String JDBC_USER = "desarrollo";
 	private static String JDBC_PASS = "desarrollo";
 	private static Driver driver = null;
+	
 	public static synchronized Connection getConnection() throws SQLException{
 		if(driver == null){
 				@SuppressWarnings("rawtypes")
@@ -52,6 +53,30 @@ public class Conexion {
 		} catch (Exception e) {
 			System.out.println("Error close");
 		}
+	}
+
+	public static String getJDBC_URL() {
+		return JDBC_URL;
+	}
+
+	public static void setJDBC_URL(String jDBC_URL) {
+		JDBC_URL = jDBC_URL;
+	}
+
+	public static String getJDBC_USER() {
+		return JDBC_USER;
+	}
+
+	public static void setJDBC_USER(String jDBC_USER) {
+		JDBC_USER = jDBC_USER;
+	}
+
+	public static String getJDBC_PASS() {
+		return JDBC_PASS;
+	}
+
+	public static void setJDBC_PASS(String jDBC_PASS) {
+		JDBC_PASS = jDBC_PASS;
 	}
 	
 }

@@ -4,66 +4,44 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-import org.codehaus.jackson.map.ObjectMapper;
-import org.svenson.JSONParser;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-import co.com.ap.model.Student;
+import co.com.ap.dao.IGenericDao;
+import co.com.ap.dao.exception.DaoException;
+import co.com.ap.dao.impl.GenericDaoImpl;
+import co.com.ap.model.GenericJSon;
 
 public class DaoTest {
-	
-	public static void main(String args[]) throws IOException{
-		
-		JSONParser parser = new JSONParser();
 
-		String json = "{" + "\"Example\": [" + "{" + "\"foo\": \"a1\","
-                + "\"bar\": \"b1\"," + "\"fubar\": \"c1\"" + "}," + "{"
-                + "\"foo\": \"a2\"," + "\"bar\": \"b2\"," + "\"fubar\": \"c2\""
-                + "}," + "{" + "\"foo\": \"a3\"," + "\"bar\": \"b3\","
-                + "\"fubar\": \"c3\"" + "}" + "]" + "}\"";
-		
-		System.out.println(json);
-		
-        String cadenaTotal = "";
-        String cadena = "";
-	  FileReader f = new FileReader("B:/archivo/students.json");
-	  BufferedReader b = new BufferedReader(f);
-	  while((cadena = b.readLine())!=null) {
-		  cadenaTotal = cadenaTotal+cadena;
-	  }
-        System.out.println(cadenaTotal);
-        
-        parser.addTypeHint("Student[]", Student.class);
-        Map<String, List<Student>> result1 = parser.parse(Map.class, cadenaTotal);
-        for (Entry<String, List<Student>> entry : result1.entrySet()) {
-            for (int i = 0; i < result1.entrySet().size(); i++) {
-            	System.out.println(entry.getValue().get(i));
-            	ObjectMapper mapper = new ObjectMapper();
-            	String jsonText = entry.getValue().get(i).toString();
-            	Student obj = mapper.readValue(jsonText, Student.class);
-            	System.out.println(entry.getValue().get(i));
+	@SuppressWarnings({ "resource", "static-access" })
+	public static void main(String args[]) throws IOException {
 
-			}
-        }
+		String cadenaTotal = "";
+		String cadena = "";
+		FileReader f = new FileReader("B:/archivo/students.json");
+		BufferedReader b = new BufferedReader(f);
+		while ((cadena = b.readLine()) != null) {
+			cadenaTotal = cadenaTotal + cadena;
+		}
+
+		ObjectMapper mapper = new ObjectMapper();
+		List<GenericJSon> jsonObjects = mapper.readValue(cadenaTotal, new TypeReference<List<GenericJSon>>() {
+		});
+		String completeSQL = "";
+		for (GenericJSon jsonObject : jsonObjects) {
+			completeSQL = completeSQL + jsonObject.getSQLInsert();
+			System.out.println(jsonObject.getSQLInsert());
+		}
 		
-//        System.out.println("lol");
-//		
-//		ObjectMapper mapper = new ObjectMapper();
-//
-//		//JSON from file to Object
-//		Student user = mapper.readValue(new File("B:/archivo/students.json"), Student.class);
-//
-//		String insert = "";
-//		insert = "INSERT INTO Student (_id,name)";
-//		insert = insert+" values(";
-//		insert = insert+" "+user.get_id()+",";
-//		insert = insert+" '"+user.getName()+"'";
-//		insert = insert+");";
-		
-//		System.out.println(insert);
-		
+		IGenericDao genericDao = null;
+		try {
+			genericDao = new GenericDaoImpl();
+			genericDao.insertarRegistros(completeSQL);
+		} catch (DaoException e) {
+			System.err.println("Ha ocurrido un error ejecutando el script: "+e.getMessage());
+		}
 	}
-	
+
 }

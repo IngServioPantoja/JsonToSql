@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConfigImpl#getConecction <em>Conecction</em>}</li>
+ *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConfigImpl#getConnection <em>Connection</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConfigImpl#getMergeFields <em>Merge Fields</em>}</li>
  * </ul>
  *
@@ -40,14 +40,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
 {
   /**
-   * The cached value of the '{@link #getConecction() <em>Conecction</em>}' containment reference.
+   * The cached value of the '{@link #getConnection() <em>Connection</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConecction()
+   * @see #getConnection()
    * @generated
    * @ordered
    */
-  protected Connection conecction;
+  protected Connection connection;
 
   /**
    * The cached value of the '{@link #getMergeFields() <em>Merge Fields</em>}' containment reference list.
@@ -85,9 +85,9 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
    * <!-- end-user-doc -->
    * @generated
    */
-  public Connection getConecction()
+  public Connection getConnection()
   {
-    return conecction;
+    return connection;
   }
 
   /**
@@ -95,13 +95,13 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetConecction(Connection newConecction, NotificationChain msgs)
+  public NotificationChain basicSetConnection(Connection newConnection, NotificationChain msgs)
   {
-    Connection oldConecction = conecction;
-    conecction = newConecction;
+    Connection oldConnection = connection;
+    connection = newConnection;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ConfigPackage.CONFIG__CONECCTION, oldConecction, newConecction);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ConfigPackage.CONFIG__CONNECTION, oldConnection, newConnection);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -112,20 +112,20 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setConecction(Connection newConecction)
+  public void setConnection(Connection newConnection)
   {
-    if (newConecction != conecction)
+    if (newConnection != connection)
     {
       NotificationChain msgs = null;
-      if (conecction != null)
-        msgs = ((InternalEObject)conecction).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigPackage.CONFIG__CONECCTION, null, msgs);
-      if (newConecction != null)
-        msgs = ((InternalEObject)newConecction).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConfigPackage.CONFIG__CONECCTION, null, msgs);
-      msgs = basicSetConecction(newConecction, msgs);
+      if (connection != null)
+        msgs = ((InternalEObject)connection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConfigPackage.CONFIG__CONNECTION, null, msgs);
+      if (newConnection != null)
+        msgs = ((InternalEObject)newConnection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConfigPackage.CONFIG__CONNECTION, null, msgs);
+      msgs = basicSetConnection(newConnection, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConfigPackage.CONFIG__CONECCTION, newConecction, newConecction));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConfigPackage.CONFIG__CONNECTION, newConnection, newConnection));
   }
 
   /**
@@ -152,8 +152,8 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
   {
     switch (featureID)
     {
-      case ConfigPackage.CONFIG__CONECCTION:
-        return basicSetConecction(null, msgs);
+      case ConfigPackage.CONFIG__CONNECTION:
+        return basicSetConnection(null, msgs);
       case ConfigPackage.CONFIG__MERGE_FIELDS:
         return ((InternalEList<?>)getMergeFields()).basicRemove(otherEnd, msgs);
     }
@@ -170,8 +170,8 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
   {
     switch (featureID)
     {
-      case ConfigPackage.CONFIG__CONECCTION:
-        return getConecction();
+      case ConfigPackage.CONFIG__CONNECTION:
+        return getConnection();
       case ConfigPackage.CONFIG__MERGE_FIELDS:
         return getMergeFields();
     }
@@ -189,8 +189,8 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
   {
     switch (featureID)
     {
-      case ConfigPackage.CONFIG__CONECCTION:
-        setConecction((Connection)newValue);
+      case ConfigPackage.CONFIG__CONNECTION:
+        setConnection((Connection)newValue);
         return;
       case ConfigPackage.CONFIG__MERGE_FIELDS:
         getMergeFields().clear();
@@ -210,8 +210,8 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
   {
     switch (featureID)
     {
-      case ConfigPackage.CONFIG__CONECCTION:
-        setConecction((Connection)null);
+      case ConfigPackage.CONFIG__CONNECTION:
+        setConnection((Connection)null);
         return;
       case ConfigPackage.CONFIG__MERGE_FIELDS:
         getMergeFields().clear();
@@ -230,8 +230,8 @@ public class ConfigImpl extends MinimalEObjectImpl.Container implements Config
   {
     switch (featureID)
     {
-      case ConfigPackage.CONFIG__CONECCTION:
-        return conecction != null;
+      case ConfigPackage.CONFIG__CONNECTION:
+        return connection != null;
       case ConfigPackage.CONFIG__MERGE_FIELDS:
         return mergeFields != null && !mergeFields.isEmpty();
     }

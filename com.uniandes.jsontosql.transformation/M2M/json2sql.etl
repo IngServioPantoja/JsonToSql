@@ -1,41 +1,49 @@
 pre {
 	("Iniciando transformación de JSon a Sql").println();
-	 var mergedField = CONFIG!MergedField;
+	 var config = CONFIG!Config;
 }
+rule Config2Database
+	transform c: CONFIG!Config
+	to 	db: DB!Database{
+		config = c ;
+	}	
 
 rule Document2Database
 	transform doc: JSON!Document
-	to db: DB!Database{
+	to db: DB!Database{		
 		db.name = "databaseTest";
-		"Objects: ".print();
-	 	var objs = doc.objects.select(e|e.isTypeOf(JSON!Object)).println();
+	 	var objs = doc.objects.select(e|e.isTypeOf(JSON!Object));
 	 	db.tables = objs.equivalent("Object2Table");
 	}
-		
+
 
 @lazy
 rule Object2Table
 	transform obj: JSON!Object
 	to tb: DB!Table{
-		"ValueObject: ".print();
-		var objPrimarios = obj.pairs.value.println();
+		var objPrimarios = obj.pairs.value;
 		objPrimarios.equivalent("ValueObject2Table");
 	}
 	
 @lazy
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
-	to config: CONFIG!MergedField, tb: DB!Table{
-		mergedField = config;
-		"obj.value.pairs: ".print();
-		obj.value.pairs.println();
+	to tb: DB!Table{
 		obj.value.pairs.select(e|e.name.MergeFieldChecker());
 		--tb.column = fieldChecker(obj.pair);	    
 	}
 	
-operation String MergeFieldChecker(){
-	self;
-	var field = mergedField.attributeNames.select(e|e.AttributeName.println());
-	 --field.attributeNames.size().println();
-	return null;
+operation String MergeFieldChecker(){	
+	self.println();
+	--var field = config.mergeFields.attributeNames.select(e|e.oldField.equals(self));
+	for(attrname in config.mergeFields.attributeNames){
+		"oldField: ".print();attrname.first().oldField.println();
+		"finalField.name: ".print();attrname.finalField.name.println();
+	}
+	--if(config.mergeFields.attributeNames.select(e|e.oldField.println()).size()>0){
+		--"mayor que cero".println();
+		
+	--}
+	
+--	return null;
 }

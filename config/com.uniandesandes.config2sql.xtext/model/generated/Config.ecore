@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="config" nsURI="http://www.uniandes.com/config2sql/xtext/Config"
     nsPrefix="config">
   <eClassifiers xsi:type="ecore:EClass" name="Config">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conecction" eType="#//Connection"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connection" eType="#//Connection"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mergeFields" upperBound="-1"
         eType="#//MergedField" containment="true"/>

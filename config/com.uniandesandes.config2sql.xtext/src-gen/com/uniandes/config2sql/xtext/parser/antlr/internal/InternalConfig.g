@@ -101,16 +101,16 @@ this_COLON_4=RULE_COLON
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); 
 	    }
-		lv_conecction_5_0=ruleConnection		{
+		lv_connection_5_0=ruleConnection		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getConfigRule());
 	        }
        		set(
        			$current, 
-       			"conecction",
-        		lv_conecction_5_0, 
+       			"connection",
+        		lv_connection_5_0, 
         		"Connection");
 	        afterParserOrEnumRuleCall();
 	    }

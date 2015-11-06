@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.uniandes.config2sql.xtext.config.Config#getConecction <em>Conecction</em>}</li>
+ *   <li>{@link com.uniandes.config2sql.xtext.config.Config#getConnection <em>Connection</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Config#getMergeFields <em>Merge Fields</em>}</li>
  * </ul>
  *
@@ -26,30 +26,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Config extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Conecction</b></em>' containment reference.
+   * Returns the value of the '<em><b>Connection</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Conecction</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Connection</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Conecction</em>' containment reference.
-   * @see #setConecction(Connection)
-   * @see com.uniandes.config2sql.xtext.config.ConfigPackage#getConfig_Conecction()
+   * @return the value of the '<em>Connection</em>' containment reference.
+   * @see #setConnection(Connection)
+   * @see com.uniandes.config2sql.xtext.config.ConfigPackage#getConfig_Connection()
    * @model containment="true"
    * @generated
    */
-  Connection getConecction();
+  Connection getConnection();
 
   /**
-   * Sets the value of the '{@link com.uniandes.config2sql.xtext.config.Config#getConecction <em>Conecction</em>}' containment reference.
+   * Sets the value of the '{@link com.uniandes.config2sql.xtext.config.Config#getConnection <em>Connection</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Conecction</em>' containment reference.
-   * @see #getConecction()
+   * @param value the new value of the '<em>Connection</em>' containment reference.
+   * @see #getConnection()
    * @generated
    */
-  void setConecction(Connection value);
+  void setConnection(Connection value);
 
   /**
    * Returns the value of the '<em><b>Merge Fields</b></em>' containment reference list.

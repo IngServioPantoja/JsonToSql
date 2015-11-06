@@ -476,9 +476,9 @@ rule__Config__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getConfigAccess().getConecctionAssignment_5()); }
-(rule__Config__ConecctionAssignment_5)
-{ after(grammarAccess.getConfigAccess().getConecctionAssignment_5()); }
+{ before(grammarAccess.getConfigAccess().getConnectionAssignment_5()); }
+(rule__Config__ConnectionAssignment_5)
+{ after(grammarAccess.getConfigAccess().getConnectionAssignment_5()); }
 )
 
 ;
@@ -2039,14 +2039,14 @@ finally {
 
 
 
-rule__Config__ConecctionAssignment_5
+rule__Config__ConnectionAssignment_5
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); }
-	ruleConnection{ after(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); }
+{ before(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); }
+	ruleConnection{ after(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); }
 )
 
 ;

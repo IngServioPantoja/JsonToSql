@@ -68,13 +68,13 @@ public interface ConfigPackage extends EPackage
   int CONFIG = 0;
 
   /**
-   * The feature id for the '<em><b>Conecction</b></em>' containment reference.
+   * The feature id for the '<em><b>Connection</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONFIG__CONECCTION = 0;
+  int CONFIG__CONNECTION = 0;
 
   /**
    * The feature id for the '<em><b>Merge Fields</b></em>' containment reference list.
@@ -282,15 +282,15 @@ public interface ConfigPackage extends EPackage
   EClass getConfig();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.uniandes.config2sql.xtext.config.Config#getConecction <em>Conecction</em>}'.
+   * Returns the meta object for the containment reference '{@link com.uniandes.config2sql.xtext.config.Config#getConnection <em>Connection</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Conecction</em>'.
-   * @see com.uniandes.config2sql.xtext.config.Config#getConecction()
+   * @return the meta object for the containment reference '<em>Connection</em>'.
+   * @see com.uniandes.config2sql.xtext.config.Config#getConnection()
    * @see #getConfig()
    * @generated
    */
-  EReference getConfig_Conecction();
+  EReference getConfig_Connection();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.uniandes.config2sql.xtext.config.Config#getMergeFields <em>Merge Fields</em>}'.
@@ -497,12 +497,12 @@ public interface ConfigPackage extends EPackage
     EClass CONFIG = eINSTANCE.getConfig();
 
     /**
-     * The meta object literal for the '<em><b>Conecction</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Connection</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONFIG__CONECCTION = eINSTANCE.getConfig_Conecction();
+    EReference CONFIG__CONNECTION = eINSTANCE.getConfig_Connection();
 
     /**
      * The meta object literal for the '<em><b>Merge Fields</b></em>' containment reference list feature.

@@ -26,8 +26,8 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLEFTPARENTESISTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		private final RuleCall cLITERACONNECTIONTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		private final RuleCall cCOLONTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
-		private final Assignment cConecctionAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cConecctionConnectionParserRuleCall_5_0 = (RuleCall)cConecctionAssignment_5.eContents().get(0);
+		private final Assignment cConnectionAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cConnectionConnectionParserRuleCall_5_0 = (RuleCall)cConnectionAssignment_5.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final RuleCall cLITERALMERGEDFIELDSTerminalRuleCall_6_0 = (RuleCall)cGroup_6.eContents().get(0);
 		private final RuleCall cLEFTBRACKETTerminalRuleCall_6_1 = (RuleCall)cGroup_6.eContents().get(1);
@@ -41,11 +41,11 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRIGHTPARENTESISTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
 		
 		//Config:
-		//	LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON conecction=Connection (LITERALMERGEDFIELDS LEFTBRACKET
+		//	LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON connection=Connection (LITERALMERGEDFIELDS LEFTBRACKET
 		//	mergeFields+=MergedField (COMA mergeFields+=MergedField)* RIGHTBRACKET)? RIGHTPARENTESIS;
 		@Override public ParserRule getRule() { return rule; }
 
-		//LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON conecction=Connection (LITERALMERGEDFIELDS LEFTBRACKET
+		//LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON connection=Connection (LITERALMERGEDFIELDS LEFTBRACKET
 		//mergeFields+=MergedField (COMA mergeFields+=MergedField)* RIGHTBRACKET)? RIGHTPARENTESIS
 		public Group getGroup() { return cGroup; }
 
@@ -64,11 +64,11 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 		//COLON
 		public RuleCall getCOLONTerminalRuleCall_4() { return cCOLONTerminalRuleCall_4; }
 
-		//conecction=Connection
-		public Assignment getConecctionAssignment_5() { return cConecctionAssignment_5; }
+		//connection=Connection
+		public Assignment getConnectionAssignment_5() { return cConnectionAssignment_5; }
 
 		//Connection
-		public RuleCall getConecctionConnectionParserRuleCall_5_0() { return cConecctionConnectionParserRuleCall_5_0; }
+		public RuleCall getConnectionConnectionParserRuleCall_5_0() { return cConnectionConnectionParserRuleCall_5_0; }
 
 		//(LITERALMERGEDFIELDS LEFTBRACKET mergeFields+=MergedField (COMA mergeFields+=MergedField)* RIGHTBRACKET)?
 		public Group getGroup_6() { return cGroup_6; }
@@ -533,7 +533,7 @@ public class ConfigGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Config:
-	//	LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON conecction=Connection (LITERALMERGEDFIELDS LEFTBRACKET
+	//	LITERACONFIG COLON LEFTPARENTESIS LITERACONNECTION COLON connection=Connection (LITERALMERGEDFIELDS LEFTBRACKET
 	//	mergeFields+=MergedField (COMA mergeFields+=MergedField)* RIGHTBRACKET)? RIGHTPARENTESIS;
 	public ConfigElements getConfigAccess() {
 		return pConfig;

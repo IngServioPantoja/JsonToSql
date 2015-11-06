@@ -1250,31 +1250,31 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Config__Group__5__Impl"
-    // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:473:1: rule__Config__Group__5__Impl : ( ( rule__Config__ConecctionAssignment_5 ) ) ;
+    // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:473:1: rule__Config__Group__5__Impl : ( ( rule__Config__ConnectionAssignment_5 ) ) ;
     public final void rule__Config__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:477:1: ( ( ( rule__Config__ConecctionAssignment_5 ) ) )
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:478:1: ( ( rule__Config__ConecctionAssignment_5 ) )
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:477:1: ( ( ( rule__Config__ConnectionAssignment_5 ) ) )
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:478:1: ( ( rule__Config__ConnectionAssignment_5 ) )
             {
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:478:1: ( ( rule__Config__ConecctionAssignment_5 ) )
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:479:1: ( rule__Config__ConecctionAssignment_5 )
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:478:1: ( ( rule__Config__ConnectionAssignment_5 ) )
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:479:1: ( rule__Config__ConnectionAssignment_5 )
             {
-             before(grammarAccess.getConfigAccess().getConecctionAssignment_5()); 
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:480:1: ( rule__Config__ConecctionAssignment_5 )
-            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:480:2: rule__Config__ConecctionAssignment_5
+             before(grammarAccess.getConfigAccess().getConnectionAssignment_5()); 
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:480:1: ( rule__Config__ConnectionAssignment_5 )
+            // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:480:2: rule__Config__ConnectionAssignment_5
             {
-            pushFollow(FOLLOW_rule__Config__ConecctionAssignment_5_in_rule__Config__Group__5__Impl958);
-            rule__Config__ConecctionAssignment_5();
+            pushFollow(FOLLOW_rule__Config__ConnectionAssignment_5_in_rule__Config__Group__5__Impl958);
+            rule__Config__ConnectionAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getConfigAccess().getConecctionAssignment_5()); 
+             after(grammarAccess.getConfigAccess().getConnectionAssignment_5()); 
 
             }
 
@@ -5332,9 +5332,9 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Field__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Config__ConecctionAssignment_5"
-    // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:2042:1: rule__Config__ConecctionAssignment_5 : ( ruleConnection ) ;
-    public final void rule__Config__ConecctionAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Config__ConnectionAssignment_5"
+    // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:2042:1: rule__Config__ConnectionAssignment_5 : ( ruleConnection ) ;
+    public final void rule__Config__ConnectionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -5345,13 +5345,13 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
             // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:2047:1: ( ruleConnection )
             // ../com.uniandesandes.config2sql.xtext.ui/src-gen/com/uniandes/config2sql/xtext/ui/contentassist/antlr/internal/InternalConfig.g:2048:1: ruleConnection
             {
-             before(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_54050);
+             before(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); 
+            pushFollow(FOLLOW_ruleConnection_in_rule__Config__ConnectionAssignment_54050);
             ruleConnection();
 
             state._fsp--;
 
-             after(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
+             after(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); 
 
             }
 
@@ -5370,7 +5370,7 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Config__ConecctionAssignment_5"
+    // $ANTLR end "rule__Config__ConnectionAssignment_5"
 
 
     // $ANTLR start "rule__Config__MergeFieldsAssignment_6_2"
@@ -6002,7 +6002,7 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_COLON_in_rule__Config__Group__4__Impl899 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Config__Group__5__Impl_in_rule__Config__Group__5928 = new BitSet(new long[]{0x0000000000000C00L});
     public static final BitSet FOLLOW_rule__Config__Group__6_in_rule__Config__Group__5931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Config__ConecctionAssignment_5_in_rule__Config__Group__5__Impl958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Config__ConnectionAssignment_5_in_rule__Config__Group__5__Impl958 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Config__Group__6__Impl_in_rule__Config__Group__6988 = new BitSet(new long[]{0x0000000000000C00L});
     public static final BitSet FOLLOW_rule__Config__Group__7_in_rule__Config__Group__6991 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Config__Group_6__0_in_rule__Config__Group__6__Impl1018 = new BitSet(new long[]{0x0000000000000002L});
@@ -6139,7 +6139,7 @@ public class InternalConfigParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_rule__Field__TypeAssignment_3_in_rule__Field__Group__3__Impl3948 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Field__Group__4__Impl_in_rule__Field__Group__43979 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_RIGHTPARENTESIS_in_rule__Field__Group__4__Impl4006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConnection_in_rule__Config__ConecctionAssignment_54050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConnection_in_rule__Config__ConnectionAssignment_54050 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_24081 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMergedField_in_rule__Config__MergeFieldsAssignment_6_3_14112 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEString_in_rule__Connection__UrlAssignment_2_14143 = new BitSet(new long[]{0x0000000000000002L});

@@ -129,7 +129,7 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConfig"
-    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:77:1: ruleConfig returns [EObject current=null] : (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) ;
+    // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:77:1: ruleConfig returns [EObject current=null] : (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_connection_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) ;
     public final EObject ruleConfig() throws RecognitionException {
         EObject current = null;
 
@@ -143,7 +143,7 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
         Token this_COMA_9=null;
         Token this_RIGHTBRACKET_11=null;
         Token this_RIGHTPARENTESIS_12=null;
-        EObject lv_conecction_5_0 = null;
+        EObject lv_connection_5_0 = null;
 
         EObject lv_mergeFields_8_0 = null;
 
@@ -153,11 +153,11 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:80:28: ( (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) )
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:80:28: ( (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_connection_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS ) )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_connection_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
             {
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:2: this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_conecction_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:1: (this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_connection_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:81:2: this_LITERACONFIG_0= RULE_LITERACONFIG this_COLON_1= RULE_COLON this_LEFTPARENTESIS_2= RULE_LEFTPARENTESIS this_LITERACONNECTION_3= RULE_LITERACONNECTION this_COLON_4= RULE_COLON ( (lv_connection_5_0= ruleConnection ) ) (this_LITERALMERGEDFIELDS_6= RULE_LITERALMERGEDFIELDS this_LEFTBRACKET_7= RULE_LEFTBRACKET ( (lv_mergeFields_8_0= ruleMergedField ) ) (this_COMA_9= RULE_COMA ( (lv_mergeFields_10_0= ruleMergedField ) ) )* this_RIGHTBRACKET_11= RULE_RIGHTBRACKET )? this_RIGHTPARENTESIS_12= RULE_RIGHTPARENTESIS
             {
             this_LITERACONFIG_0=(Token)match(input,RULE_LITERACONFIG,FOLLOW_RULE_LITERACONFIG_in_ruleConfig121); 
              
@@ -179,17 +179,17 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
              
                 newLeafNode(this_COLON_4, grammarAccess.getConfigAccess().getCOLONTerminalRuleCall_4()); 
                 
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:101:1: ( (lv_conecction_5_0= ruleConnection ) )
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:102:1: (lv_conecction_5_0= ruleConnection )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:101:1: ( (lv_connection_5_0= ruleConnection ) )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:102:1: (lv_connection_5_0= ruleConnection )
             {
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:102:1: (lv_conecction_5_0= ruleConnection )
-            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:103:3: lv_conecction_5_0= ruleConnection
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:102:1: (lv_connection_5_0= ruleConnection )
+            // ../com.uniandesandes.config2sql.xtext/src-gen/com/uniandes/config2sql/xtext/parser/antlr/internal/InternalConfig.g:103:3: lv_connection_5_0= ruleConnection
             {
              
-            	        newCompositeNode(grammarAccess.getConfigAccess().getConecctionConnectionParserRuleCall_5_0()); 
+            	        newCompositeNode(grammarAccess.getConfigAccess().getConnectionConnectionParserRuleCall_5_0()); 
             	    
             pushFollow(FOLLOW_ruleConnection_in_ruleConfig181);
-            lv_conecction_5_0=ruleConnection();
+            lv_connection_5_0=ruleConnection();
 
             state._fsp--;
 
@@ -199,8 +199,8 @@ public class InternalConfigParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"conecction",
-                    		lv_conecction_5_0, 
+                   			"connection",
+                    		lv_connection_5_0, 
                     		"Connection");
             	        afterParserOrEnumRuleCall();
             	    

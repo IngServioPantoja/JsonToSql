@@ -15,7 +15,7 @@
       <genEnumLiterals ecoreEnumLiteral="Config.ecore#//FieldType/Boolean"/>
     </genEnums>
     <genClasses ecoreClass="Config.ecore#//Config">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Config.ecore#//Config/conecction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Config.ecore#//Config/connection"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Config.ecore#//Config/mergeFields"/>
     </genClasses>
     <genClasses ecoreClass="Config.ecore#//Connection">

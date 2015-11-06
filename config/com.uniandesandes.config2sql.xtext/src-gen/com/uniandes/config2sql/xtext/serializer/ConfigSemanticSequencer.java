@@ -60,7 +60,7 @@ public class ConfigSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (conecction=Connection (mergeFields+=MergedField mergeFields+=MergedField*)?)
+	 *     (connection=Connection (mergeFields+=MergedField mergeFields+=MergedField*)?)
 	 */
 	protected void sequence_Config(EObject context, Config semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

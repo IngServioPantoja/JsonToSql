@@ -52,7 +52,7 @@ public class ConfigParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMergedFieldAccess().getGroup_10(), "rule__MergedField__Group_10__0");
 					put(grammarAccess.getAttributeNameAccess().getGroup(), "rule__AttributeName__Group__0");
 					put(grammarAccess.getFieldAccess().getGroup(), "rule__Field__Group__0");
-					put(grammarAccess.getConfigAccess().getConecctionAssignment_5(), "rule__Config__ConecctionAssignment_5");
+					put(grammarAccess.getConfigAccess().getConnectionAssignment_5(), "rule__Config__ConnectionAssignment_5");
 					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_2(), "rule__Config__MergeFieldsAssignment_6_2");
 					put(grammarAccess.getConfigAccess().getMergeFieldsAssignment_6_3_1(), "rule__Config__MergeFieldsAssignment_6_3_1");
 					put(grammarAccess.getConnectionAccess().getUrlAssignment_2_1(), "rule__Connection__UrlAssignment_2_1");

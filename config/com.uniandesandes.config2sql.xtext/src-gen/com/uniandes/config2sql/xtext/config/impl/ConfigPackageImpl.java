@@ -147,7 +147,7 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getConfig_Conecction()
+  public EReference getConfig_Connection()
   {
     return (EReference)configEClass.getEStructuralFeatures().get(0);
   }
@@ -343,7 +343,7 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage
 
     // Create classes and their features
     configEClass = createEClass(CONFIG);
-    createEReference(configEClass, CONFIG__CONECCTION);
+    createEReference(configEClass, CONFIG__CONNECTION);
     createEReference(configEClass, CONFIG__MERGE_FIELDS);
 
     connectionEClass = createEClass(CONNECTION);
@@ -400,7 +400,7 @@ public class ConfigPackageImpl extends EPackageImpl implements ConfigPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(configEClass, Config.class, "Config", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getConfig_Conecction(), this.getConnection(), null, "conecction", null, 0, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConfig_Connection(), this.getConnection(), null, "connection", null, 0, 1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConfig_MergeFields(), this.getMergedField(), null, "mergeFields", null, 0, -1, Config.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

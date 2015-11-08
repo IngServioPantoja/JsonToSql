@@ -29,21 +29,20 @@ rule Object2Table
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
 	to tb: DB!Table{
-		obj.value.pairs.select(e|e.name.MergeFieldChecker());
+		var mergedFieldsNames = obj.value.pairs.collect(e|e.name.MergeFieldChecker());
+		mergedFieldsNames.println();
 		--tb.column = fieldChecker(obj.pair);	    
 	}
 	
 operation String MergeFieldChecker(){	
-	self.println();
-	--var field = config.mergeFields.attributeNames.select(e|e.oldField.equals(self));
-	for(attrname in config.mergeFields.attributeNames){
-		"oldField: ".print();attrname.first().oldField.println();
-		"finalField.name: ".print();attrname.finalField.name.println();
+	var finalField = self;
+	for(attrNames in config.mergeFields.attributeNames){
+		for(attrName in attrNames){
+			if(attrName.oldField == self){
+				--"oldField: ".print();attrName.oldField.print();" NewField: ".print();
+				finalField = attrName.finalField.name;--println();
+			}
+		}
 	}
-	--if(config.mergeFields.attributeNames.select(e|e.oldField.println()).size()>0){
-		--"mayor que cero".println();
-		
-	--}
-	
---	return null;
+	return finalField;	
 }

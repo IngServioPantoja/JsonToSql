@@ -1,3 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DB:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:DB="DB" xsi:schemaLocation="DB ../metamodels/SqlModel.ecore"/>
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DB="DB">
+  <DB:Database name="databaseTest">
+    <tables>
+    	<DB:Table name="&quot;scores&quot;">
+   			<columns type="varchar" name="&quot;type&quot;"/>
+    		<columns type="decimal" name="&quot;score&quot;"/>
+  		</DB:Table>
+  		<DB:Table name="&quot;student&quot;">
+      		<columns name="&quot;_id&quot;"/>
+      		<columns type="varchar" name="&quot;name&quot;"/>
+      		<columns name="&quot;scores&quot;"/>
+      	</DB:Table>
+    </tables>
+  </DB:Database>
+  
+</xmi:XMI>

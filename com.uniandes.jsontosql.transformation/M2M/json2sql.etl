@@ -1,5 +1,4 @@
 pre {
-	("Iniciando transformación de JSon a Sql").println();
 	 var config = CONFIG!Config;
 }
 rule Config2Database
@@ -10,10 +9,17 @@ rule Config2Database
 
 rule Document2Database
 	transform doc: JSON!Document
-	to db: DB!Database{		
+	to db: DB!Database{	
 		db.name = "databaseTest";
 	 	var objs = doc.objects.select(e|e.isTypeOf(JSON!Object));
-	 	db.tables = objs.equivalent("Object2Table");
+	 	for(obj in objs){
+	 		for(pair in obj.pairs){
+	 			if(db.tables.size()==0){
+	 				db.tables.add(obj.pairs[0].value.equivalent("ValueObject2Table"));
+	 			}else if(db.tables.select(t|t.name = pair.name).size() == 0)
+	 				db.tables.add(obj.pairs[0].value.equivalent("ValueObject2Table"));
+	 			}
+	 	}
 	}
 
 
@@ -29,20 +35,51 @@ rule Object2Table
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
 	to tb: DB!Table{
-		var mergedFieldsNames = obj.value.pairs.collect(e|e.name.MergeFieldChecker());
-		mergedFieldsNames.println();
-		--tb.column = fieldChecker(obj.pair);	    
+		obj.value.pairs.collect(e|e.name.MergeFieldChecker());
+		tb.name = obj.eContainer().name;
+		tb.columns = obj.value.pairs.equivalent("Pair2Column");
+	}
+
+@lazy
+rule ArrayObject2Table
+	transform a: JSON!ArrayValue
+	to tb: DB!Table{
+		"Array2Table:".println();
+		a.eContainer().name.println();
+		tb.name = a.eContainer().name;
+		tb.columns = a.values[0].value.pairs.equivalent("Pair2Column");
+	}
+
+@lazy
+rule Pair2Column
+	transform p: JSON!Pair
+	to col: DB!Column{
+		col.name = p.name;
+		if(p.value.isTypeOf(JSON!StringValue)){
+			col.type = DB!DataType#varchar;
+		}else if(p.value.isTypeOf(JSON!NumberValue)){
+			col.type = DB!DataType#int;
+		}else if(p.value.isTypeOf(JSON!DecimalValue)){
+			col.type = DB!DataType#decimal;
+		}else if(p.value.isTypeOf(JSON!ArrayValue)){
+			p.value.equivalent("ArrayObject2Table");
+		}else{
+			col.type = DB!DataType#unknown;
+		}
 	}
 	
 operation String MergeFieldChecker(){	
 	var finalField = self;
+	"MergeField from:".println();
+	self.println();
 	for(attrNames in config.mergeFields.attributeNames){
 		for(attrName in attrNames){
 			if(attrName.oldField == self){
-				--"oldField: ".print();attrName.oldField.print();" NewField: ".print();
-				finalField = attrName.finalField.name;--println();
+				finalField = attrName.finalField.name;
 			}
 		}
 	}
+	"MergeFiled to:".println();
+	finalField.println();
 	return finalField;	
 }

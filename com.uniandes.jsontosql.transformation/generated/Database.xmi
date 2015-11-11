@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<DB:Database
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:DB="DB"
-    xsi:schemaLocation="DB ../metamodels/SqlModel.ecore"
-    name="Test">
-  <tables name="Student"
-      database="/">
-    <columns
-        table="//@tables.0"
-        name="_id"/>
+<DB:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DB="DB" name="Test">
+  <tables name="Student" database="/">
+    <foreignkeys isMany="true" foreign_column="//@tables.1/@columns.0"/>
+    <primary_key name="_id_S" key_column="//@tables.0/@columns.0" referenced="//@tables.0/@foreignkeys.0"/>
+    <columns table="//@tables.0" name="_id_S"/>
   </tables>
-  <tables name="Puntajes"
-      database="/">
-    <columns
-        table="//@tables.1"
-        name="_id_P"/>
+  <tables name="Puntajes" database="/">
+    <primary_key name="_id" key_column="//@tables.1/@columns.0"/>
+    <columns table="//@tables.1" name="_id_P" foreign="//@tables.0/@foreignkeys.0"/>
   </tables>
 </DB:Database>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DB:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DB="DB" name="universidad">
+  <tables name="stundent" database="/">
+    <primary_key name="id_student_pk" key_column="//@tables.0/@columns.0"/>
+    <columns table="//@tables.0" type="int" name="id_student"/>
+    <columns table="//@tables.0" type="varchar" name="nombre"/>
+  </tables>
+  <tables name="puntaje" database="/">
+    <foreignkeys referencedKey="//@tables.0/@primary_key.0" foreign_column="//@tables.1/@columns.3"/>
+    <primary_key name="id_puntaje_pk" key_column="//@tables.1/@columns.0"/>
+    <columns name="id_puntaje"/>
+    <columns name="type"/>
+    <columns name="puntaje"/>
+    <columns name="student_id"/>
+  </tables>
+</DB:Database>

@@ -1,6 +1,7 @@
 pre {
 	 var config = CONFIG!Config;
 	 var DataBase =  DB!Database;
+	 var TablesWithAssociations: Collection ;
 }
 --This Rule is creating and extra empty database
 rule Config2Database
@@ -18,7 +19,7 @@ rule Document2Database
 	 	for(obj in objs){
 	 		for(pair in obj.pairs){
 	 			if(db.tables.size()==0){
-	 				var table = obj.pairs[0].value.equivalent("ValueObject2Table"); 
+	 				var table = obj.pairs[0].value.equivalent("ValueObject2Table");
 	 				db.tables.add(table);
 	 			}
  			}
@@ -26,21 +27,14 @@ rule Document2Database
 	}
 
 
-@lazy
-rule Object2Table
-	transform obj: JSON!Object
-	to tb: DB!Table{
-		var objPrimarios = obj.pairs.value;
-		objPrimarios.equivalent("ValueObject2Table");
-	}
 	
 @lazy
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
 	to tb: DB!Table{
 		tb.name = obj.eContainer().name.MergeFieldChecker();
-		//System.out.println("tb.name: "+ tb.name);
 		tb.columns = obj.value.pairs.equivalent("Pair2Column");
+		tb.setPK(tb.columns.has_ID());
 		tb.database = DataBase;
 	}
 
@@ -50,6 +44,8 @@ rule ArrayValue2Table
 	to tb: DB!Table{
 		tb.name = a.eContainer().name.MergeFieldChecker();
 		tb.columns = a.values[0].value.pairs.equivalent("Pair2Column");
+		//System.out.println("t.primary_key: "+ tb.primary_key);
+		tb.setPK(tb.columns.has_ID());
 		tb.database = DataBase;
 	}
 
@@ -67,28 +63,52 @@ rule Pair2Column
 			col.type = DB!DataType#int;
 		}else if(p.value.isTypeOf(JSON!DecimalValue)){
 			col.type = DB!DataType#decimal;
-		}else if(p.value.isTypeOf(JSON!ArrayValue)){
-			var arrayValue = p.value;
-			DataBase.tables.add(arrayValue.equivalent("ArrayValue2Table"));
-			arrayValue.equivalent("ArrayValue2ForeignKey");		 
+		}else if(p.value.isTypeOf(JSON!ArrayValue)){			
+			var table = p.value.equivalent("ArrayValue2Table");
+			DataBase.tables.add(table);
+			//TablesWithAssociations.add(table);
+			System.out.println("ForeignTable: "+ TablesWithassociations);
+			
 		}else{
 			col.type = DB!DataType#unknown;
 		}
 	}
 @lazy
-rule ArrayValue2ForeignKey
-	transform p: JSON!ArrayValue
-	to fk: DB!ForeignKey{
-		//Here MergeFieldChecker has to be called to change the name of the column.
-		fk.isMany = true;
-		System.out.println("fk: "+ fk);
-		
+rule Column2Key
+	transform c: DB!Column
+	to k: DB!Key{
+		k.name = c.name;
+		k.key_column.add(c);
 	}
+
+operation OrderedSet has_ID(){
+	//System.out.println("Original Column: "+ self);
+	if( self.name.select(e|e.equals('"_id"')).size()==0){
+		var col =  new DB!Column;
+		col.name = '"_id"';
+		col.type = DB!DataType#int;
+		self.add(col);
+		//"add column \"_id\": ".print();
+		//System.out.println("Modify Column: "+ self);
+	}
+	return self;
+	
+}
+operation DB!Table setPK(columns){
+	for(column in columns){
+		if('"_id"' == column.name){
+			//"\n∆∆∆∆∆∆∆".println();
+			self.primary_key.add(column.equivalent("Column2Key"));
+			//System.out.println("Table.primary_key: "+ self.primary_key);
+			
+		}
+	}
+}
 	
 operation String MergeFieldChecker(){	
 	var finalField = self;
-	"".println();
-	System.out.println("MergeField from: "+ self);
+	//"".println();
+	//System.out.println("MergeField from: "+ self);
 
 	for(attrNames in config.mergeFields.attributeNames){
 		for(attrName in attrNames){
@@ -97,6 +117,6 @@ operation String MergeFieldChecker(){
 			}
 		}
 	}
-	System.out.println("MergeField to: "+ finalField);
+	//System.out.println("MergeField to: "+ finalField);
 	return finalField;	
 }

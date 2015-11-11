@@ -3,14 +3,14 @@
   <DB:Database/>
   <DB:Database name="databaseTest">
     <tables name="&quot;puntajes&quot;" database="/1">
+      <primary_key name="&quot;_id&quot;" key_column="/1/@tables.0/@columns.2"/>
       <columns type="varchar" name="&quot;type&quot;"/>
       <columns type="decimal" name="&quot;score&quot;"/>
-    </tables>
-    <tables name="&quot;student&quot;" database="/1">
       <columns name="&quot;_id&quot;"/>
-      <columns type="varchar" name="&quot;nombre&quot;"/>
-      <columns name="&quot;puntajes&quot;"/>
     </tables>
   </DB:Database>
-  <DB:ForeignKey isMany="true"/>
+  <DB:Table name="&quot;student&quot;"/>
+  <DB:Column name="&quot;_id&quot;"/>
+  <DB:Column type="varchar" name="&quot;nombre&quot;"/>
+  <DB:Column name="&quot;puntajes&quot;"/>
 </xmi:XMI>

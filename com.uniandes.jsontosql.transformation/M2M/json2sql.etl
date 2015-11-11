@@ -1,6 +1,7 @@
 pre {
 	 var config = CONFIG!Config;
 }
+
 rule Config2Database
 	transform c: CONFIG!Config
 	to 	db: DB!Database{
@@ -15,7 +16,8 @@ rule Document2Database
 	 	for(obj in objs){
 	 		for(pair in obj.pairs){
 	 			if(db.tables.size()==0){
-	 				db.tables.add(obj.pairs[0].value.equivalent("ValueObject2Table"));
+	 				var table = obj.pairs[0].value.equivalent("ValueObject2Table"); 
+	 				db.tables.add(table);
 	 			}else if(db.tables.select(t|t.name = pair.name).size() == 0)
 	 				db.tables.add(obj.pairs[0].value.equivalent("ValueObject2Table"));
 	 			}
@@ -35,13 +37,12 @@ rule Object2Table
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
 	to tb: DB!Table{
-		obj.value.pairs.collect(e|e.name.MergeFieldChecker());
 		tb.name = obj.eContainer().name;
 		tb.columns = obj.value.pairs.equivalent("Pair2Column");
 	}
 
 @lazy
-rule ArrayObject2Table
+rule ArrayValue2Table
 	transform a: JSON!ArrayValue
 	to tb: DB!Table{
 		"Array2Table:".println();
@@ -54,6 +55,7 @@ rule ArrayObject2Table
 rule Pair2Column
 	transform p: JSON!Pair
 	to col: DB!Column{
+		//Here MergeFieldChecker has to be called to change the name of the column.
 		col.name = p.name;
 		if(p.value.isTypeOf(JSON!StringValue)){
 			col.type = DB!DataType#varchar;
@@ -62,7 +64,8 @@ rule Pair2Column
 		}else if(p.value.isTypeOf(JSON!DecimalValue)){
 			col.type = DB!DataType#decimal;
 		}else if(p.value.isTypeOf(JSON!ArrayValue)){
-			p.value.equivalent("ArrayObject2Table");
+			//El no sabe que es db, buscar una forma de que la tabla que sale de la trasnformacion ArrayValue2Table se asgine a la "main" database.
+			db.tables = p.value.equivalent("ArrayValue2Table");
 		}else{
 			col.type = DB!DataType#unknown;
 		}

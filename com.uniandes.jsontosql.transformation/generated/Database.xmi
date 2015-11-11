@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ASCII"?>
+<DB:Database
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:DB="DB"
+    xsi:schemaLocation="DB ../metamodels/SqlModel.ecore"
+    name="Test">
+  <tables name="Student"
+      database="/">
+    <columns
+        table="//@tables.0"
+        name="_id"/>
+  </tables>
+  <tables name="Puntajes"
+      database="/">
+    <columns
+        table="//@tables.1"
+        name="_id_P"/>
+  </tables>
+</DB:Database>

@@ -8,8 +8,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignkeys" lowerBound="1"
-        upperBound="-1" eType="#//ForeignKey" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreignkeys" upperBound="-1"
+        eType="#//ForeignKey" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="primary_key" upperBound="-1"
         eType="#//Key" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" lowerBound="1"
@@ -25,8 +25,8 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="key" eType="#//Key"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="foreign" lowerBound="1"
-        upperBound="-1" eType="#//ForeignKey"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="foreign" upperBound="-1"
+        eType="#//ForeignKey"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ForeignKey">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMany" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>

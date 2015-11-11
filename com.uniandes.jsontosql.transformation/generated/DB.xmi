@@ -2,14 +2,15 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:DB="DB">
   <DB:Database/>
   <DB:Database name="databaseTest">
-    <tables name="&quot;puntajes&quot;">
+    <tables name="&quot;puntajes&quot;" database="/1">
       <columns type="varchar" name="&quot;type&quot;"/>
       <columns type="decimal" name="&quot;score&quot;"/>
     </tables>
-    <tables name="&quot;student&quot;">
+    <tables name="&quot;student&quot;" database="/1">
       <columns name="&quot;_id&quot;"/>
       <columns type="varchar" name="&quot;nombre&quot;"/>
       <columns name="&quot;puntajes&quot;"/>
     </tables>
   </DB:Database>
+  <DB:ForeignKey isMany="true"/>
 </xmi:XMI>

@@ -41,6 +41,7 @@ rule ValueObject2Table
 		tb.name = obj.eContainer().name.MergeFieldChecker();
 		//System.out.println("tb.name: "+ tb.name);
 		tb.columns = obj.value.pairs.equivalent("Pair2Column");
+		tb.database = DataBase;
 	}
 
 @lazy
@@ -49,6 +50,7 @@ rule ArrayValue2Table
 	to tb: DB!Table{
 		tb.name = a.eContainer().name.MergeFieldChecker();
 		tb.columns = a.values[0].value.pairs.equivalent("Pair2Column");
+		tb.database = DataBase;
 	}
 
 @lazy
@@ -66,11 +68,21 @@ rule Pair2Column
 		}else if(p.value.isTypeOf(JSON!DecimalValue)){
 			col.type = DB!DataType#decimal;
 		}else if(p.value.isTypeOf(JSON!ArrayValue)){
-			//El no sabe que es db, buscar una forma de que la tabla que sale de la trasnformacion ArrayValue2Table se asgine a la "main" database.
-			 DataBase.tables.add(p.value.equivalent("ArrayValue2Table"));
+			var arrayValue = p.value;
+			DataBase.tables.add(arrayValue.equivalent("ArrayValue2Table"));
+			arrayValue.equivalent("ArrayValue2ForeignKey");		 
 		}else{
 			col.type = DB!DataType#unknown;
 		}
+	}
+@lazy
+rule ArrayValue2ForeignKey
+	transform p: JSON!ArrayValue
+	to fk: DB!ForeignKey{
+		//Here MergeFieldChecker has to be called to change the name of the column.
+		fk.isMany = true;
+		System.out.println("fk: "+ fk);
+		
 	}
 	
 operation String MergeFieldChecker(){	

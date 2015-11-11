@@ -190,10 +190,10 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_9GDr4IHjEeW9uONB5rhPFw" type="4002" source="_JBbrAIHfEeW9uONB5rhPFw" target="_Dg9aIIHhEeW9uONB5rhPFw">
     <children xmi:type="notation:DecorationNode" xmi:id="_9GES8IHjEeW9uONB5rhPFw" type="6001">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_9GES8YHjEeW9uONB5rhPFw" y="40"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9GES8YHjEeW9uONB5rhPFw" y="-41"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_9GES8oHjEeW9uONB5rhPFw" type="6003">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_9GES84HjEeW9uONB5rhPFw" x="2" y="71"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9GES84HjEeW9uONB5rhPFw" x="2" y="-28"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_9GDr4YHjEeW9uONB5rhPFw" fontName=".SF NS Text"/>
     <element xmi:type="ecore:EReference" href="SqlModel.ecore#//ForeignKey/referencedKey"/>
@@ -262,5 +262,18 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_0FAd8YHqEeW9uONB5rhPFw" fontName=".SF NS Text"/>
     <element xmi:type="ecore:EReference" href="SqlModel.ecore#//Column/table"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0FAd8oHqEeW9uONB5rhPFw" points="[-77, 2, 225, 0]$[-247, 0, 55, -2]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_JSXIAIg3EeWARZ8vTnWNjQ" type="4002" source="_Dg9aIIHhEeW9uONB5rhPFw" target="_JBbrAIHfEeW9uONB5rhPFw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_JSXIA4g3EeWARZ8vTnWNjQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JSXIBIg3EeWARZ8vTnWNjQ" x="-3" y="-29"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_JSXvEIg3EeWARZ8vTnWNjQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JSXvEYg3EeWARZ8vTnWNjQ" x="-60" y="-32"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JSXIAYg3EeWARZ8vTnWNjQ" fontName=".SF NS Text"/>
+    <element xmi:type="ecore:EReference" href="SqlModel.ecore#//Key/referenced"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JSXIAog3EeWARZ8vTnWNjQ" points="[18, 0, -12, -103]$[30, 0, 0, -103]$[30, 98, 0, -5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JSayYIg3EeWARZ8vTnWNjQ" id="(0.8582677165354331,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JSayYYg3EeWARZ8vTnWNjQ" id="(1.0,0.0847457627118644)"/>
   </edges>
 </notation:Diagram>

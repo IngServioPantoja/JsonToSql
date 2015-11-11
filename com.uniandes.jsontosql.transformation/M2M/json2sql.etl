@@ -1,7 +1,8 @@
 pre {
 	 var config = CONFIG!Config;
+	 var DataBase =  DB!Database;
 }
-
+--This Rule is creating and extra empty database
 rule Config2Database
 	transform c: CONFIG!Config
 	to 	db: DB!Database{
@@ -11,6 +12,7 @@ rule Config2Database
 rule Document2Database
 	transform doc: JSON!Document
 	to db: DB!Database{	
+		DataBase = db;
 		db.name = "databaseTest";
 	 	var objs = doc.objects.select(e|e.isTypeOf(JSON!Object));
 	 	for(obj in objs){
@@ -18,9 +20,8 @@ rule Document2Database
 	 			if(db.tables.size()==0){
 	 				var table = obj.pairs[0].value.equivalent("ValueObject2Table"); 
 	 				db.tables.add(table);
-	 			}else if(db.tables.select(t|t.name = pair.name).size() == 0)
-	 				db.tables.add(obj.pairs[0].value.equivalent("ValueObject2Table"));
 	 			}
+ 			}
 	 	}
 	}
 
@@ -37,7 +38,8 @@ rule Object2Table
 rule ValueObject2Table
 	transform obj: JSON!ValueObject
 	to tb: DB!Table{
-		tb.name = obj.eContainer().name;
+		tb.name = obj.eContainer().name.MergeFieldChecker();
+		//System.out.println("tb.name: "+ tb.name);
 		tb.columns = obj.value.pairs.equivalent("Pair2Column");
 	}
 
@@ -45,9 +47,7 @@ rule ValueObject2Table
 rule ArrayValue2Table
 	transform a: JSON!ArrayValue
 	to tb: DB!Table{
-		"Array2Table:".println();
-		a.eContainer().name.println();
-		tb.name = a.eContainer().name;
+		tb.name = a.eContainer().name.MergeFieldChecker();
 		tb.columns = a.values[0].value.pairs.equivalent("Pair2Column");
 	}
 
@@ -56,7 +56,9 @@ rule Pair2Column
 	transform p: JSON!Pair
 	to col: DB!Column{
 		//Here MergeFieldChecker has to be called to change the name of the column.
-		col.name = p.name;
+		//System.out.println("p.name: "+ p.name);
+		col.name = p.name.MergeFieldChecker();
+		//System.out.println("col.name: "+ col.name);
 		if(p.value.isTypeOf(JSON!StringValue)){
 			col.type = DB!DataType#varchar;
 		}else if(p.value.isTypeOf(JSON!NumberValue)){
@@ -65,7 +67,7 @@ rule Pair2Column
 			col.type = DB!DataType#decimal;
 		}else if(p.value.isTypeOf(JSON!ArrayValue)){
 			//El no sabe que es db, buscar una forma de que la tabla que sale de la trasnformacion ArrayValue2Table se asgine a la "main" database.
-			db.tables = p.value.equivalent("ArrayValue2Table");
+			 DataBase.tables.add(p.value.equivalent("ArrayValue2Table"));
 		}else{
 			col.type = DB!DataType#unknown;
 		}
@@ -73,8 +75,9 @@ rule Pair2Column
 	
 operation String MergeFieldChecker(){	
 	var finalField = self;
-	"MergeField from:".println();
-	self.println();
+	"".println();
+	System.out.println("MergeField from: "+ self);
+
 	for(attrNames in config.mergeFields.attributeNames){
 		for(attrName in attrNames){
 			if(attrName.oldField == self){
@@ -82,7 +85,6 @@ operation String MergeFieldChecker(){
 			}
 		}
 	}
-	"MergeFiled to:".println();
-	finalField.println();
+	System.out.println("MergeField to: "+ finalField);
 	return finalField;	
 }

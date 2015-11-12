@@ -2,11 +2,15 @@ pre {
 	 var config = CONFIG!Config;
 	 var DataBase =  DB!Database;
 	 var TablesWithAssociations: Collection ;
+	 var TableParentAssociation: Collection ;
+	 var fKColumn;
 }
 --This Rule is creating and extra empty database
 rule Config2Database
 	transform c: CONFIG!Config
 	to 	db: DB!Database{
+		TablesWithAssociations = Collection{};
+		TableParentAssociation = Collection{};
 		config = c ;
 	}	
 
@@ -24,6 +28,11 @@ rule Document2Database
 	 			}
  			}
 	 	}
+	 	DataBase = db;
+	 	// Set foreignKeys
+		db.tables.addforeignKeys(TablesWithAssociations);
+	 	//		tb.hasFK(TablesWithAssociations);
+	 	
 	}
 
 
@@ -35,7 +44,7 @@ rule ValueObject2Table
 		tb.name = obj.eContainer().name.MergeFieldChecker();
 		tb.columns = obj.value.pairs.equivalent("Pair2Column");
 		tb.setPK(tb.columns.has_ID());
-		tb.database = DataBase;
+		tb.database = DataBase;		
 	}
 
 @lazy
@@ -63,11 +72,13 @@ rule Pair2Column
 			col.type = DB!DataType#int;
 		}else if(p.value.isTypeOf(JSON!DecimalValue)){
 			col.type = DB!DataType#decimal;
-		}else if(p.value.isTypeOf(JSON!ArrayValue)){			
+		}else if(p.value.isTypeOf(JSON!ArrayValue)){	
+					
 			var table = p.value.equivalent("ArrayValue2Table");
 			DataBase.tables.add(table);
-			//TablesWithAssociations.add(table);
-			System.out.println("ForeignTable: "+ TablesWithassociations);
+			var parentTable = p.eContainer.eContainer.eContainer.name.MergeFieldChecker();
+			TablesWithAssociations.add(Collection{parentTable,table});
+			//System.out.println("ForeignTable: "+ TablesWithAssociations);
 			
 		}else{
 			col.type = DB!DataType#unknown;
@@ -80,13 +91,21 @@ rule Column2Key
 		k.name = c.name;
 		k.key_column.add(c);
 	}
-
+@lazy
+rule Column2ForeignKey
+	transform c: DB!Column
+	to fk: DB!ForeignKey{
+		
+		fk.foreign_column = c;
+		fk.referencedKey = fKColumn.equivalent("Column2Key");
+	}
 operation OrderedSet has_ID(){
 	//System.out.println("Original Column: "+ self);
 	if( self.name.select(e|e.equals('"_id"')).size()==0){
 		var col =  new DB!Column;
 		col.name = '"_id"';
 		col.type = DB!DataType#int;
+		
 		self.add(col);
 		//"add column \"_id\": ".print();
 		//System.out.println("Modify Column: "+ self);
@@ -94,6 +113,35 @@ operation OrderedSet has_ID(){
 	return self;
 	
 }
+operation OrderedSet addforeignKeys(TablesWithAssociation){
+	TablesWithAssociation;
+	for(table in self){
+		var association = TablesWithAssociation.first().first();
+		if(TablesWithAssociation.first().second().collect(t|t.name.equals(table.name)).first()){
+			System.out.println("table : "+ table.name+ " has association with " + association+" table");
+			//var foreignPrimary
+			var column = new DB!Column;
+			column.name = association + "_id";
+			column.notNull = true;
+			table.columns.add(column);
+			fKColumn = DataBase.tables.getPrimaryColumn(association);
+			table.foreignkeys.add(column.equivalent("Column2ForeignKey"));
+			//table.println();	
+		}
+	}
+}
+
+operation OrderedSet getPrimaryColumn(association){
+	var fkColumn;
+	for(table in self){
+		if(table.name == association){
+			fkColumn = table.primary_key.key_column.first().first();
+			//System.out.print("From Table :"+ table.name + " fkColum "+ fkColumn);
+		}
+	}
+	return fkColumn;
+}
+
 operation DB!Table setPK(columns){
 	for(column in columns){
 		if('"_id"' == column.name){

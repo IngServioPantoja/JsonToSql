@@ -30,9 +30,7 @@ rule Document2Database
 	 	}
 	 	DataBase = db;
 	 	// Set foreignKeys
-		db.tables.addforeignKeys(TablesWithAssociations);
-	 	//		tb.hasFK(TablesWithAssociations);
-	 	
+		db.tables.addforeignKeys(TablesWithAssociations);	 	
 	}
 
 

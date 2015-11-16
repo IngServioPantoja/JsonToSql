@@ -9,6 +9,7 @@ pre {
 rule Config2Database
 	transform c: CONFIG!Config
 	to 	db: DB!Database{
+		db.name = "helper";
 		TablesWithAssociations = Collection{};
 		TableParentAssociation = Collection{};
 		config = c ;

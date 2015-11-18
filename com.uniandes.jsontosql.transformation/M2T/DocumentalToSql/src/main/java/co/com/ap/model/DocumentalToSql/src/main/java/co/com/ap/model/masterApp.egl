@@ -1,0 +1,36 @@
+[% 
+
+	var mergerFields = CO!MergedField.all;
+	var sql = SQL!Table.all;
+	for(table in sql){
+		var t:Template:= TemplateFactory.load('model.egl');
+		t.populate("table", table);
+		var merger = mergerFields.select(m | m.tableName.equals(table.name)).first();
+		if(null == merger){
+			t.populate("merger", null);
+		}else{
+			t.populate("merger", merger);
+		}
+		var foraneas = SQL!ForeignKey.all.obtenerLlaves(table);
+		if(foraneas.size>0){
+			t.populate("foraneas", foraneas);
+		}else{
+			t.populate("foraneas", null);
+		}
+		t.generate('../../DocumentalToSql/src/main/java/co/com/ap/model/'+table.name.firstToUpperCase()+'.java');
+	}
+	
+	if(not(mergerFields == null)){
+		for(mergerField in mergerFields){
+			var t:Template:= TemplateFactory.load('mergerField.egl');
+			t.populate("mergeField", mergerField);
+			t.generate('../../DocumentalToSql/src/main/java/co/com/ap/model/'+mergerField.tableName.firstToUpperCase()+'mergerField.java');
+		}
+	}
+	
+	operation Collection obtenerLlaves(table){
+		return SQL!ForeignKey.all.select(f | 
+			f.referencedKey.key_column.table.name.first.equals(table.name) or 
+			f.foreign_column.table.name.equals(table.name));
+	}	
+%]

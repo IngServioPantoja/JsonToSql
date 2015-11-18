@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<config:Config xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:config="http://www.uniandes.com/config2sql/xtext/Config">
+  <mergeFields tableName="student">
+    <fields name="nombre"/>
+    <fields name="puntajes"/>
+    <attributeNames oldField="nombre" finalField="//@mergeFields.0/@fields.0"/>
+    <attributeNames oldField="name" finalField="//@mergeFields.0/@fields.0"/>
+    <attributeNames oldField="puntajes" finalField="//@mergeFields.0/@fields.1"/>
+    <attributeNames oldField="scores" finalField="//@mergeFields.0/@fields.1"/>
+  </mergeFields>
+  <mergeFields tableName="puntaje">
+    <fields name="puntaje"/>
+    <attributeNames oldField="puntaje" finalField="//@mergeFields.1/@fields.0"/>
+    <attributeNames oldField="score" finalField="//@mergeFields.1/@fields.0"/>
+  </mergeFields>
+</config:Config>

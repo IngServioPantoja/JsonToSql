@@ -19,19 +19,42 @@ CREATE DATABASE [%=database.name%];
 	
 [%
 			for(table in database.tables){
-				var primaryKey = table.primary_key.getPK(); 
+				var primaryKey = table.primary_key.getPK();
+				var foreignKeyBool = table.foreignkeys.size()>0; 
+				System.out.println("foreignKeyBool: "+ foreignKeyBool);
 %]
 CREATE TABLE [%=table.name%] (
 		[%=primaryKey%]PRIMARY KEY,
 [%
+				var columnsLenght = table.columns.size() - 2;
 				for(column in table.columns){
 					var columnFormation = column.name.removeQuotes()+" "+column.type.getType();
 					if(not (columnFormation+" " == primaryKey)){
 					
 %]
-		[%=columnFormation%],
-[%
+		[%=columnFormation%] 
+[%					//(not (columnsLenght==0)).println();
+					if(not (columnsLenght==0)){
+%]
+   ,
+[%						
 					}
+					//columnsLenght.println();
+					columnsLenght = columnsLenght - 1;
+				
+/*
+FOREIGN KEY (product_category, product_id)
+      REFERENCES product(category, id)
+*/
+					}
+				}
+				if(foreignKeyBool){
+				%]
+		,
+		FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
+      		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
+      			 ON DELETE CASCADE
+				[%	
 				}
 %]	
 )

@@ -20,10 +20,9 @@ CREATE DATABASE [%=database.name%];
 [%
 			for(table in database.tables){
 				var primaryKey = table.primary_key.getPK();
-				var foreignKeyBool = table.foreignkeys.size()>0; 
-				System.out.println("foreignKeyBool: "+ foreignKeyBool);
+				
 %]
-CREATE TABLE [%=table.name%] (
+CREATE TABLE [%=table.name.removeQuotes()%] (
 		[%=primaryKey%]PRIMARY KEY,
 [%
 				var columnsLenght = table.columns.size() - 2;
@@ -42,24 +41,28 @@ CREATE TABLE [%=table.name%] (
 					//columnsLenght.println();
 					columnsLenght = columnsLenght - 1;
 				
-/*
-FOREIGN KEY (product_category, product_id)
-      REFERENCES product(category, id)
-*/
 					}
 				}
-				if(foreignKeyBool){
-				%]
-		,
-		FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
-      		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
-      			 ON DELETE CASCADE
-				[%	
-				}
 %]	
-)
+);
+
+
 [%				
 			}
+			
+			for(table in database.tables){
+				var foreignKeyBool = table.foreignkeys.size()>0; 
+				System.out.println("foreignKeyBool: "+ foreignKeyBool);
+				if(foreignKeyBool){
+				%]
+ALTER TABLE [%=table.name.removeQuotes()%]
+	ADD FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
+  		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
+	  		 ON DELETE CASCADE;
+				[%	
+				}
+			}
+			
 		}
 	
 %]

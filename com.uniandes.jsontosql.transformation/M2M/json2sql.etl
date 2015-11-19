@@ -120,7 +120,7 @@ operation OrderedSet addforeignKeys(TablesWithAssociation){
 			System.out.println("table : "+ table.name+ " has association with " + association+" table");
 			//var foreignPrimary
 			var column = new DB!Column;
-			column.name = association + "_id";
+			column.name = '"'+association.removeQuotes() + '_id'+'"';
 			column.notNull = true;
 			table.columns.add(column);
 			fKColumn = DataBase.tables.getPrimaryColumn(association);
@@ -166,4 +166,8 @@ operation String MergeFieldChecker(){
 	}
 	//System.out.println("MergeField to: "+ finalField);
 	return finalField;	
+}
+operation String removeQuotes(){
+	//self.split('"').second().println();
+	return self.split('"').second();
 }

@@ -19,18 +19,16 @@ CREATE DATABASE [%=database.name%];
 	
 [%
 			for(table in database.tables){
-				var tableName = table.name.removeQuotes().toSingular(table.name.removeQuotes().endsWith("s"));
-				//var tableName = toSingular();
-				var primaryKey = table.primary_key.getPK(tableName);
+				var primaryKey = table.primary_key.getPK();
 				
 %]
-CREATE TABLE [%=tableName%] (
+CREATE TABLE [%=table.name.removeQuotes()%] (
 		[%=primaryKey%]PRIMARY KEY,
 [%
 				var columnsLenght = table.columns.size() - 2;
 				for(column in table.columns){
 					var columnFormation = column.name.removeQuotes()+" "+column.type.getType();
-					if(not (column.name.removeQuotes() == "_id")){
+					if(not (columnFormation+" " == primaryKey)){
 					
 %]
 		[%=columnFormation%] 
@@ -53,14 +51,13 @@ CREATE TABLE [%=tableName%] (
 			}
 			
 			for(table in database.tables){
-				var tableName = table.name.removeQuotes().toSingular(table.name.removeQuotes().endsWith("s"));
 				var foreignKeyBool = table.foreignkeys.size()>0; 
 				System.out.println("foreignKeyBool: "+ foreignKeyBool);
 				if(foreignKeyBool){
 				%]
 ALTER TABLE [%=table.name.removeQuotes()%]
-	ADD FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
-  		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes().replace("_","")+"_"+tableName%])
+		FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
+  		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
 	  		 ON DELETE CASCADE;
 				[%	
 				}
@@ -71,7 +68,7 @@ ALTER TABLE [%=table.name.removeQuotes()%]
 %]
 [%
 	}
-operation OrderedSet getPK(tableName){
+operation OrderedSet getPK(){
 	var pk = self.first().key_column.first();
 	//pk.println();
 	return pk.name.removeQuotes().replace("_","")+"_"+tableName+" "+pk.type.getType()+" ";
@@ -81,30 +78,20 @@ operation String removeQuotes(){
 	//self.split('"').second().println();
 	return self.split('"').second();
 }
-operation String toSingular(bool){
-	if(bool){
-		"has s ".print();
-		self.println();
-		var s = (self.toCharSequence().size()-1).println();
-		return self.substring(0,s).println();
-	}
-	return self;
-}
 operation EEnumLiteral getType(){
 	var type = self;
-	
 	if(type == DB!DataType#varchar){
-		type = "var(255)";
-	}else if(type == DB!DataType#int){
-		type = "int";
-	}else if(type == DB!DataType#text){
-		type = "text";
-	}else if(type == DB!DataType#bool){
-		type = "boolean";
-	}else if(type == DB!DataType#decimal){
-		type = "decimal";
-	}else type = null;
-	//type.println();
+    type = "TEXT";
+  }else if(type == DB!DataType#int){
+    type = "INT";
+  }else if(type == DB!DataType#text){
+    type = "TEXT";
+  }else if(type == DB!DataType#bool){
+    type = "DECIMAL(18,4)";
+  }else if(type == DB!DataType#decimal){
+    type = "TINYINT(1)";
+  }else type = null;
+  //type.println();
 return type;
 }
 %]

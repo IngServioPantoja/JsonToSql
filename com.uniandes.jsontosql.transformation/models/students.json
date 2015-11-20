@@ -40,5 +40,27 @@
         "score": 34.85718117893772
       }
     ]
+  }},
+  { "student": { "_id": 2,
+    "nombre": "servio Pantoja",
+    "puntajes": [
+      {
+        "type": "exam",
+        "score": 10.06045071030959
+      },
+      {
+        "type": "quiz",
+        "score": 12.79790691903873
+      },
+      {
+        "type": "homework",
+        "score": 11.76133439165544
+      },
+      {
+        "type": "homework",
+        "score": 14.85718117893772
+      }
+    ]
   }}
+
 ]

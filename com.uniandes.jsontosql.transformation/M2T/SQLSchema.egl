@@ -56,6 +56,7 @@ CREATE TABLE [%=table.name.removeQuotes()%] (
 				if(foreignKeyBool){
 				%]
 ALTER TABLE [%=table.name.removeQuotes()%]
+	ADD CONSTRAINT `fk_[%=table.name.removeQuotes()%]_[%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]`
 		FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
   		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
 	  		 ON DELETE CASCADE;
@@ -71,7 +72,7 @@ ALTER TABLE [%=table.name.removeQuotes()%]
 operation OrderedSet getPK(){
 	var pk = self.first().key_column.first();
 	//pk.println();
-	return pk.name.removeQuotes().replace("_","")+"_"+tableName+" "+pk.type.getType()+" ";
+	return pk.name.removeQuotes()+" "+pk.type.getType()+" ";
 }
 
 operation String removeQuotes(){

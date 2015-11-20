@@ -2,8 +2,8 @@
 CREATE DATABASE databaseTest;
 	
 	
-CREATE TABLE puntajes (
-		_id int PRIMARY KEY,
+CREATE TABLE puntaje (
+		id_puntaje int PRIMARY KEY,
 		type var(255) 
    ,
 		score decimal 
@@ -14,7 +14,7 @@ CREATE TABLE puntajes (
 
 
 CREATE TABLE student (
-		_id int PRIMARY KEY,
+		id_student int PRIMARY KEY,
 		nombre var(255) 
    ,
 		puntajes int 
@@ -24,5 +24,5 @@ CREATE TABLE student (
 
 ALTER TABLE puntajes
 	ADD FOREIGN KEY (student_id)
-  		REFERENCES student(_id)
+  		REFERENCES student(id_puntaje)
 	  		 ON DELETE CASCADE;

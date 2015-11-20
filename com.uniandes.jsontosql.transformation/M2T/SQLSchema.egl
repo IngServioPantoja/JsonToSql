@@ -19,16 +19,18 @@ CREATE DATABASE [%=database.name%];
 	
 [%
 			for(table in database.tables){
-				var primaryKey = table.primary_key.getPK();
+				var tableName = table.name.removeQuotes().toSingular(table.name.removeQuotes().endsWith("s"));
+				//var tableName = toSingular();
+				var primaryKey = table.primary_key.getPK(tableName);
 				
 %]
-CREATE TABLE [%=table.name.removeQuotes()%] (
+CREATE TABLE [%=tableName%] (
 		[%=primaryKey%]PRIMARY KEY,
 [%
 				var columnsLenght = table.columns.size() - 2;
 				for(column in table.columns){
 					var columnFormation = column.name.removeQuotes()+" "+column.type.getType();
-					if(not (columnFormation+" " == primaryKey)){
+					if(not (column.name.removeQuotes() == "_id")){
 					
 %]
 		[%=columnFormation%] 
@@ -51,13 +53,14 @@ CREATE TABLE [%=table.name.removeQuotes()%] (
 			}
 			
 			for(table in database.tables){
+				var tableName = table.name.removeQuotes().toSingular(table.name.removeQuotes().endsWith("s"));
 				var foreignKeyBool = table.foreignkeys.size()>0; 
 				System.out.println("foreignKeyBool: "+ foreignKeyBool);
 				if(foreignKeyBool){
 				%]
 ALTER TABLE [%=table.name.removeQuotes()%]
 	ADD FOREIGN KEY ([%=table.foreignkeys.foreign_column.name.first().removeQuotes()%])
-  		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes()%])
+  		REFERENCES [%=table.foreignkeys.referencedKey.eContainer.name.first().removeQuotes()%]([%=table.foreignkeys.referencedKey.name.first().removeQuotes().replace("_","")+"_"+tableName%])
 	  		 ON DELETE CASCADE;
 				[%	
 				}
@@ -68,15 +71,24 @@ ALTER TABLE [%=table.name.removeQuotes()%]
 %]
 [%
 	}
-operation OrderedSet getPK(){
+operation OrderedSet getPK(tableName){
 	var pk = self.first().key_column.first();
 	//pk.println();
-	return pk.name.removeQuotes()+" "+pk.type.getType()+" ";
+	return pk.name.removeQuotes().replace("_","")+"_"+tableName+" "+pk.type.getType()+" ";
 }
 
 operation String removeQuotes(){
 	//self.split('"').second().println();
 	return self.split('"').second();
+}
+operation String toSingular(bool){
+	if(bool){
+		"has s ".print();
+		self.println();
+		var s = (self.toCharSequence().size()-1).println();
+		return self.substring(0,s).println();
+	}
+	return self;
 }
 operation EEnumLiteral getType(){
 	var type = self;

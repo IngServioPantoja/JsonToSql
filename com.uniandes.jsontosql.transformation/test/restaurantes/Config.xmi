@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="ASCII"?>
+<config:Config xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:config="http://www.uniandes.com/config2sql/xtext/Config" xsi:schemaLocation="http://www.uniandes.com/config2sql/xtext/Config Config.ecore"/>

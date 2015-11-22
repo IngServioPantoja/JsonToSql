@@ -23,7 +23,8 @@ CREATE DATABASE [%=database.name%];
 				
 %]
 CREATE TABLE [%=table.name.removeQuotes()%] (
-		[%=primaryKey%]PRIMARY KEY,
+		[%=primaryKey%]PRIMARY KEY
+	   ,
 [%
 				var columnsLenght = table.columns.size() - 2;
 				for(column in table.columns){
@@ -91,7 +92,7 @@ operation EEnumLiteral getType(){
     type = "DECIMAL(18,4)";
   }else if(type == DB!DataType#decimal){
     type = "TINYINT(1)";
-  }else type = null;
+  }else type = "TEXT";
   //type.println();
 return type;
 }

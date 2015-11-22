@@ -3,7 +3,8 @@ CREATE DATABASE databaseTest;
 	
 	
 CREATE TABLE grades (
-		_id INT PRIMARY KEY,
+		_id INT PRIMARY KEY
+	   ,
 		grade TEXT 
    ,
 		score INT 
@@ -14,8 +15,9 @@ CREATE TABLE grades (
 
 
 CREATE TABLE restaurant (
-		_id TEXT PRIMARY KEY,
-		address  
+		_id TEXT PRIMARY KEY
+	   ,
+		address TEXT 
    ,
 		borough TEXT 
    ,

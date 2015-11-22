@@ -2,28 +2,32 @@
 CREATE DATABASE databaseTest;
 	
 	
-CREATE TABLE puntajes (
+CREATE TABLE grades (
 		_id INT PRIMARY KEY,
-		type TEXT 
+		grade TEXT 
    ,
-		score TINYINT(1) 
+		score INT 
    ,
-		student_id INT 
+		restaurant_id INT 
 	
 );
 
 
-CREATE TABLE student (
-		_id INT PRIMARY KEY,
+CREATE TABLE restaurant (
+		_id TEXT PRIMARY KEY,
+		address  
+   ,
+		borough TEXT 
+   ,
+		cuisine TEXT 
+   ,
 		nombre TEXT 
-   ,
-		puntajes INT 
 	
 );
 
 
-ALTER TABLE puntajes
-	ADD CONSTRAINT `fk_puntajes_student`
-		FOREIGN KEY (student_id)
-  		REFERENCES student(_id)
+ALTER TABLE grades
+	ADD CONSTRAINT `fk_grades_restaurant`
+		FOREIGN KEY (restaurant_id)
+  		REFERENCES restaurant(_id)
 	  		 ON DELETE CASCADE;

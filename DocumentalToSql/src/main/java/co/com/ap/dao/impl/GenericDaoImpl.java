@@ -23,16 +23,20 @@ public class GenericDaoImpl implements IGenericDao, Serializable {
 		this.userConn = conn;
 	}
 
-	public void insertarRegistros(String sql) throws DaoException {
+	public void insertarRegistros(String[] sentencias) throws DaoException {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		try {
 			conn = (this.userConn != null) ? this.userConn : Conexion.getConnection();
-			stmt = conn.prepareStatement(sql);
-			int rows = stmt.executeUpdate();
-			System.out.println(rows);
+			for (String sentencia : sentencias) {
+				if(!"".equals(sentencia)){
+					stmt = conn.prepareStatement(sentencia);
+					stmt.executeUpdate();
+					System.out.println("Sentencia exitosa: "+sentencia);
+				}
+			}
 		} catch (SQLException e) {
-			throw new DaoException("Ha ocurrido un error al insertar lso registros: "+e.getMessage(), e);
+			throw new DaoException("Ha ocurrido un error al insertar el registro: "+e.getMessage(), e);
 		} finally {
 			Conexion.close(stmt);
 			if (this.userConn == null)

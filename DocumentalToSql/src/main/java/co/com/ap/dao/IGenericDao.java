@@ -4,6 +4,6 @@ import co.com.ap.dao.exception.DaoException;
 
 public interface IGenericDao {
 	
-	void insertarRegistros(String sql) throws DaoException;
+	void insertarRegistros(String[] sentencias) throws DaoException;
 	
 }

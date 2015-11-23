@@ -7,16 +7,16 @@
       <primary_key name="&quot;_id&quot;" key_column="/1/@tables.0/@columns.2"/>
       <columns type="varchar" name="&quot;grade&quot;"/>
       <columns name="&quot;score&quot;"/>
-      <columns name="&quot;_id&quot;"/>
-      <columns notNull="true" name="&quot;restaurant_id&quot;"/>
+      <columns table="/1/@tables.0" name="&quot;_id&quot;"/>
+      <columns table="/1/@tables.0" notNull="true" name="&quot;restaurant_id&quot;"/>
     </tables>
     <tables name="&quot;restaurant&quot;" database="/1">
       <primary_key name="&quot;_id&quot;" key_column="/1/@tables.1/@columns.4"/>
-      <columns type="unknown" name="&quot;address&quot;"/>
+      <columns type="varchar" name="&quot;address&quot;"/>
       <columns type="varchar" name="&quot;borough&quot;"/>
       <columns type="varchar" name="&quot;cuisine&quot;"/>
       <columns type="varchar" name="&quot;nombre&quot;"/>
-      <columns type="varchar" name="&quot;_id&quot;"/>
+      <columns table="/1/@tables.1" name="&quot;_id&quot;"/>
     </tables>
   </DB:Database>
   <DB:Column name="&quot;grades&quot;"/>

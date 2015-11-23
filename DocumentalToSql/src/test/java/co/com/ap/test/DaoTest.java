@@ -17,7 +17,7 @@ public class DaoTest {
 
 	@SuppressWarnings({ "resource" })
 	public static void main(String args[]) throws IOException {
-
+		System.out.println("Iniciando proceso de migración de datos");
 		String cadenaTotal = "";
 		String cadena = "";
 		FileReader f = new FileReader("C:/Users/ServioAndres/git/JsonToSql/DocumentalToSql/src/test/java/co/com/ap/test/Restaurante.json");
@@ -30,10 +30,11 @@ public class DaoTest {
 		List<GenericJSon> jsonObjects = mapper.readValue(cadenaTotal, new TypeReference<List<GenericJSon>>() {
 		});
 		String[] tokens = null;
+		String inserts = "";
 		for (GenericJSon jsonObject : jsonObjects) {
-			tokens = jsonObject.getSQLInsert().split(";", -1);
+			inserts = inserts + jsonObject.getSQLInsert();
 		}
-
+		tokens = inserts.split(";", -1);
 		IGenericDao genericDao = null;
 		try {
 			genericDao = new GenericDaoImpl();

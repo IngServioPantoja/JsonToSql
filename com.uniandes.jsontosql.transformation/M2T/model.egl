@@ -2,28 +2,29 @@ package co.com.ap.model;
 
 import java.util.List;
 
-public class [%= table.name.firstToUpperCase() %] {
+public class [%= (table.name.removerComillas()).firstToUpperCase() %] {
 
 	[%for(atributo in table.columns){%]
 	[% if(atributo.name.isMergeField(merger)){for(mergeField in atributo.name.getMergedFields(merger)){%]
-	private [%= atributo.type.toString.toJavaType() %] [%= mergeField.oldField %];	
+	private [%= atributo.type.toString.toJavaType() %] [%= (mergeField.oldField.removerComillas()) %];	
 		[%}
 	}else if(atributo.name.isFatherRelation(foraneas,table.name)){%]
 [%= atributo.generarRelacionPadre(foraneas)%]
 	[%}else{%] 
-	private [%= atributo.type.toString.toJavaType() %] [%= atributo.name %];	
+	private [%= atributo.type.toString.toJavaType() %] [%= atributo.name.removerComillas() %];	
 	[%}}%]
 	
-	[% if(not(foraneas == null )){ for(foranea in foraneas){ %]
+	[% if(not(foraneas == null )){ 
+		for(foranea in foraneas.select( f | f.referencedKey.key_column.table.name.first.removerComillas().equals(table.name.removerComillas()))){ %]
 [%= foranea.generarListaAtributo(merger)%][% }} %]
 	
-	public [%= table.name.firstToUpperCase() %](){
+	public [%= (table.name.removerComillas()).firstToUpperCase() %](){
 	
 	}
 	
 	[% table.columns.select(c | c.generarAccesores(table,merger,foraneas)); %]	
 	
-	[% if(not(foraneas == null )){foraneas.select(f | f.referencedKey.key_column.table.name.first.equals(table.name)).select( c | c.generarListasRelacion(table,merger));}%]
+	[% if(not(foraneas == null )){foraneas.select( f | f.referencedKey.key_column.table.name.first.removerComillas().equals(table.name.removerComillas())).select( c | c.generarListasRelacion(table,merger));}%]
 	
 	public String toSQLInsert(){
 		String insert = "INSERT INTO "+this.getClass().getSimpleName()+" (";
@@ -34,9 +35,9 @@ public class [%= table.name.firstToUpperCase() %] {
 		}%]
 		columns = columns+")";
 		values = values +")";
-		insert = insert+columns+values+"; \n";
+		insert = insert+columns+values+";";
 		[% if(not(foraneas == null )){for(foranea in foraneas.select(f | 
-			f.referencedKey.key_column.table.name.first.equals(table.name))){
+			f.referencedKey.key_column.table.name.first.removerComillas().equals(table.name.removerComillas()))){
 			foranea.generarInsertsListas(table,merger); 
 		}}%]
 		return insert;
@@ -54,7 +55,7 @@ public class [%= table.name.firstToUpperCase() %] {
 	}
 	
 	operation String isMergeField(merger){
-		if(not(merger == null) and merger.fields.select(f | f.name.equals(self)).size()>0){
+		if(not(merger == null) and merger.fields.select(f | f.name.equals(self.removerComillas())).size()>0){
 			return true;
 		}else{
 			return false;
@@ -75,13 +76,13 @@ public class [%= table.name.firstToUpperCase() %] {
 	}
 	
 	operation String getMergedFields(merger){
-		return merger.attributeNames.select(a | a.finalField.name.equals(self));		
+		return merger.attributeNames.select(a | a.finalField.name.removerComillas().equals(self.removerComillas()));		
 	}
 	
 	operation SQL!Column generarRelacionPadre(foraneas){
 		for(foranea in foraneas){
 			if(foranea.foreign_column.name.equals(self.name)){%]
-	private [%= foranea.referencedKey.key_column.table.name.first.firstToUpperCase()%] [%= foranea.referencedKey.key_column.table.name.first%];	
+	private [%= (foranea.referencedKey.key_column.table.name.first.removerComillas()).firstToUpperCase()%] [%= foranea.referencedKey.key_column.table.name.first.removerComillas()%];	
 		[% break;}}
 	}
 	
@@ -96,120 +97,133 @@ public class [%= table.name.firstToUpperCase() %] {
 		return result;
 	}
 	
+	operation String obtenerPrimariaPadre(foraneas){
+		var result = "";
+		for(foranea in foraneas){
+			if(foranea.foreign_column.name.equals(self)){
+				result =  foranea.referencedKey.key_column.name.first;
+				break;
+			}
+		}
+		return result;
+	}
+	
 	operation SQL!Column generarAccesores(table,merger,foraneas){
 		if(self.name.isMergeField(merger)){
 			for(mergeField in self.name.getMergedFields(merger)){%]
-	public [%= self.type.toString.toJavaType() %] get[%= mergeField.oldField.firstToUpperCase() %](){
-		return [%= mergeField.oldField %];
+	public [%= self.type.toString.toJavaType() %] get[%= (mergeField.oldField.removerComillas()).firstToUpperCase() %](){
+		return [%= mergeField.oldField.removerComillas() %];
 	}
-	public void set[%= mergeField.oldField.firstToUpperCase() %]([%= self.type.toString.toJavaType() %] [%= mergeField.oldField %]){
-		this.[%= mergeField.oldField %] = [%= mergeField.oldField %];
+	public void set[%= (mergeField.oldField.removerComillas()).firstToUpperCase() %]([%= self.type.toString.toJavaType() %] [%= mergeField.oldField.removerComillas() %]){
+		this.[%= mergeField.oldField.removerComillas() %] = [%= mergeField.oldField.removerComillas() %];
 	}
 	[%}}else if(self.name.isFatherRelation(foraneas,table.name)){%]
-	public [%= self.name.obtenerPadreRelacion(foraneas).firstToUpperCase()%] get[%= self.name.obtenerPadreRelacion(foraneas).firstToUpperCase()%](){
-		return [%= self.name.obtenerPadreRelacion(foraneas)%];
+	public [%= (self.name.obtenerPadreRelacion(foraneas).removerComillas()).firstToUpperCase()%] get[%= (self.name.obtenerPadreRelacion(foraneas).removerComillas()).firstToUpperCase()%](){
+		return [%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%];
 	}
-	public void set[%= self.name.obtenerPadreRelacion(foraneas).firstToUpperCase()%]([%= self.name.obtenerPadreRelacion(foraneas).firstToUpperCase()%] [%= self.name.obtenerPadreRelacion(foraneas)%]){
-		this.[%= self.name.obtenerPadreRelacion(foraneas)%] = [%= self.name.obtenerPadreRelacion(foraneas)%];
+	public void set[%= (self.name.obtenerPadreRelacion(foraneas).removerComillas()).firstToUpperCase()%]([%= (self.name.obtenerPadreRelacion(foraneas).removerComillas()).firstToUpperCase()%] [%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%]){
+		this.[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%] = [%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%];
 	}
 	[%}else{%] 
-	public [%= self.type.toString.toJavaType() %] get[%= self.name.firstToUpperCase() %](){
-		return [%= self.name %];
+	public [%= self.type.toString.toJavaType() %] get[%= (self.name.removerComillas()).firstToUpperCase() %](){
+		return [%= self.name.removerComillas() %];
 	}
-	public void set[%= self.name.firstToUpperCase() %]([%= self.type.toString.toJavaType() %] [%= self.name %]){
-		this.[%= self.name %] = [%= self.name %];
+	public void set[%= (self.name.removerComillas()).firstToUpperCase() %]([%= self.type.toString.toJavaType() %] [%= self.name.removerComillas() %]){
+		this.[%= self.name.removerComillas() %] = [%= self.name.removerComillas() %];
 	}
 	[%}
 	}
 	
 	operation SQL!ForeignKey generarListaAtributo(merger){
-		if((self.foreign_column.table.name+"s").isMergeField(merger)){
-			for(mergeField in (self.foreign_column.table.name+"s").getMergedFields(merger)){%]
-	private List<[%= self.foreign_column.table.name.firstToUpperCase() %]> [%= mergeField.oldField%];
+		if((self.foreign_column.table.name.removerComillas()).isMergeField(merger)){
+			for(mergeField in (self.foreign_column.table.name.removerComillas()).getMergedFields(merger)){%]
+	private List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> [%= mergeField.oldField.removerComillas()%];
 	[%}
 		}else{%]
-	private List<[%= self.foreign_column.table.name.firstToUpperCase() %]> [%= self.foreign_column.table.name %]s;
+	private List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> [%= self.foreign_column.table.name.removerComillas() %];
 		[%
 		}
 	}
 	
 	operation SQL!ForeignKey generarListasRelacion(table,merger){
-		var columna = self.foreign_column.table.name+"s";
+		var columna = self.foreign_column.table.name;
 		if(columna.isMergeField(merger)){
 			for(mergeField in columna.getMergedFields(merger)){%]
 	
-	public List<[%= self.foreign_column.table.name.firstToUpperCase() %]> get[%= mergeField.oldField.firstToUpperCase() %](){
-		return this.[%= mergeField.oldField%];
+	public List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> get[%= (mergeField.oldField.removerComillas()).firstToUpperCase() %](){
+		return this.[%= mergeField.oldField.removerComillas()%];
 	}
-	public void set[%= mergeField.oldField.firstToUpperCase() %](List<[%= self.foreign_column.table.name.firstToUpperCase() %]> [%= mergeField.oldField%]){
-		this.[%= mergeField.oldField%] = [%= mergeField.oldField%];
+	public void set[%= (mergeField.oldField.removerComillas()).firstToUpperCase() %](List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> [%= mergeField.oldField.removerComillas()%]){
+		this.[%= mergeField.oldField.removerComillas()%] = [%= mergeField.oldField.removerComillas()%];
 	}
 			[%}%]
 		[%}else{%]
 		
-	public List<[%= self.foreign_column.table.name.firstToUpperCase() %]> get[%= self.foreign_column.table.name.firstToUpperCase() %]s(){
-		return this.[%= self.foreign_column.table.name %]s;
+	public List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> get[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %](){
+		return this.[%= self.foreign_column.table.name.removerComillas() %];
 	}
-	public void set[%= self.foreign_column.table.name.firstToUpperCase() %]s(List<[%= self.foreign_column.table.name.firstToUpperCase() %]> [%= self.foreign_column.table.name %]s){
-		this.[%= self.foreign_column.table.name %]s = [%= self.foreign_column.table.name %]s;
+	public void set[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]s(List<[%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %]> [%= self.foreign_column.table.name.removerComillas() %]){
+		this.[%= (self.foreign_column.table.name.removerComillas()) %] = [%= self.foreign_column.table.name.removerComillas() %];
 	}
 		[%}
 	}
 	
 	operation SQL!Column generarInsertColumnas(table,foraneas,merger){ 
-		if(self.name.isFatherRelation(foraneas,table.name)){%]
-		if(this.[%= self.name.obtenerPadreRelacion(foraneas)%]!=null){
+		if(self.name.isFatherRelation(foraneas,table.name)){//Tratamiento a una relación a un padre
+		%]
+		if(this.[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%]!=null){
 			if(columns.equals("")){
-				columns = columns + "[%= self.name.obtenerPadreRelacion(foraneas)%]";
-				if(this.[%= self.name.obtenerPadreRelacion(foraneas)%].getClass().getSimpleName().equals("String")){
-					values = values + "'"+[%= self.name.obtenerPadreRelacion(foraneas)%]+"'";
+				columns = columns + "[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%][%= self.name.obtenerPrimariaPadre(foraneas).removerComillas()%]";
+				if(this.[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= (self.name.obtenerPrimariaPadre(foraneas).removerComillas()).firstToUpperCase()%]().getClass().getSimpleName().equals("String")){
+					values = values + "'"+[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= (self.name.obtenerPrimariaPadre(foraneas).removerComillas()).firstToUpperCase()%]()+"'";
 				}else{
-					values = values + [%= self.name.obtenerPadreRelacion(foraneas)%];
+					values = values + [%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= (self.name.obtenerPrimariaPadre(foraneas).removerComillas()).firstToUpperCase()%]();
 				}
 			}else{
-				columns = columns + ",[%= self.name.obtenerPadreRelacion(foraneas)%]";
-				if(this.[%= self.name.obtenerPadreRelacion(foraneas)%].getClass().getSimpleName().equals("String")){
-					values = values + ",'"+[%= self.name.obtenerPadreRelacion(foraneas)%]+"'";
+				columns = columns + ",[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%][%= self.name.obtenerPrimariaPadre(foraneas).removerComillas()%]";
+				if(this.[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= self.name.obtenerPrimariaPadre(foraneas).removerComillas()%]().getClass().getSimpleName().equals("String")){
+					values = values + ",'"+[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= self.name.obtenerPrimariaPadre(foraneas).removerComillas()%]()+"'";
 				}else{
-					values = values + ","+[%= self.name.obtenerPadreRelacion(foraneas)%];
+					values = values + ","+[%= self.name.obtenerPadreRelacion(foraneas).removerComillas()%].get[%= self.name.obtenerPrimariaPadre(foraneas).removerComillas()%]();
 				}
 			}
 						
 		}
-		[%}else if(self.name.isMergeField(merger)){%]
-		if([%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this)!=null){
+		[%}else if(self.name.isMergeField(merger)){ //Tratamiento a un campo de fusión 
+		%]
+		if([%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this)!=null){
 			if(columns.equals("")){
-				columns = columns + "[%= self.name%]";
-				if([%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this).getClass().getSimpleName().equals("String")){
-					values = values + "'"+[%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this)+"'";
+				columns = columns + "[%= self.name.removerComillas()%]";
+				if([%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this).getClass().getSimpleName().equals("String")){
+					values = values + "'"+[%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this)+"'";
 				}else{
-					values = values + [%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this);
+					values = values + [%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this);
 				}
 			}else{
-				columns = columns + ",[%= self.name%]";
-				if([%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this).getClass().getSimpleName().equals("String")){
-					values = values + ",'"+[%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this)+"'";
+				columns = columns + ",[%= self.name.removerComillas()%]";
+				if([%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this).getClass().getSimpleName().equals("String")){
+					values = values + ",'"+[%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this)+"'";
 				}else{
-					values = values + ","+[%=table.name.firstToUpperCase()%]MergerField.get[%=self.name.firstToUpperCase()%](this);
+					values = values + ","+[%=(table.name.removerComillas()).firstToUpperCase()%]MergerField.get[%=(self.name.removerComillas()).firstToUpperCase()%](this);
 				}
 			}
 						
 		}
 		[%}else{%]
-		if(this.[%= self.name%]!=null){
+		if(this.[%= self.name.removerComillas()%]!=null){
 			if(columns.equals("")){
-				columns = columns + "[%= self.name%]";
-				if(this.[%= self.name%].getClass().getSimpleName().equals("String")){
-					values = values + "'"+[%= self.name%]+"'";
+				columns = columns + "[%= self.name.removerComillas()%]";
+				if(this.[%= self.name.removerComillas()%].getClass().getSimpleName().equals("String")){
+					values = values + "'"+[%= self.name.removerComillas()%]+"'";
 				}else{
-					values = values + [%= self.name%];
+					values = values + [%= self.name.removerComillas()%];
 				}
 			}else{
-				columns = columns + ",[%= self.name%]";
-				if(this.[%= self.name%].getClass().getSimpleName().equals("String")){
-					values = values + ",'"+[%= self.name%]+"'";
+				columns = columns + ",[%= self.name.removerComillas()%]";
+				if(this.[%= self.name.removerComillas()%].getClass().getSimpleName().equals("String")){
+					values = values + ",'"+[%= self.name.removerComillas()%]+"'";
 				}else{
-					values = values + ","+[%= self.name%];
+					values = values + ","+[%= self.name.removerComillas()%];
 				}
 			}
 						
@@ -218,23 +232,26 @@ public class [%= table.name.firstToUpperCase() %] {
 	}
 	
 	operation SQL!ForeignKey generarInsertsListas(table,merger){
-		if((self.foreign_column.table.name+"s").isMergeField(merger)){
-			for(mergeField in (self.foreign_column.table.name+"s").getMergedFields(merger)){%]
-		if([%= mergeField.oldField%]!=null){
-			for ([%= self.foreign_column.table.name.firstToUpperCase() %] [%= self.foreign_column.table.name%] : [%= mergeField.oldField%]) {
+		if((self.foreign_column.table.name).isMergeField(merger)){
+			for(mergeField in (self.foreign_column.table.name).getMergedFields(merger)){%]
+		if([%= mergeField.oldField.removerComillas()%]!=null){
+			for ([%= (self.foreign_column.table.name.removerCOmillas()).firstToUpperCase() %] [%= self.foreign_column.table.name.removerComillas()%] : [%= mergeField.oldField.removerComillas()%]) {
 				[%= self.foreign_column.table.name%].set[%= table.name.firstToUpperCase() %](this);
 				insert = insert + [%= self.foreign_column.table.name%].toSQLInsert();
 			}
 		}	
 			[%}
 		}else{%]
-		if([%= self.foreign_column.table.name%]s!=null){
-			for ([%= self.foreign_column.table.name.firstToUpperCase() %] [%= self.foreign_column.table.name%] : [%= self.foreign_column.table.name%]s) {
-				[%= self.foreign_column.table.name%].set[%= table.name.firstToUpperCase() %](this);
-				insert = insert + [%= self.foreign_column.table.name%].toSQLInsert();
+		if([%= self.foreign_column.table.name.removerComillas()%]!=null){
+			for ([%= (self.foreign_column.table.name.removerComillas()).firstToUpperCase() %] [%= self.foreign_column.table.name.removerComillas()%] : [%= self.foreign_column.table.name.removerComillas()%]) {
+				[%= self.foreign_column.table.name.removerComillas()%].set[%= (table.name.removerComillas()).firstToUpperCase() %](this);
+				insert = insert + [%= self.foreign_column.table.name.removerComillas()%].toSQLInsert();
 			}
 		}
 		[%}
 	}
-	
+
+	operation String removerComillas(){
+		return self.replace("\"","");	
+	}
 %]

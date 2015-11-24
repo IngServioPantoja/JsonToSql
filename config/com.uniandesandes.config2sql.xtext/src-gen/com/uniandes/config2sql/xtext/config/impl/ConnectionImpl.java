@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConnectionImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConnectionImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConnectionImpl#getPassword <em>Password</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

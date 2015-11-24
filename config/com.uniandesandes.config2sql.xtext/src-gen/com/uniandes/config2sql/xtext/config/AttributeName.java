@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.AttributeName#getOldField <em>Old Field</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.AttributeName#getFinalField <em>Final Field</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.uniandes.config2sql.xtext.config.ConfigPackage#getAttributeName()
  * @model

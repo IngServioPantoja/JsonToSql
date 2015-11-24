@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.mtcflow.model:MTC xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.mtcflow.model="http://com.mtcflow.mtc/1.1"/>
+<com.mtcflow.model:MTC xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.mtcflow.model="http://com.mtcflow.mtc/1.1">
+  <files name="NoSql" URI="workspace/input.json"/>
+  <files name="ConfigApp" URI="workspace/sads.config"/>
+  <metamodels name="JSON" URI="Json.ecore" alias="JSON"/>
+  <metamodels name="CONFIG" URI="Config.ecore" alias="CONFIG" metamodelURI=""/>
+  <metamodels name="DB" URI="SqlModel.ecore" alias="DB"/>
+  <models name="JsonModel" URI="input.json" metamodels="//@metamodels.0" format=""/>
+  <models name="ConfigModel" URI="sads.config" metamodels="//@metamodels.1"/>
+  <models name="SqlModel" URI="DB.xmi" metamodels="//@metamodels.2"/>
+  <inputModels model="//@models.0" modelAlias="JSON" transformation="//@transformations.2"/>
+  <inputModels model="//@models.1" modelAlias="CONFIG" transformation="//@transformations.2"/>
+  <inputModels model="//@models.2" modelAlias="DB" transformation="//@transformations.3"/>
+  <inputModels model="//@models.1" modelAlias="CO" transformation="//@transformations.4" metamodelAlias="CO"/>
+  <inputModels model="//@models.2" modelAlias="SQL" transformation="//@transformations.4" metamodelAlias="SQL"/>
+  <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="JSonT2M" URI="transformations/T2M/Json.xtext"/>
+  <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="ConfigT2M" URI="transformations/T2M/Config.xtext"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="JsonConfig2Sql" URI="json2sql.etl"/>
+  <transformations xsi:type="com.mtcflow.model:M2TTransformation" name="SQLSchema" URI="master.egl"/>
+  <transformations xsi:type="com.mtcflow.model:M2TTransformation" name="JavaApp" URI="masterApp.egl"/>
+  <outputModels modelAlias="JSON" model="//@models.0" transformation="//@transformations.0" metamodelAlias="JSON"/>
+  <outputModels modelAlias="CONFIG" model="//@models.1" transformation="//@transformations.1" metamodelAlias="CONFIG"/>
+  <outputModels model="//@models.2" transformation="//@transformations.2"/>
+  <inputFiles file="//@files.0" transformation="//@transformations.0"/>
+  <inputFiles file="//@files.1" transformation="//@transformations.1"/>
+</com.mtcflow.model:MTC>

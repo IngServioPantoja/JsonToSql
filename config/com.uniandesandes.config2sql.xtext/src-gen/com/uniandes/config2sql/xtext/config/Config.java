@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Config#getConnection <em>Connection</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Config#getMergeFields <em>Merge Fields</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.uniandes.config2sql.xtext.config.ConfigPackage#getConfig()
  * @model

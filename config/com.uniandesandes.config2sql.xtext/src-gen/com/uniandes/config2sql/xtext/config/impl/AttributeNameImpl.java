@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.AttributeNameImpl#getOldField <em>Old Field</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.AttributeNameImpl#getFinalField <em>Final Field</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

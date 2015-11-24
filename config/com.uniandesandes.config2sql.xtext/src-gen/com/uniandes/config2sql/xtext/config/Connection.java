@@ -11,12 +11,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Connection#getUrl <em>Url</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Connection#getUsername <em>Username</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.Connection#getPassword <em>Password</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.uniandes.config2sql.xtext.config.ConfigPackage#getConnection()
  * @model

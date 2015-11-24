@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConfigImpl#getConnection <em>Connection</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.ConfigImpl#getMergeFields <em>Merge Fields</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

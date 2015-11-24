@@ -29,12 +29,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.MergedFieldImpl#getTableName <em>Table Name</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.MergedFieldImpl#getFields <em>Fields</em>}</li>
  *   <li>{@link com.uniandes.config2sql.xtext.config.impl.MergedFieldImpl#getAttributeNames <em>Attribute Names</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

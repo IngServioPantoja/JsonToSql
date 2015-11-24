@@ -5,8 +5,8 @@
   <metamodels name="JSON" URI="Json.ecore" alias="JSON"/>
   <metamodels name="CONFIG" URI="Config.ecore" alias="CONFIG" metamodelURI=""/>
   <metamodels name="DB" URI="SqlModel.ecore" alias="DB"/>
-  <models name="JsonModel" URI="input.json" metamodels="//@metamodels.0" format=""/>
-  <models name="ConfigModel" URI="sads.config" metamodels="//@metamodels.1"/>
+  <models name="JsonModel" URI="json.xmi" metamodels="//@metamodels.0" format=""/>
+  <models name="ConfigModel" URI="config.xmi" metamodels="//@metamodels.1"/>
   <models name="SqlModel" URI="DB.xmi" metamodels="//@metamodels.2"/>
   <inputModels model="//@models.0" modelAlias="JSON" transformation="//@transformations.2"/>
   <inputModels model="//@models.1" modelAlias="CONFIG" transformation="//@transformations.2"/>

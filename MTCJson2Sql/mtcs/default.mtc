@@ -7,8 +7,8 @@
   <metamodels name="JSON" URI="Json.ecore" technology="" alias="JSON" autoregister="false" metamodelURI="http://www.uniandes.com/jsontosql/xtext/Json"/>
   <metamodels name="CONFIG" URI="Config.ecore" alias="CONFIG" autoregister="false" metamodelURI="http://www.uniandes.com/config2sql/xtext/Config"/>
   <metamodels name="DB" URI="SqlModel.ecore" alias="DB"/>
-  <models name="JsonModel" URI="json.xmi" metamodels="//@metamodels.0" format=""/>
-  <models name="ConfigModel" URI="config.xmi" metamodels="//@metamodels.1"/>
+  <models name="JsonModel" URI="workspace/json.xmi" metamodels="//@metamodels.0" format=""/>
+  <models name="ConfigModel" URI="workspace/config.xmi" metamodels="//@metamodels.1"/>
   <models name="SqlModel" URI="DB.xmi" metamodels="//@metamodels.2"/>
   <inputModels model="//@models.0" modelAlias="JSON" transformation="//@transformations.2"/>
   <inputModels model="//@models.1" modelAlias="CONFIG" transformation="//@transformations.2"/>

@@ -1,6 +1,7 @@
 [% 
 	("Iniciando proceso de generación de aplicación de migración").println;
 	var mergerFields = CO!MergedField.all;
+	("Mergers: "+mergerFields.size()).println;
 	var sql = SQL!Table.all;
 	for(table in sql){
 		var t:Template:= TemplateFactory.load('model.egl');

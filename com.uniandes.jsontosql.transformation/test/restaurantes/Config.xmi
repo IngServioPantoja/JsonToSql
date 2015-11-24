@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <config:Config xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:config="http://www.uniandes.com/config2sql/xtext/Config">
-  <connection url="jdbc:mysql://localhost/automatizacion" username="desarrollo" password="desarrollo"/>
+  <connection url="comida" username="desarrollo" password="desarrollo"/>
   <mergeFields tableName="&quot;restaurant&quot;">
     <fields name="nombre"/>
     <attributeNames oldField="nombre" finalField="//@mergeFields.0/@fields.0"/>

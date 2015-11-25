@@ -12,7 +12,7 @@
   <inputModels model="//@models.1" modelAlias="CONFIG" transformation="//@transformations.2"/>
   <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="Json2Model" URI="${XtextJson}" implementationClass=""/>
   <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="Config2Model" URI="${XtextConfig}"/>
-  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Json2Sql" URI="${Json2SqlEtl}" modelDependencies="//@models.0 //@models.1"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Json2Sql" URI="json2sql.etl" modelDependencies="//@models.0 //@models.1"/>
   <outputModels modelAlias="JSON" model="//@models.0" transformation="//@transformations.0"/>
   <outputModels modelAlias="CONFIG" model="//@models.1" transformation="//@transformations.1"/>
   <outputModels modelAlias="DB" model="//@models.2" transformation="//@transformations.2"/>

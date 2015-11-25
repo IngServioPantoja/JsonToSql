@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.mtcflow.model:MTC xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.mtcflow.model="http://com.mtcflow.mtc/1.1">
+  <files name="InputJsonFile" URI="${InputJson}"/>
+  <files name="InputConfigFile" URI="${InputConfig}"/>
+  <metamodels name="JSON" URI="${MetaModelJson}" alias="JSON"/>
+  <metamodels name="CONFIG" URI="${MetaModelConfig}" alias="CONFIG"/>
+  <metamodels name="DB" URI="${MetaModelSql}" alias="DB"/>
+  <models name="JsonModel" URI="${ModelJson}" metamodels="//@metamodels.0"/>
+  <models name="ConfigModel" URI="${ModelConfig}" metamodels="//@metamodels.1"/>
+  <models name="SqlModel" URI="${ModelSql}" metamodels="//@metamodels.2"/>
+  <inputModels model="//@models.0" modelAlias="JSON" transformation="//@transformations.2"/>
+  <inputModels model="//@models.1" modelAlias="CONFIG" transformation="//@transformations.2"/>
+  <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="Json2Model" URI="${XtextJson}" implementationClass=""/>
+  <transformations xsi:type="com.mtcflow.model:T2MTransformation" name="Config2Model" URI="${XtextConfig}"/>
+  <transformations xsi:type="com.mtcflow.model:M2MTransformation" name="Json2Sql" URI="${Json2SqlEtl}" modelDependencies="//@models.0 //@models.1"/>
+  <outputModels modelAlias="JSON" model="//@models.0" transformation="//@transformations.0"/>
+  <outputModels modelAlias="CONFIG" model="//@models.1" transformation="//@transformations.1"/>
+  <outputModels modelAlias="DB" model="//@models.2" transformation="//@transformations.2"/>
+  <configurations>
+    <variables name="InputJson" defaultValue="input.json"/>
+    <variables name="XtextJson" defaultValue="Json.xtext"/>
+    <variables name="ModelJson" defaultValue="input.json"/>
+    <variables name="MetaModelJson" defaultValue="Json.ecore"/>
+    <variables name="InputConfig" defaultValue="input.config"/>
+    <variables name="XtextConfig" defaultValue="Config.xtext"/>
+    <variables name="ModelConfig" defaultValue="input.config"/>
+    <variables name="MetaModelConfig" defaultValue="Config.ecore"/>
+    <variables name="Json2SqlEtl" defaultValue="transformations/M2M/json2sql.etl"/>
+    <variables name="ModelSql" defaultValue="DB.xmi"/>
+    <variables name="MetaModelSql" defaultValue="SqlModel.ecore"/>
+  </configurations>
+  <inputFiles file="//@files.0" transformation="//@transformations.0"/>
+  <inputFiles file="//@files.1" transformation="//@transformations.1"/>
+</com.mtcflow.model:MTC>

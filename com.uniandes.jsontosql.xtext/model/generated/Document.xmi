@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<json:Document
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:json="http://www.uniandes.com/jsontosql/xtext/Json"
+    xsi:schemaLocation="http://www.uniandes.com/jsontosql/xtext/Json Json.ecore">
+  <objects>
+    <pairs name="Name">
+      <value
+          xsi:type="json:StringValue"
+          value="Javier"/>
+    </pairs>
+    <pairs name="Notes">
+      <value
+          xsi:type="json:ArrayValue">
+        <values
+            xsi:type="json:ValueObject">
+          <value>
+            <pairs
+                name="Value">
+              <value
+                  xsi:type="json:NumberValue"
+                  value="5"/>
+            </pairs>
+          </value>
+        </values>
+      </value>
+    </pairs>
+  </objects>
+</json:Document>

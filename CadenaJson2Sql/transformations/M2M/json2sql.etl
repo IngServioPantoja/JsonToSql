@@ -10,6 +10,7 @@ pre {
 rule Config2Database
 	transform c: CONFIG!Config
 	to 	db: DB!Database{
+		"---------Im doing Config2Database".println();
 		db.name = "helper";
 		TablesWithAssociations = Collection{};
 		TableParentAssociation = Collection{};

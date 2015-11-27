@@ -20,7 +20,7 @@ public class DaoTest {
 		System.out.println("Iniciando proceso de migración de datos");
 		String cadenaTotal = "";
 		String cadena = "";
-		FileReader f = new FileReader("C:/Users/ServioAndres/git/JsonToSql/DocumentalToSql/src/test/java/co/com/ap/test/Restaurante.json");
+		FileReader f = new FileReader("B:/JsonToSql/JsonToSql/DocumentalToSql/src/test/java/co/com/ap/test/universidades/input.json");
 		BufferedReader b = new BufferedReader(f);
 		while ((cadena = b.readLine()) != null) {
 			cadenaTotal = cadenaTotal + cadena;

@@ -1,0 +1,31 @@
+[
+  {"restaurant": {
+    "address": "Calle 15 # 22  -72",
+    "borough": "Bronx",
+    "cuisine": "Bakery",
+    "grades": [
+      {
+        "grade": "A",
+        "score": 2
+      },
+      {
+        "grade": "A",
+        "score": 6
+      },
+      {
+        "grade": "A",
+        "score": 10
+      },
+      {
+        "grade": "A",
+        "score": 9
+      },
+      {
+        "grade": "B",
+        "score": 14
+      }
+    ],
+    "name": "Morris Park Bake Shop",
+    "_id": "30075445"
+  }}
+ ]

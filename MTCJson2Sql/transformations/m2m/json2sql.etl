@@ -1,7 +1,11 @@
 pre {
   var config = CONFIG!Config;
-  (config).println;
-  var DataBase =  DB!Database;
+  var DataBase;
+  if(DB!Database.all.size()==0){
+  	DataBase =  DB!Database;
+  }else{
+  	DataBase =  DB!Database.all.get(DB!Database.all.size()-1);
+  }
   var TablesWithAssociations: Collection ;
   var TableParentAssociation: Collection ;
   var fKColumn;
@@ -20,7 +24,7 @@ rule Document2Database
  transform doc: JSON!Document
  to db: DB!Database{ 
   DataBase = db;
-  db.name = "databaseTest";
+  db.name = config.connection.url;
    var objs = doc.objects.select(e|e.isTypeOf(JSON!Object));
    for(obj in objs){
     for(pair in obj.pairs){

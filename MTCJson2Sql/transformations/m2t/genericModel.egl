@@ -1,4 +1,4 @@
-[% var sql = SQL!Table.all;%]
+[% var sql = db.tables;%]
 package co.com.ap.model;
 
 public class GenericJSon {

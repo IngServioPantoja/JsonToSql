@@ -26,7 +26,7 @@
 	<target name="build">
 
 		<echo>Borrando el contenido de la carpeta model salida</echo>
-		<delete dir="${generated.location}/sql3.xmi" failonerror="true" />
+		<delete dir="${generated.location}" failonerror="true"  />
 		<echo>Borrando el contenido de la carpeta model de la app</echo>
 		<delete dir="${basedir}/DocumentalToSql/src/main/java/co/com/ap/" failonerror="true" />
 		<delete dir="${basedir}/DocumentalToSql/src/main/java/co/com/ap/" failonerror="true" />
@@ -37,15 +37,14 @@
 	<target name="m2m">
 
 		<echo>Iniciando transformación M2M</echo>
-
-		<epsilon.emf.register file="${sql.metamodel.location}" /><echo>Se registro Metamodelo SQL</echo>
+		
+		<epsilon.emf.loadModel name="DB" aliases="DB" modelfile="${generated.location}/sql.xmi"  metamodeluri="${sql.metamodel.uri}" read="false" store="true" />
 		
 		<epsilon.emf.loadModel name="CONFIG" modelfile="${models.location}/input.config" metamodeluri="${config.metamodel.uri}" read="true" store="false" />
 
 		<epsilon.emf.loadModel name="JSON" modelfile="${models.location}/input.json" metamodeluri="${json.metamodel.uri}" read="true" store="false" />
 
-		<epsilon.emf.loadModel name="DB" modelfile="${generated.location}/sql3.xmi" metamodeluri="${sql.metamodel.uri}" read="false" store="true" />
-		<echo>Archivo final ${models.location}/salida/sql3.xmi</echo>
+		<echo>Archivo final ${models.location}/salida/sql.xmi</echo>
 		<echo>Iniciando llamado json2sql.etl</echo>
 		<epsilon.etl src="${transformations.location}/m2m/json2sql.etl">
 
@@ -68,15 +67,14 @@
 
 		<echo>Corriendo Template EGL</echo>
 		
-		<epsilon.emf.register file="${sql.metamodel.location}" />
-
-		<epsilon.emf.loadModel name="SQL" modelfile="${generated.location}/sql3.xmi" metamodeluri="${sql.metamodel.uri}" read="true" store="false" />
-		<epsilon.emf.loadModel name="CO" modelfile="${models.location}/input.config" metamodeluri="${config.metamodel.uri}" read="true" store="false" />
+		<epsilon.emf.loadModel name="DB" modelfile="${generated.location}/sql.xmi" metamodeluri="${sql.metamodel.uri}" read="true" store="false" />
+		
+		<epsilon.emf.loadModel name="CONFIG" modelfile="${models.location}/input.config" metamodeluri="${config.metamodel.uri}" read="true" store="false" />
 
 		<epsilon.egl src="${transformations.location}/m2t/masterApp.egl">
 			<parameter name="ubicacion" value="../../DocumentalToSql/src/main/java/co/com/ap/"/>
-			<model ref="CO" />
-			<model ref="SQL" />
+			<model ref="CONFIG" />
+			<model ref="DB" />
 		</epsilon.egl>
 
 	</target>
@@ -84,11 +82,12 @@
 
 		<echo>Corriendo Template EGL</echo>
 		
-		<epsilon.emf.register file="${sql.metamodel.location}" />
-
-		<epsilon.emf.loadModel name="DB" modelfile="${generated.location}/sql3.xmi" metamodeluri="${sql.metamodel.uri}" read="true" store="false" />
+		<epsilon.emf.loadModel name="DB" modelfile="${generated.location}/sql.xmi" metamodeluri="${sql.metamodel.uri}" read="true" store="false" />
+		
+		<epsilon.emf.loadModel name="CONFIG" modelfile="${models.location}/input.config" metamodeluri="${config.metamodel.uri}" read="true" store="false" />
 
 		<epsilon.egl src="${transformations.location}/m2t/master.egl">
+			<model ref="CONFIG" />
 			<model ref="DB" />
 		</epsilon.egl>
 

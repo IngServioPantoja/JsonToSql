@@ -1,49 +1,58 @@
-[% 
+[% 	
 	("Iniciando proceso de generaci�n de aplicaci�n de migraci�n").println;
-	var mergerFields = CO!MergedField.all;
-	("Mergers: "+mergerFields.size()).println;
-	var sql = SQL!Table.all;
-	for(table in sql){
+	var mergerFields = CONFIG!MergedField.all;
+	var sql =  DB!Database.all.get(DB!Database.all.size()-1);
+	var ubicacion;
+	if(ubicacion==null){
+		ubicacion = "../../DocumentalToSql/src/main/java/co/com/ap/";
+	}
+	//("Cantidad de tablas bien "+sql.tables.size()).println;
+	//("Cantidad de tablas "+DB!Table.all.size()).println;
+	for(table in sql.tables){
+		//("Cantidad de columnas: "+table.columns.size()).println;
 		var t:Template:= TemplateFactory.load('model.egl');
 		t.populate("table", table);
 		var merger = null;
 		if(mergerFields.size()>0){
-			merger = mergerFields.select(m | m.tableName.equals(table.name)).first();
+			merger = mergerFields.select(m | m.tableName.removerComillas().equals(table.name.removerComillas())).first();
 		}
 		if(null == merger){
 			t.populate("merger", null);
 		}else{
 			t.populate("merger", merger);
 		}
-		var foraneas = SQL!ForeignKey.all.obtenerLlaves(table);
+		var foraneas = sql.obtenerLlaves(table);
 		if(foraneas.size>0){
 			t.populate("foraneas", foraneas);
 		}else{
 			t.populate("foraneas", null);
 		}
-		t.generate('../../DocumentalToSql/src/main/java/co/com/ap/model/'+(table.name.removerComillas()).firstToUpperCase()+'.java');
+		t.generate(ubicacion+'model/'+(table.name.removerComillas()).firstToUpperCase()+'.java');
 	}
 	
 	if(not(mergerFields == null and mergerFields.size()>0)){
 		for(mergerField in mergerFields){
 			var t:Template:= TemplateFactory.load('mergerField.egl');
 			t.populate("mergeField", mergerField);
-			t.generate('../../DocumentalToSql/src/main/java/co/com/ap/model/'+(mergerField.tableName.removerComillas()).firstToUpperCase()+'MergerField.java');
+			t.generate(ubicacion+'model/'+(mergerField.tableName.removerComillas()).firstToUpperCase()+'MergerField.java');
 		}
 	}
 	
 	var t:Template:= TemplateFactory.load('genericModel.egl');
-	t.generate('../../DocumentalToSql/src/main/java/co/com/ap/model/GenericJSon.java');
+	t.populate("db", sql);
+	t.generate(ubicacion+'model/GenericJSon.java');
 	
 	var t:Template:= TemplateFactory.load('conexion.egl');
-	t.generate('../../DocumentalToSql/src/main/java/co/com/ap/core/Conexion.java');
+	t.populate("db", sql);
+	t.generate(ubicacion+'core/Conexion.java');
 	
-	operation Collection obtenerLlaves(table){
-		//TODO: Es necesario que la clave foranea tenga ademas de la columna key column, 
-		//lat tabla correspondiente f.referencedKey.key_column.table.name.first.equals(table.name)
-		var llaves = SQL!ForeignKey.all.select(f | 
+	operation DB!Database obtenerLlaves(table){
+		var llaves:OrderedSet = new OrderedSet;
+		for(tableForeign in self.tables){
+			llaves.addAll(tableForeign.foreignkeys.select( f | 
 			f.referencedKey.key_column.table.name.first.removerComillas().equals(table.name.removerComillas()) or 
-			f.foreign_column.table.name.removerComillas().equals(table.name.removerComillas()));
+			f.foreign_column.table.name.removerComillas().equals(table.name.removerComillas())));
+		}
 		return llaves;
 	}	
 	

@@ -10,12 +10,14 @@ varchar(80) references student(_id),
 'type' varchar(200),
 'score' real);INSERT INTO student  (  '_id','name')
  VALUES (0, 'aimee Zank');
-*/ var databases = DB!Database.all(); 
- for (database in databases){
+ 
+*/ var database = DB!Database.all.get(DB!Database.all.size()-1); 
+	var co = CONFIG!Config.all.first;
   if(not (database.name  == "helper")){
 %]   
-CREATE DATABASE [%=database.name%];
- 
+CREATE DATABASE [%=co.connection.url%];
+
+USE [%=co.connection.url%]; 
  
 [%
    for(table in database.tables){
@@ -53,7 +55,7 @@ CREATE TABLE [%=table.name.removeQuotes()%] (
    
    for(table in database.tables){
     var foreignKeyBool = table.foreignkeys.size()>0; 
-    System.out.println("foreignKeyBool: "+ foreignKeyBool);
+    //System.out.println("foreignKeyBool: "+ foreignKeyBool);
     if(foreignKeyBool){
     %]
 ALTER TABLE [%=table.name.removeQuotes()%]
@@ -69,7 +71,7 @@ ALTER TABLE [%=table.name.removeQuotes()%]
  
 %]
 [%
- }
+ 
 operation OrderedSet getPK(){
  var pk = self.first().key_column.first();
  //pk.println();

@@ -1,4 +1,4 @@
-[% var co = CO!Config.all.first;%]
+[% var co = CONFIG!Config.all.first;%]
 package co.com.ap.core;
 
 import java.sql.Connection;
